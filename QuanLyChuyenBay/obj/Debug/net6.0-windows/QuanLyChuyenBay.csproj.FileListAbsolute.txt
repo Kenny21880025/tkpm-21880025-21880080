@@ -22,3 +22,10 @@ D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\QuanLy
 D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\QuanLyChuyenBay.MH_TraCuu.resources
 D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\QuanLyChuyenBay.MH_BaoCaoThang.resources
 D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\QuanLyChuyenBay.MH_BaoCaoNam.resources
+D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\QuanLyChuyenBay.csproj.CopyComplete
