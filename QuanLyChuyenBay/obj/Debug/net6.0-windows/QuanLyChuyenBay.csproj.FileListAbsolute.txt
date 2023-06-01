@@ -17,3 +17,8 @@ D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\QuanLy
 D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\ref\QuanLyChuyenBay.dll
 D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\QuanLyChuyenBay.MH_NhanLich.resources
 D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\QuanLyChuyenBay.Properties.Resources.resources
+D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\QuanLyChuyenBay.MH_BanVe.resources
+D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\QuanLyChuyenBay.MH_DatCho.resources
+D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\QuanLyChuyenBay.MH_TraCuu.resources
+D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\QuanLyChuyenBay.MH_BaoCaoThang.resources
+D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\QuanLyChuyenBay.MH_BaoCaoNam.resources
