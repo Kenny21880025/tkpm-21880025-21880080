@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Demo_Winform_Layer_Tier.DAO
+namespace QuanLyChuyenBay.DAO
 {
     public class Db
     {
@@ -31,41 +31,33 @@ namespace Demo_Winform_Layer_Tier.DAO
         protected string LayTen(string sql)
         {
             string ten = "";
-            using (SqlConnection ket_noi = new SqlConnection(duong_dan))
+            SqlConnection ket_noi = new SqlConnection(duong_dan);
+            SqlCommand lenh = new SqlCommand(sql, ket_noi);
+            lenh.CommandType = CommandType.Text;
+            ket_noi.Open();
+            if (ket_noi.State == ConnectionState.Open)
             {
-                using (SqlCommand lenh = new SqlCommand(sql, ket_noi))
+                object result = lenh.ExecuteScalar();
+                if (result != null)
                 {
-                    lenh.CommandType = CommandType.Text;
-                    ket_noi.Open();
-                    if (ket_noi.State == ConnectionState.Open)
-                    {
-                        object result = lenh.ExecuteScalar();
-                        if (result != null)
-                        {
-                            ten = result.ToString();
-                        }
-                    }
+                    ten = result.ToString();
                 }
             }
             return ten;
         }
-        public int LaySo(string strSQL)
+        protected int LaySo(string sql)
         {
-            int so = 0;
-            using (SqlConnection ket_noi = new SqlConnection(duong_dan))
+           int so = 0;
+            SqlConnection ket_noi = new SqlConnection(duong_dan);
+            SqlCommand lenh = new SqlCommand(sql, ket_noi);
+            lenh.CommandType = CommandType.Text;
+            ket_noi.Open();
+            if (ket_noi.State == ConnectionState.Open)
             {
-                using (SqlCommand lenh = new SqlCommand(strSQL, ket_noi))
+                object result = lenh.ExecuteScalar();
+                if (result != null)
                 {
-                    lenh.CommandType = CommandType.Text;
-                    ket_noi.Open();
-                    if (ket_noi.State == ConnectionState.Open)
-                    {
-                        object result = lenh.ExecuteScalar();
-                        if (result != null)
-                        {
-                            int.TryParse(result.ToString(), out so);
-                        }
-                    }
+                    int.TryParse(result.ToString(), out so);
                 }
             }
             return so;

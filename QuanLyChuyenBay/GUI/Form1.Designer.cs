@@ -35,9 +35,9 @@
             menuStrip1 = new MenuStrip();
             doanhThuThang = new ToolStripMenuItem();
             doanhThuNam = new ToolStripMenuItem();
-            grevLichBay = new DataGridView();
+            grvLichBay = new DataGridView();
             menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)grevLichBay).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)grvLichBay).BeginInit();
             SuspendLayout();
             // 
             // btn_NhanLich
@@ -103,22 +103,22 @@
             doanhThuNam.Text = "Báo Cáo Doanh Thu Năm";
             doanhThuNam.Click += doanhThuNam_Click;
             // 
-            // grevLichBay
+            // grvLichBay
             // 
-            grevLichBay.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            grevLichBay.Location = new Point(49, 171);
-            grevLichBay.Name = "grevLichBay";
-            grevLichBay.RowTemplate.Height = 25;
-            grevLichBay.Size = new Size(697, 248);
-            grevLichBay.TabIndex = 5;
-            grevLichBay.CellContentClick += grevLichBay_CellContentClick;
+            grvLichBay.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            grvLichBay.Location = new Point(49, 171);
+            grvLichBay.Name = "grvLichBay";
+            grvLichBay.RowTemplate.Height = 25;
+            grvLichBay.Size = new Size(697, 248);
+            grvLichBay.TabIndex = 5;
+            grvLichBay.CellContentClick += grvLichBay_CellContentClick;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(grevLichBay);
+            Controls.Add(grvLichBay);
             Controls.Add(btn_TraCuu);
             Controls.Add(btn_DatCho);
             Controls.Add(btn_BanVe);
@@ -129,7 +129,7 @@
             Text = "Quản Lý Chuyến Bay";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)grevLichBay).EndInit();
+            ((System.ComponentModel.ISupportInitialize)grvLichBay).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -143,6 +143,6 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem doanhThuThang;
         private ToolStripMenuItem doanhThuNam;
-        private DataGridView grevLichBay;
+        private DataGridView grvLichBay;
     }
 }

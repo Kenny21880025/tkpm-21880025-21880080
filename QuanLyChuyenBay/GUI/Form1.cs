@@ -1,7 +1,11 @@
+using QuanLyChuyenBay.BUS;
+using QuanLyChuyenBay.DAO;
+
 namespace QuanLyChuyenBay
 {
     public partial class Form1 : Form
     {
+        ChuyenBayBUS cbDb = new ChuyenBayBUS();
         public Form1()
         {
             InitializeComponent();
@@ -9,8 +13,14 @@ namespace QuanLyChuyenBay
 
         private void btn_NhanLich_Click(object sender, EventArgs e)
         {
+            LayDuLieu();
             MH_NhanLich mhnl = new MH_NhanLich();
             mhnl.Show();
+        }
+        private void LayDuLieu()
+        {
+            var bang = cbDb.LayDanhSach();
+            grvLichBay.DataSource = bang;
         }
 
         private void btn_BanVe_Click(object sender, EventArgs e)
@@ -44,10 +54,11 @@ namespace QuanLyChuyenBay
             mhbcn.Show();
         }
 
-        private void grevLichBay_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void grvLichBay_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
+
 
     }
 }
