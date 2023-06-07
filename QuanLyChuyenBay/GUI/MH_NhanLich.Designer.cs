@@ -235,7 +235,7 @@
             Controls.Add(label1);
             Controls.Add(lb_NhanLich);
             Name = "MH_NhanLich";
-            Text = "Nhận Lịch Chuyến Bay";
+            Text = "Nhận Lịch Chuyến Bay";            
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

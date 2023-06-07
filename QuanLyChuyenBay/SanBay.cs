@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace QuanLyChuyenBay
 {
-    internal class SanBay
+    public class SanBay
     {
+        public string MaSanBay { get; set; }
+        public string TenSanBay { get; set; }
     }
 }

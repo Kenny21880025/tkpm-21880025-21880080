@@ -11,7 +11,8 @@ namespace QuanLyChuyenBay.DAO
     {
         public DataTable LayDanhSach()
         {
-            string sql = "select * from ChuyenBay";
+            string sql = "select MaChuyenBay as [Mã Chuyến Bay], MaTuyenBay as [Mã Tuyến Bay], NgayGio as [Ngày Giờ], ThoiGianBay as [Thời Gian Bay], SoLuongGheHang1 as [Số Lượng Ghế Hạng 1], SoLuongGheHang2 as [Số Lượng Ghế Hạng 2] from ChuyenBay";
+
             return LayDuLieu(sql);
         }
         public int ThemChuyenBay(ChuyenBay cb)

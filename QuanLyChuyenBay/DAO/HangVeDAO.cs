@@ -16,7 +16,7 @@ namespace QuanLyChuyenBay.DAO
         }
         public DataTable LayDSHangVe()
         {
-            string sql = "SELECT MaHangVe, TenHangVe FROM HangVe";
+            string sql = "SELECT MaHangVe as [Mã Hạng Vé], TenHangVe as [Tên Hạng Vé] FROM HangVe";
             return LayDuLieu(sql);            
         }
         public DataTable LayTenHangVe(string mhv)
