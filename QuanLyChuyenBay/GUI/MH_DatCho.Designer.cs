@@ -41,7 +41,6 @@
             txtSanBayDen = new TextBox();
             txtSanBayDi = new TextBox();
             label12 = new Label();
-            label11 = new Label();
             label10 = new Label();
             label9 = new Label();
             label8 = new Label();
@@ -56,6 +55,7 @@
             btn_MaHanhKhach = new Button();
             cbHangVe = new ComboBox();
             dtpNgayDat = new DateTimePicker();
+            btn_HangVe = new Button();
             SuspendLayout();
             // 
             // btn_ThoatDatCho
@@ -66,6 +66,7 @@
             btn_ThoatDatCho.TabIndex = 51;
             btn_ThoatDatCho.Text = "Thoát";
             btn_ThoatDatCho.UseVisualStyleBackColor = true;
+            btn_ThoatDatCho.Click += btn_ThoatDatCho_Click;
             // 
             // btn_TaoPhieuMoi
             // 
@@ -158,15 +159,6 @@
             label12.Size = new Size(49, 15);
             label12.TabIndex = 37;
             label12.Text = "Giá Tiền";
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Location = new Point(268, 180);
-            label11.Name = "label11";
-            label11.Size = new Size(51, 15);
-            label11.TabIndex = 36;
-            label11.Text = "Hạng Vé";
             // 
             // label10
             // 
@@ -274,6 +266,7 @@
             btn_MaHanhKhach.TabIndex = 55;
             btn_MaHanhKhach.Text = "Mã Hành Khách";
             btn_MaHanhKhach.UseVisualStyleBackColor = true;
+            btn_MaHanhKhach.Click += btn_MaHanhKhach_Click;
             // 
             // cbHangVe
             // 
@@ -291,11 +284,22 @@
             dtpNgayDat.Size = new Size(200, 23);
             dtpNgayDat.TabIndex = 57;
             // 
+            // btn_HangVe
+            // 
+            btn_HangVe.Location = new Point(268, 176);
+            btn_HangVe.Name = "btn_HangVe";
+            btn_HangVe.Size = new Size(88, 23);
+            btn_HangVe.TabIndex = 58;
+            btn_HangVe.Text = "Hạng Vé";
+            btn_HangVe.UseVisualStyleBackColor = true;
+            btn_HangVe.Click += btn_HangVe_Click;
+            // 
             // MH_DatCho
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(551, 326);
+            Controls.Add(btn_HangVe);
             Controls.Add(dtpNgayDat);
             Controls.Add(cbHangVe);
             Controls.Add(btn_MaHanhKhach);
@@ -314,7 +318,6 @@
             Controls.Add(txtSanBayDen);
             Controls.Add(txtSanBayDi);
             Controls.Add(label12);
-            Controls.Add(label11);
             Controls.Add(label10);
             Controls.Add(label9);
             Controls.Add(label8);
@@ -346,7 +349,6 @@
         private TextBox txtSanBayDen;
         private TextBox txtSanBayDi;
         private Label label12;
-        private Label label11;
         private Label label10;
         private Label label9;
         private Label label8;
@@ -361,5 +363,6 @@
         private Button btn_MaHanhKhach;
         private ComboBox cbHangVe;
         private DateTimePicker dtpNgayDat;
+        private Button btn_HangVe;
     }
 }

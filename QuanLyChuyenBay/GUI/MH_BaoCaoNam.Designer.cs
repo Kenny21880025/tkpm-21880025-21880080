@@ -30,9 +30,9 @@
         {
             label1 = new Label();
             label3 = new Label();
-            comboBox2 = new ComboBox();
-            button1 = new Button();
-            button2 = new Button();
+            cbNam = new ComboBox();
+            btn_BaoCao = new Button();
+            btn_Thoat = new Button();
             SuspendLayout();
             // 
             // label1
@@ -40,9 +40,9 @@
             label1.AutoSize = true;
             label1.Location = new Point(70, 19);
             label1.Name = "label1";
-            label1.Size = new Size(144, 15);
+            label1.Size = new Size(141, 15);
             label1.TabIndex = 0;
-            label1.Text = "Báo C áo Doanh Thu Năm";
+            label1.Text = "Báo Cáo Doanh Thu Năm";
             // 
             // label3
             // 
@@ -53,44 +53,45 @@
             label3.TabIndex = 2;
             label3.Text = "Năm";
             // 
-            // comboBox2
+            // cbNam
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(84, 57);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(61, 23);
-            comboBox2.TabIndex = 4;
+            cbNam.FormattingEnabled = true;
+            cbNam.Location = new Point(84, 57);
+            cbNam.Name = "cbNam";
+            cbNam.Size = new Size(61, 23);
+            cbNam.TabIndex = 4;
             // 
-            // button1
+            // btn_BaoCao
             // 
-            button1.Location = new Point(84, 109);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 5;
-            button1.Text = "Báo Cáo";
-            button1.UseVisualStyleBackColor = true;
+            btn_BaoCao.Location = new Point(84, 109);
+            btn_BaoCao.Name = "btn_BaoCao";
+            btn_BaoCao.Size = new Size(75, 23);
+            btn_BaoCao.TabIndex = 5;
+            btn_BaoCao.Text = "Báo Cáo";
+            btn_BaoCao.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btn_Thoat
             // 
-            button2.Location = new Point(181, 109);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 6;
-            button2.Text = "Thoát";
-            button2.UseVisualStyleBackColor = true;
+            btn_Thoat.Location = new Point(181, 109);
+            btn_Thoat.Name = "btn_Thoat";
+            btn_Thoat.Size = new Size(75, 23);
+            btn_Thoat.TabIndex = 6;
+            btn_Thoat.Text = "Thoát";
+            btn_Thoat.UseVisualStyleBackColor = true;
             // 
             // MH_BaoCaoNam
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(310, 172);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(comboBox2);
+            Controls.Add(btn_Thoat);
+            Controls.Add(btn_BaoCao);
+            Controls.Add(cbNam);
             Controls.Add(label3);
             Controls.Add(label1);
             Name = "MH_BaoCaoNam";
             Text = "MH_BaoCaoThang";
+            Load += MH_BaoCaoNam_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -99,8 +100,8 @@
 
         private Label label1;
         private Label label3;
-        private ComboBox comboBox2;
-        private Button button1;
-        private Button button2;
+        private ComboBox cbNam;
+        private Button btn_BaoCao;
+        private Button btn_Thoat;
     }
 }

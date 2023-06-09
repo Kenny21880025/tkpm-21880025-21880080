@@ -334,8 +334,7 @@
         private Label label9;
         private Label label10;
         private Label label11;
-        private Label label12;
-        private TextBox textBox1;
+        private Label label12;        
         private TextBox txtSanBayDi;
         private TextBox txtSanBayDen;
         private TextBox txtNgayGio;        

@@ -17,6 +17,9 @@ namespace QuanLyChuyenBay
             InitializeComponent();
         }
 
+        private void MH_BaoCaoThang_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }

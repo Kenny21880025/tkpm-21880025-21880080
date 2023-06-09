@@ -23,7 +23,7 @@ namespace QuanLyChuyenBay
         HanhKhachBUS hkBus = new HanhKhachBUS();
         HangVe hv = new HangVe();
         DonGia dg = new DonGia();
-        ChuyenBay cb = new ChuyenBay();           
+        ChuyenBay cb = new ChuyenBay();
         PhieuDatChoBUS pdcBus = new PhieuDatChoBUS();
         PhieuDatCho pdc = new PhieuDatCho();
         public MH_DatCho()
@@ -102,15 +102,6 @@ namespace QuanLyChuyenBay
             gia = dgBus.LayDonGia(matuyenbay, cbHangVe.Text);
             txtGiaTien.Text = gia.ToString();
         }
-        private void btn_MaHanhKhach_Click(object sender, EventArgs e)
-        {
-            MH_ThemHanhKhach mhthk = new MH_ThemHanhKhach();
-            mhthk.ShowDialog();
-            txtMaHanhKhach.Text = mhthk.txtMaHanhKhach.Text;
-            txtID.Text = mhthk.txtID.Text;
-            txtDienThoai.Text = mhthk.txtDienThoai.Text;
-            txtTenHanhKhach.Text = mhthk.txtTenHanhKhach.Text;
-        }
         private void txtMaHanhKhach_LostFocus(object sender, EventArgs e)
         {
             if (txtMaHanhKhach.Text == "")
@@ -161,16 +152,7 @@ namespace QuanLyChuyenBay
             dg = null;
             txtGiaTien.Text = gia.ToString();
         }
-        private void btn_HangVe_Click(object sender, EventArgs e)
-        {
-            MH_ThemHangVe mhthv = new MH_ThemHangVe();
-            mhthv.ShowDialog();
-            DataTable ds = new DataTable();
-            ds = cbBus.LayMaCBSauNgay(DateTime.Now);
-            cb = null;
-            cbMaChuyenBay.DataSource = ds;
-            cbMaChuyenBay.DisplayMember = "MaChuyenBay";
-        }
+
 
         private void btn_TaoPhieuMoi_Click(object sender, EventArgs e)
         {
@@ -184,6 +166,32 @@ namespace QuanLyChuyenBay
             txtID.Text = "";
             txtGiaTien.Text = "";
             cbMaChuyenBay.Text = "";
+        }
+
+        private void btn_MaHanhKhach_Click(object sender, EventArgs e)
+        {
+            MH_ThemHanhKhach mhthk = new MH_ThemHanhKhach();
+            mhthk.Show();
+            txtMaHanhKhach.Text = mhthk.txtMaHanhKhach.Text;
+            txtID.Text = mhthk.txtID.Text;
+            txtDienThoai.Text = mhthk.txtDienThoai.Text;
+            txtTenHanhKhach.Text = mhthk.txtTenHanhKhach.Text;
+        }
+
+        private void btn_ThoatDatCho_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btn_HangVe_Click(object sender, EventArgs e)
+        {
+            MH_ThemHangVe mhthv = new MH_ThemHangVe();
+            mhthv.ShowDialog();
+            DataTable ds = new DataTable();
+            ds = cbBus.LayMaCBSauNgay(DateTime.Now);
+            cb = null;
+            cbMaChuyenBay.DataSource = ds;
+            cbMaChuyenBay.DisplayMember = "MaChuyenBay";
         }
     }
 }

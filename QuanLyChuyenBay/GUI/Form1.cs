@@ -1,5 +1,6 @@
 using QuanLyChuyenBay.BUS;
 using QuanLyChuyenBay.DAO;
+using QuanLyChuyenBay.GUI;
 
 namespace QuanLyChuyenBay
 {
@@ -61,17 +62,20 @@ namespace QuanLyChuyenBay
 
         private void QD1_Click(object sender, EventArgs e)
         {
-
+            MH_QD1 mhqd1 = new MH_QD1();
+            mhqd1.Show();
         }
 
         private void QD2_Click(object sender, EventArgs e)
         {
-
+            MH_QD2 mhqd2 = new MH_QD2();
+            mhqd2.Show();
         }
 
         private void QD3_Click(object sender, EventArgs e)
         {
-
+            MH_QD3 mhqd3 = new MH_QD3();
+            mhqd3.Show();
         }
     }
 }

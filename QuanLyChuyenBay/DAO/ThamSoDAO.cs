@@ -13,10 +13,25 @@ namespace QuanLyChuyenBay.DAO
         {
             string sql = "select ThoiGianBayToiThieu,SoSanBayTrungGianToiDa,ThoiGianDungToiThieu,ThoiGianDungToiDa from Thamso";
             return LayDuLieu(sql);
-        }
+        }        
         public int SuaQD1(QD1 qd)
         {
             string sql = string.Format("Update SanBay Set ThoiGianBayToiThieu = '{0}' SoSanBayTrungGianToiDa = '{1}' ThoiGianDungToiThieu '{2}' hoiGianDungToiDa '{3}'", qd.ThoiGianBayToiThieu, qd.SoSanByTrungGianToiDa, qd.ThoiGianDungToiThieu, qd.ThoiGianDungToiDa);
+            return ThucThi(sql);
+        }
+        public DataTable LayQD2()
+        {
+            string sql = "select * from HangVe";
+            return LayDuLieu(sql);
+        }
+        public int SuaQD2(QD2 qd)
+        {
+            string sql = string.Format("Update HangVe Set MaHangVe = '{0}'", qd.SLHangVe);
+            return ThucThi(sql);
+        }
+        public int SuaQD3(QD3 qd)
+        {
+            string sql = string.Format("Update HangVe Set MaHangVe = '{0}'", qd.TimeCancel);
             return ThucThi(sql);
         }
         public DataTable LayBangDonGia()
