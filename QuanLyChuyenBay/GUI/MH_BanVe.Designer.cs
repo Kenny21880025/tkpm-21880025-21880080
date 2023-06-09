@@ -34,32 +34,33 @@
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
-            label7 = new Label();
             label8 = new Label();
             label9 = new Label();
             label10 = new Label();
-            label11 = new Label();
             label12 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
-            textBox8 = new TextBox();
-            textBox9 = new TextBox();
-            textBox10 = new TextBox();
-            textBox11 = new TextBox();
+            txtSanBayDi = new TextBox();
+            txtSanBayDen = new TextBox();
+            txtNgayGio = new TextBox();
+            txtGiaTien = new TextBox();
+            txtTinhTrangVe = new TextBox();
+            txtDienThoai = new TextBox();
+            txtID = new TextBox();
+            txtTenHanhKhach = new TextBox();
+            txtMaHanhKhach = new TextBox();
             btn_LuuVe = new Button();
             btn_TaoMoi = new Button();
             btn_ThoatBanVe = new Button();
+            btn_MaHanhKhach = new Button();
+            cbMaChuyenBay = new ComboBox();
+            btn_HangVe = new Button();
+            cbHangVe = new ComboBox();
+            txtTenHangVe = new TextBox();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(236, 20);
+            label1.Location = new Point(218, 22);
             label1.Name = "label1";
             label1.Size = new Size(98, 15);
             label1.TabIndex = 0;
@@ -104,20 +105,11 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(21, 177);
+            label6.Location = new Point(266, 177);
             label6.Name = "label6";
             label6.Size = new Size(77, 15);
             label6.TabIndex = 5;
             label6.Text = "Tình Trạng Vé";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(265, 59);
-            label7.Name = "label7";
-            label7.Size = new Size(92, 15);
-            label7.TabIndex = 6;
-            label7.Text = "Mã Hành Khách";
             // 
             // label8
             // 
@@ -146,153 +138,177 @@
             label10.TabIndex = 9;
             label10.Text = "Điện Thoại";
             // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Location = new Point(265, 177);
-            label11.Name = "label11";
-            label11.Size = new Size(51, 15);
-            label11.TabIndex = 10;
-            label11.Text = "Hạng Vé";
-            // 
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(21, 208);
+            label12.Location = new Point(267, 205);
             label12.Name = "label12";
             label12.Size = new Size(49, 15);
             label12.TabIndex = 11;
             label12.Text = "Giá Tiền";
             // 
-            // textBox1
+            // txtSanBayDi
             // 
-            textBox1.Location = new Point(130, 56);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(129, 23);
-            textBox1.TabIndex = 12;
+            txtSanBayDi.Location = new Point(130, 85);
+            txtSanBayDi.Name = "txtSanBayDi";
+            txtSanBayDi.Size = new Size(129, 23);
+            txtSanBayDi.TabIndex = 13;
             // 
-            // textBox2
+            // txtSanBayDen
             // 
-            textBox2.Location = new Point(130, 85);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(129, 23);
-            textBox2.TabIndex = 13;
+            txtSanBayDen.Location = new Point(130, 114);
+            txtSanBayDen.Name = "txtSanBayDen";
+            txtSanBayDen.Size = new Size(129, 23);
+            txtSanBayDen.TabIndex = 14;
             // 
-            // textBox3
+            // txtNgayGio
             // 
-            textBox3.Location = new Point(130, 114);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(129, 23);
-            textBox3.TabIndex = 14;
+            txtNgayGio.Location = new Point(130, 146);
+            txtNgayGio.Name = "txtNgayGio";
+            txtNgayGio.Size = new Size(129, 23);
+            txtNgayGio.TabIndex = 15;
             // 
-            // textBox4
+            // txtGiaTien
             // 
-            textBox4.Location = new Point(130, 146);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(129, 23);
-            textBox4.TabIndex = 15;
+            txtGiaTien.Location = new Point(375, 202);
+            txtGiaTien.Name = "txtGiaTien";
+            txtGiaTien.Size = new Size(129, 23);
+            txtGiaTien.TabIndex = 17;
             // 
-            // textBox5
+            // txtTinhTrangVe
             // 
-            textBox5.Location = new Point(130, 174);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(129, 23);
-            textBox5.TabIndex = 16;
+            txtTinhTrangVe.Location = new Point(375, 173);
+            txtTinhTrangVe.Name = "txtTinhTrangVe";
+            txtTinhTrangVe.Size = new Size(129, 23);
+            txtTinhTrangVe.TabIndex = 22;
             // 
-            // textBox6
+            // txtDienThoai
             // 
-            textBox6.Location = new Point(130, 205);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(129, 23);
-            textBox6.TabIndex = 17;
+            txtDienThoai.Location = new Point(375, 146);
+            txtDienThoai.Name = "txtDienThoai";
+            txtDienThoai.Size = new Size(129, 23);
+            txtDienThoai.TabIndex = 21;
             // 
-            // textBox7
+            // txtID
             // 
-            textBox7.Location = new Point(375, 174);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(129, 23);
-            textBox7.TabIndex = 22;
+            txtID.Location = new Point(375, 114);
+            txtID.Name = "txtID";
+            txtID.Size = new Size(129, 23);
+            txtID.TabIndex = 20;
             // 
-            // textBox8
+            // txtTenHanhKhach
             // 
-            textBox8.Location = new Point(375, 146);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(129, 23);
-            textBox8.TabIndex = 21;
+            txtTenHanhKhach.Location = new Point(375, 85);
+            txtTenHanhKhach.Name = "txtTenHanhKhach";
+            txtTenHanhKhach.Size = new Size(129, 23);
+            txtTenHanhKhach.TabIndex = 19;
             // 
-            // textBox9
+            // txtMaHanhKhach
             // 
-            textBox9.Location = new Point(375, 114);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(129, 23);
-            textBox9.TabIndex = 20;
-            // 
-            // textBox10
-            // 
-            textBox10.Location = new Point(375, 85);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(129, 23);
-            textBox10.TabIndex = 19;
-            // 
-            // textBox11
-            // 
-            textBox11.Location = new Point(375, 56);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(129, 23);
-            textBox11.TabIndex = 18;
+            txtMaHanhKhach.Location = new Point(375, 56);
+            txtMaHanhKhach.Name = "txtMaHanhKhach";
+            txtMaHanhKhach.Size = new Size(129, 23);
+            txtMaHanhKhach.TabIndex = 18;
             // 
             // btn_LuuVe
             // 
-            btn_LuuVe.Location = new Point(68, 262);
+            btn_LuuVe.Location = new Point(185, 262);
             btn_LuuVe.Name = "btn_LuuVe";
             btn_LuuVe.Size = new Size(75, 23);
             btn_LuuVe.TabIndex = 23;
             btn_LuuVe.Text = "Lưu";
             btn_LuuVe.UseVisualStyleBackColor = true;
+            btn_LuuVe.Click += btn_LuuVe_Click;
             // 
             // btn_TaoMoi
             // 
-            btn_TaoMoi.Location = new Point(236, 262);
+            btn_TaoMoi.Location = new Point(306, 262);
             btn_TaoMoi.Name = "btn_TaoMoi";
             btn_TaoMoi.Size = new Size(75, 23);
             btn_TaoMoi.TabIndex = 24;
             btn_TaoMoi.Text = "Tạo Mới";
             btn_TaoMoi.UseVisualStyleBackColor = true;
+            btn_TaoMoi.Click += btn_TaoMoi_Click;
             // 
             // btn_ThoatBanVe
             // 
-            btn_ThoatBanVe.Location = new Point(391, 262);
+            btn_ThoatBanVe.Location = new Point(429, 262);
             btn_ThoatBanVe.Name = "btn_ThoatBanVe";
             btn_ThoatBanVe.Size = new Size(75, 23);
             btn_ThoatBanVe.TabIndex = 25;
             btn_ThoatBanVe.Text = "Thoát";
             btn_ThoatBanVe.UseVisualStyleBackColor = true;
+            btn_ThoatBanVe.Click += btn_ThoatBanVe_Click;
+            // 
+            // btn_MaHanhKhach
+            // 
+            btn_MaHanhKhach.Location = new Point(265, 56);
+            btn_MaHanhKhach.Name = "btn_MaHanhKhach";
+            btn_MaHanhKhach.Size = new Size(104, 23);
+            btn_MaHanhKhach.TabIndex = 26;
+            btn_MaHanhKhach.Text = "Mã Hành Khách";
+            btn_MaHanhKhach.UseVisualStyleBackColor = true;
+            btn_MaHanhKhach.Click += btn_MaHanhKhach_Click;
+            // 
+            // cbMaChuyenBay
+            // 
+            cbMaChuyenBay.FormattingEnabled = true;
+            cbMaChuyenBay.Location = new Point(130, 56);
+            cbMaChuyenBay.Name = "cbMaChuyenBay";
+            cbMaChuyenBay.Size = new Size(129, 23);
+            cbMaChuyenBay.TabIndex = 27;
+            cbMaChuyenBay.SelectedIndexChanged += cbMaChuyenBay_SelectedIndexChanged;
+            // 
+            // btn_HangVe
+            // 
+            btn_HangVe.Location = new Point(21, 173);
+            btn_HangVe.Name = "btn_HangVe";
+            btn_HangVe.Size = new Size(104, 23);
+            btn_HangVe.TabIndex = 28;
+            btn_HangVe.Text = "Hạng Vé";
+            btn_HangVe.UseVisualStyleBackColor = true;
+            // 
+            // cbHangVe
+            // 
+            cbHangVe.FormattingEnabled = true;
+            cbHangVe.Location = new Point(131, 173);
+            cbHangVe.Name = "cbHangVe";
+            cbHangVe.Size = new Size(129, 23);
+            cbHangVe.TabIndex = 29;
+            // 
+            // txtTenHangVe
+            // 
+            txtTenHangVe.Location = new Point(130, 202);
+            txtTenHangVe.Name = "txtTenHangVe";
+            txtTenHangVe.Size = new Size(129, 23);
+            txtTenHangVe.TabIndex = 30;
             // 
             // MH_BanVe
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(536, 315);
+            Controls.Add(txtTenHangVe);
+            Controls.Add(cbHangVe);
+            Controls.Add(btn_HangVe);
+            Controls.Add(cbMaChuyenBay);
+            Controls.Add(btn_MaHanhKhach);
             Controls.Add(btn_ThoatBanVe);
             Controls.Add(btn_TaoMoi);
             Controls.Add(btn_LuuVe);
-            Controls.Add(textBox7);
-            Controls.Add(textBox8);
-            Controls.Add(textBox9);
-            Controls.Add(textBox10);
-            Controls.Add(textBox11);
-            Controls.Add(textBox6);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txtTinhTrangVe);
+            Controls.Add(txtDienThoai);
+            Controls.Add(txtID);
+            Controls.Add(txtTenHanhKhach);
+            Controls.Add(txtMaHanhKhach);
+            Controls.Add(txtGiaTien);
+            Controls.Add(txtNgayGio);
+            Controls.Add(txtSanBayDen);
+            Controls.Add(txtSanBayDi);
             Controls.Add(label12);
-            Controls.Add(label11);
             Controls.Add(label10);
             Controls.Add(label9);
             Controls.Add(label8);
-            Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -301,6 +317,7 @@
             Controls.Add(label1);
             Name = "MH_BanVe";
             Text = "Vé Chuyến Bay";
+            Load += MH_BanVe_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -313,25 +330,28 @@
         private Label label4;
         private Label label5;
         private Label label6;
-        private Label label7;
         private Label label8;
         private Label label9;
         private Label label10;
         private Label label11;
         private Label label12;
         private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private TextBox textBox6;
-        private TextBox textBox7;
-        private TextBox textBox8;
-        private TextBox textBox9;
-        private TextBox textBox10;
-        private TextBox textBox11;
+        private TextBox txtSanBayDi;
+        private TextBox txtSanBayDen;
+        private TextBox txtNgayGio;        
+        private TextBox txtGiaTien;
+        private TextBox txtTinhTrangVe;
+        private TextBox txtDienThoai;
+        private TextBox txtID;
+        private TextBox txtTenHanhKhach;
+        private TextBox txtMaHanhKhach;
         private Button btn_LuuVe;
         private Button btn_TaoMoi;
         private Button btn_ThoatBanVe;
+        private Button btn_MaHanhKhach;
+        private ComboBox cbMaChuyenBay;
+        private Button btn_HangVe;
+        private ComboBox cbHangVe;
+        private TextBox txtTenHangVe;
     }
 }

@@ -31,36 +31,36 @@
             btn_ThoatDatCho = new Button();
             btn_TaoPhieuMoi = new Button();
             btn_LuuCho = new Button();
-            textBox7 = new TextBox();
-            textBox8 = new TextBox();
-            textBox9 = new TextBox();
-            textBox10 = new TextBox();
-            textBox11 = new TextBox();
-            textBox6 = new TextBox();
-            textBox5 = new TextBox();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            tb_MaChuyenBay = new TextBox();
+            txtDienThoai = new TextBox();
+            txtID = new TextBox();
+            txtTenHanhKhach = new TextBox();
+            txtMaHanhKhach = new TextBox();
+            txtGiaTien = new TextBox();
+            txtTinhTrangVe = new TextBox();
+            txtNgayGio = new TextBox();
+            txtSanBayDen = new TextBox();
+            txtSanBayDi = new TextBox();
             label12 = new Label();
             label11 = new Label();
             label10 = new Label();
             label9 = new Label();
             label8 = new Label();
-            label7 = new Label();
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
-            textBox12 = new TextBox();
             label13 = new Label();
+            cbMaChuyenBay = new ComboBox();
+            btn_MaHanhKhach = new Button();
+            cbHangVe = new ComboBox();
+            dtpNgayDat = new DateTimePicker();
             SuspendLayout();
             // 
             // btn_ThoatDatCho
             // 
-            btn_ThoatDatCho.Location = new Point(394, 265);
+            btn_ThoatDatCho.Location = new Point(432, 265);
             btn_ThoatDatCho.Name = "btn_ThoatDatCho";
             btn_ThoatDatCho.Size = new Size(75, 23);
             btn_ThoatDatCho.TabIndex = 51;
@@ -69,98 +69,86 @@
             // 
             // btn_TaoPhieuMoi
             // 
-            btn_TaoPhieuMoi.Location = new Point(239, 265);
+            btn_TaoPhieuMoi.Location = new Point(306, 265);
             btn_TaoPhieuMoi.Name = "btn_TaoPhieuMoi";
             btn_TaoPhieuMoi.Size = new Size(75, 23);
             btn_TaoPhieuMoi.TabIndex = 50;
             btn_TaoPhieuMoi.Text = "Tạo Mới";
             btn_TaoPhieuMoi.UseVisualStyleBackColor = true;
+            btn_TaoPhieuMoi.Click += btn_TaoPhieuMoi_Click;
             // 
             // btn_LuuCho
             // 
-            btn_LuuCho.Location = new Point(71, 265);
+            btn_LuuCho.Location = new Point(175, 265);
             btn_LuuCho.Name = "btn_LuuCho";
             btn_LuuCho.Size = new Size(75, 23);
             btn_LuuCho.TabIndex = 49;
             btn_LuuCho.Text = "Lưu";
             btn_LuuCho.UseVisualStyleBackColor = true;
+            btn_LuuCho.Click += btn_LuuCho_Click;
             // 
-            // textBox7
+            // txtDienThoai
             // 
-            textBox7.Location = new Point(378, 177);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(129, 23);
-            textBox7.TabIndex = 48;
+            txtDienThoai.Location = new Point(378, 149);
+            txtDienThoai.Name = "txtDienThoai";
+            txtDienThoai.Size = new Size(129, 23);
+            txtDienThoai.TabIndex = 47;
             // 
-            // textBox8
+            // txtID
             // 
-            textBox8.Location = new Point(378, 149);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(129, 23);
-            textBox8.TabIndex = 47;
+            txtID.Location = new Point(378, 117);
+            txtID.Name = "txtID";
+            txtID.Size = new Size(129, 23);
+            txtID.TabIndex = 46;
             // 
-            // textBox9
+            // txtTenHanhKhach
             // 
-            textBox9.Location = new Point(378, 117);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(129, 23);
-            textBox9.TabIndex = 46;
+            txtTenHanhKhach.Location = new Point(378, 88);
+            txtTenHanhKhach.Name = "txtTenHanhKhach";
+            txtTenHanhKhach.Size = new Size(129, 23);
+            txtTenHanhKhach.TabIndex = 45;
             // 
-            // textBox10
+            // txtMaHanhKhach
             // 
-            textBox10.Location = new Point(378, 88);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(129, 23);
-            textBox10.TabIndex = 45;
+            txtMaHanhKhach.Location = new Point(378, 59);
+            txtMaHanhKhach.Name = "txtMaHanhKhach";
+            txtMaHanhKhach.Size = new Size(129, 23);
+            txtMaHanhKhach.TabIndex = 44;
             // 
-            // textBox11
+            // txtGiaTien
             // 
-            textBox11.Location = new Point(378, 59);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(129, 23);
-            textBox11.TabIndex = 44;
+            txtGiaTien.Location = new Point(133, 208);
+            txtGiaTien.Name = "txtGiaTien";
+            txtGiaTien.Size = new Size(129, 23);
+            txtGiaTien.TabIndex = 43;
             // 
-            // textBox6
+            // txtTinhTrangVe
             // 
-            textBox6.Location = new Point(133, 208);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(129, 23);
-            textBox6.TabIndex = 43;
+            txtTinhTrangVe.Location = new Point(133, 177);
+            txtTinhTrangVe.Name = "txtTinhTrangVe";
+            txtTinhTrangVe.Size = new Size(129, 23);
+            txtTinhTrangVe.TabIndex = 42;
             // 
-            // textBox5
+            // txtNgayGio
             // 
-            textBox5.Location = new Point(133, 177);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(129, 23);
-            textBox5.TabIndex = 42;
+            txtNgayGio.Location = new Point(133, 149);
+            txtNgayGio.Name = "txtNgayGio";
+            txtNgayGio.Size = new Size(129, 23);
+            txtNgayGio.TabIndex = 41;
             // 
-            // textBox4
+            // txtSanBayDen
             // 
-            textBox4.Location = new Point(133, 149);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(129, 23);
-            textBox4.TabIndex = 41;
+            txtSanBayDen.Location = new Point(133, 117);
+            txtSanBayDen.Name = "txtSanBayDen";
+            txtSanBayDen.Size = new Size(129, 23);
+            txtSanBayDen.TabIndex = 40;
             // 
-            // textBox3
+            // txtSanBayDi
             // 
-            textBox3.Location = new Point(133, 117);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(129, 23);
-            textBox3.TabIndex = 40;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(133, 88);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(129, 23);
-            textBox2.TabIndex = 39;
-            // 
-            // tb_MaChuyenBay
-            // 
-            tb_MaChuyenBay.Location = new Point(133, 59);
-            tb_MaChuyenBay.Name = "tb_MaChuyenBay";
-            tb_MaChuyenBay.Size = new Size(129, 23);
-            tb_MaChuyenBay.TabIndex = 38;
+            txtSanBayDi.Location = new Point(133, 88);
+            txtSanBayDi.Name = "txtSanBayDi";
+            txtSanBayDi.Size = new Size(129, 23);
+            txtSanBayDi.TabIndex = 39;
             // 
             // label12
             // 
@@ -206,15 +194,6 @@
             label8.Size = new Size(93, 15);
             label8.TabIndex = 33;
             label8.Text = "Tên Hành Khách";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(268, 62);
-            label7.Name = "label7";
-            label7.Size = new Size(92, 15);
-            label7.TabIndex = 32;
-            label7.Text = "Mã Hành Khách";
             // 
             // label6
             // 
@@ -270,13 +249,6 @@
             label1.TabIndex = 26;
             label1.Text = "Thông Tin Đặt Chỗ";
             // 
-            // textBox12
-            // 
-            textBox12.Location = new Point(378, 211);
-            textBox12.Name = "textBox12";
-            textBox12.Size = new Size(129, 23);
-            textBox12.TabIndex = 53;
-            // 
             // label13
             // 
             label13.AutoSize = true;
@@ -286,33 +258,66 @@
             label13.TabIndex = 52;
             label13.Text = "Ngày đặt";
             // 
+            // cbMaChuyenBay
+            // 
+            cbMaChuyenBay.FormattingEnabled = true;
+            cbMaChuyenBay.Location = new Point(133, 59);
+            cbMaChuyenBay.Name = "cbMaChuyenBay";
+            cbMaChuyenBay.Size = new Size(129, 23);
+            cbMaChuyenBay.TabIndex = 54;
+            // 
+            // btn_MaHanhKhach
+            // 
+            btn_MaHanhKhach.Location = new Point(268, 58);
+            btn_MaHanhKhach.Name = "btn_MaHanhKhach";
+            btn_MaHanhKhach.Size = new Size(104, 23);
+            btn_MaHanhKhach.TabIndex = 55;
+            btn_MaHanhKhach.Text = "Mã Hành Khách";
+            btn_MaHanhKhach.UseVisualStyleBackColor = true;
+            // 
+            // cbHangVe
+            // 
+            cbHangVe.FormattingEnabled = true;
+            cbHangVe.Location = new Point(378, 178);
+            cbHangVe.Name = "cbHangVe";
+            cbHangVe.Size = new Size(129, 23);
+            cbHangVe.TabIndex = 56;
+            // 
+            // dtpNgayDat
+            // 
+            dtpNgayDat.Location = new Point(339, 208);
+            dtpNgayDat.Margin = new Padding(2);
+            dtpNgayDat.Name = "dtpNgayDat";
+            dtpNgayDat.Size = new Size(200, 23);
+            dtpNgayDat.TabIndex = 57;
+            // 
             // MH_DatCho
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(551, 326);
-            Controls.Add(textBox12);
+            Controls.Add(dtpNgayDat);
+            Controls.Add(cbHangVe);
+            Controls.Add(btn_MaHanhKhach);
+            Controls.Add(cbMaChuyenBay);
             Controls.Add(label13);
             Controls.Add(btn_ThoatDatCho);
             Controls.Add(btn_TaoPhieuMoi);
             Controls.Add(btn_LuuCho);
-            Controls.Add(textBox7);
-            Controls.Add(textBox8);
-            Controls.Add(textBox9);
-            Controls.Add(textBox10);
-            Controls.Add(textBox11);
-            Controls.Add(textBox6);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(tb_MaChuyenBay);
+            Controls.Add(txtDienThoai);
+            Controls.Add(txtID);
+            Controls.Add(txtTenHanhKhach);
+            Controls.Add(txtMaHanhKhach);
+            Controls.Add(txtGiaTien);
+            Controls.Add(txtTinhTrangVe);
+            Controls.Add(txtNgayGio);
+            Controls.Add(txtSanBayDen);
+            Controls.Add(txtSanBayDi);
             Controls.Add(label12);
             Controls.Add(label11);
             Controls.Add(label10);
             Controls.Add(label9);
             Controls.Add(label8);
-            Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -320,7 +325,8 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "MH_DatCho";
-            Text = "MH_DatCho";
+            Text = "Phiếu Đặt Chỗ";
+            Load += MH_DatCho_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -330,30 +336,30 @@
         private Button btn_ThoatDatCho;
         private Button btn_TaoPhieuMoi;
         private Button btn_LuuCho;
-        private TextBox textBox7;
-        private TextBox textBox8;
-        private TextBox textBox9;
-        private TextBox textBox10;
-        private TextBox textBox11;
-        private TextBox textBox6;
-        private TextBox textBox5;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox tb_MaChuyenBay;
+        private TextBox txtDienThoai;
+        private TextBox txtID;
+        private TextBox txtTenHanhKhach;
+        private TextBox txtMaHanhKhach;
+        private TextBox txtGiaTien;
+        private TextBox txtTinhTrangVe;
+        private TextBox txtNgayGio;
+        private TextBox txtSanBayDen;
+        private TextBox txtSanBayDi;
         private Label label12;
         private Label label11;
         private Label label10;
         private Label label9;
         private Label label8;
-        private Label label7;
         private Label label6;
         private Label label5;
         private Label label4;
         private Label label3;
         private Label label2;
         private Label label1;
-        private TextBox textBox12;
         private Label label13;
+        private ComboBox cbMaChuyenBay;
+        private Button btn_MaHanhKhach;
+        private ComboBox cbHangVe;
+        private DateTimePicker dtpNgayDat;
     }
 }

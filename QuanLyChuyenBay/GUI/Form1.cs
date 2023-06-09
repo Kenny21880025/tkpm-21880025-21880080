@@ -59,6 +59,19 @@ namespace QuanLyChuyenBay
 
         }
 
+        private void QD1_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void QD2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void QD3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

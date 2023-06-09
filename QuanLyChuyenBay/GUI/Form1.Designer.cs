@@ -35,7 +35,11 @@
             menuStrip1 = new MenuStrip();
             doanhThuThang = new ToolStripMenuItem();
             doanhThuNam = new ToolStripMenuItem();
+            QD1 = new ToolStripMenuItem();
+            QD2 = new ToolStripMenuItem();
+            QD3 = new ToolStripMenuItem();
             grvLichBay = new DataGridView();
+            label1 = new Label();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)grvLichBay).BeginInit();
             SuspendLayout();
@@ -82,7 +86,7 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { doanhThuThang, doanhThuNam });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { doanhThuThang, doanhThuNam, QD1, QD2, QD3 });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(800, 24);
@@ -103,6 +107,27 @@
             doanhThuNam.Text = "Báo Cáo Doanh Thu Năm";
             doanhThuNam.Click += doanhThuNam_Click;
             // 
+            // QD1
+            // 
+            QD1.Name = "QD1";
+            QD1.Size = new Size(78, 20);
+            QD1.Text = "Quy Định 1";
+            QD1.Click += QD1_Click;
+            // 
+            // QD2
+            // 
+            QD2.Name = "QD2";
+            QD2.Size = new Size(78, 20);
+            QD2.Text = "Quy Định 2";
+            QD2.Click += QD2_Click;
+            // 
+            // QD3
+            // 
+            QD3.Name = "QD3";
+            QD3.Size = new Size(78, 20);
+            QD3.Text = "Quy Định 3";
+            QD3.Click += QD3_Click;
+            // 
             // grvLichBay
             // 
             grvLichBay.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -113,11 +138,22 @@
             grvLichBay.TabIndex = 5;
             grvLichBay.CellContentClick += grvLichBay_CellContentClick;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Yellow;
+            label1.Location = new Point(49, 24);
+            label1.Name = "label1";
+            label1.Size = new Size(385, 15);
+            label1.TabIndex = 6;
+            label1.Text = "SVTH: Trần Quốc Dũng - 21880025 và Trần Phan Quang Minh - 21880080";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label1);
             Controls.Add(grvLichBay);
             Controls.Add(btn_TraCuu);
             Controls.Add(btn_DatCho);
@@ -144,5 +180,9 @@
         private ToolStripMenuItem doanhThuThang;
         private ToolStripMenuItem doanhThuNam;
         private DataGridView grvLichBay;
+        private Label label1;
+        private ToolStripMenuItem QD1;
+        private ToolStripMenuItem QD2;
+        private ToolStripMenuItem QD3;
     }
 }

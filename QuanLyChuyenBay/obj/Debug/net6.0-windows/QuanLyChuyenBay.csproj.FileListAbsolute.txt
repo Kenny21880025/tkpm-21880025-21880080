@@ -29,3 +29,7 @@ D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\bin\Debug\net6.0-windows\runtim
 D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\QuanLyChuyenBay.csproj.CopyComplete
+D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\QuanLyChuyenBay.GUI.MH_ThemSanBay.resources
+D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\QuanLyChuyenBay.GUI.MH_ThemTuyenBay.resources
+D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\QuanLyChuyenBay.GUI.MH_ThemHanhKhach.resources
+D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\QuanLyChuyenBay.GUI.MH_ThemHangVe.resources

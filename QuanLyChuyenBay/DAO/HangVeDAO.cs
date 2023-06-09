@@ -19,10 +19,10 @@ namespace QuanLyChuyenBay.DAO
             string sql = "SELECT MaHangVe as [Mã Hạng Vé], TenHangVe as [Tên Hạng Vé] FROM HangVe";
             return LayDuLieu(sql);            
         }
-        public DataTable LayTenHangVe(string mhv)
+        public string LayTenHangVe(string mhv)
         {
             string sql = string.Format("select TenHangVe from HangVe where MaHangVe = '{0}'", mhv);
-            return LayDuLieu(sql);
+            return LayTen(sql);
         }
         public int ThemHangVe(HangVe hv)
         {

@@ -19,9 +19,9 @@ namespace QuanLyChuyenBay.BUS
         {
             return cbDb.ThemCTChuyenBay(ctcb);
         }
-        public DataTable LayTDChiTietChuyenBay(ChiTietChuyenBay ctcb)
+        public DataTable LayTDChiTietChuyenBay()
         {
-            return cbDb.LayTDChiTietChuyenBay(ctcb);
+            return cbDb.LayTDChiTietChuyenBay();
         }
     }
 }

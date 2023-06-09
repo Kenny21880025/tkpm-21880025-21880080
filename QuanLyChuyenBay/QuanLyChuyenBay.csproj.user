@@ -16,6 +16,18 @@
     <Compile Update="GUI\MH_NhanLich.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GUI\MH_ThemHangVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\MH_ThemHanhKhach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\MH_ThemSanBay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\MH_ThemTuyenBay.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GUI\MH_TraCuu.cs">
       <SubType>Form</SubType>
     </Compile>

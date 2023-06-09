@@ -19,6 +19,5 @@ namespace QuanLyChuyenBay.DAO
             string sql = string.Format("SELECT DonGia FROM DonGia WHERE MaTuyenBay = '{0}' AND MaHangVe = '{1}'", MaTuyenBay, MaHangVe);
             return ThucThi(sql);
         }
-
     }
 }

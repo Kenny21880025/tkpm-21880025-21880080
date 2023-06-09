@@ -53,10 +53,9 @@ namespace QuanLyChuyenBay.DAO
             DataTable ds = LayDuLieu(sql);
             return ds;
         }
-
         public int ThemTuyenBay(string MaTuyenBay, string SanBayDi, string SanBayDen)
         {
-            string sql = string.Format("Insert into TuyenBay(MaTuyenBay,SanBayDi, SanBayDen) values ('{0}', '{1}')", SanBayDi, SanBayDen);
+            string sql = string.Format("Insert into TuyenBay(MaTuyenBay,SanBayDi, SanBayDen) values ('{0}', '{1}'), '{2}'), MaTuyenBay, SanBayDi, SanBayDen");
             return ThucThi(sql);
         }
 

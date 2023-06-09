@@ -28,28 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
+            grvChuyenBay = new DataGridView();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
-            comboBox1 = new ComboBox();
+            cbSanBayDi = new ComboBox();
             label1 = new Label();
-            comboBox2 = new ComboBox();
-            comboBox3 = new ComboBox();
-            comboBox4 = new ComboBox();
+            cbSanBayDen = new ComboBox();
             label5 = new Label();
             label6 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            dtpTu = new DateTimePicker();
+            dtpDen = new DateTimePicker();
+            btn_Tim = new Button();
+            btn_Thoat = new Button();
+            lbTenSBDen = new Label();
+            lbTenSBDi = new Label();
+            ((System.ComponentModel.ISupportInitialize)grvChuyenBay).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // grvChuyenBay
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 211);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(670, 119);
-            dataGridView1.TabIndex = 0;
+            grvChuyenBay.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            grvChuyenBay.Location = new Point(12, 240);
+            grvChuyenBay.Name = "grvChuyenBay";
+            grvChuyenBay.RowTemplate.Height = 25;
+            grvChuyenBay.Size = new Size(670, 166);
+            grvChuyenBay.TabIndex = 0;
+            grvChuyenBay.CellContentClick += grvChuyenBay_CellContentClick;
             // 
             // label2
             // 
@@ -78,13 +83,13 @@
             label4.TabIndex = 4;
             label4.Text = "Ngày Khởi Hành";
             // 
-            // comboBox1
+            // cbSanBayDi
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(178, 68);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(211, 23);
-            comboBox1.TabIndex = 6;
+            cbSanBayDi.FormattingEnabled = true;
+            cbSanBayDi.Location = new Point(178, 68);
+            cbSanBayDi.Name = "cbSanBayDi";
+            cbSanBayDi.Size = new Size(211, 23);
+            cbSanBayDi.TabIndex = 6;
             // 
             // label1
             // 
@@ -94,31 +99,14 @@
             label1.Size = new Size(129, 15);
             label1.TabIndex = 7;
             label1.Text = "TRA CỨU CHUYẾN BAY";
-            label1.Click += label1_Click_2;
             // 
-            // comboBox2
+            // cbSanBayDen
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(178, 99);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(211, 23);
-            comboBox2.TabIndex = 8;
-            // 
-            // comboBox3
-            // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(178, 146);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(211, 23);
-            comboBox3.TabIndex = 9;
-            // 
-            // comboBox4
-            // 
-            comboBox4.FormattingEnabled = true;
-            comboBox4.Location = new Point(459, 146);
-            comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(211, 23);
-            comboBox4.TabIndex = 10;
+            cbSanBayDen.FormattingEnabled = true;
+            cbSanBayDen.Location = new Point(178, 99);
+            cbSanBayDen.Name = "cbSanBayDen";
+            cbSanBayDen.Size = new Size(211, 23);
+            cbSanBayDen.TabIndex = 8;
             // 
             // label5
             // 
@@ -138,42 +126,94 @@
             label6.TabIndex = 12;
             label6.Text = "Đến";
             // 
+            // dtpTu
+            // 
+            dtpTu.Location = new Point(178, 143);
+            dtpTu.Name = "dtpTu";
+            dtpTu.Size = new Size(200, 23);
+            dtpTu.TabIndex = 13;
+            // 
+            // dtpDen
+            // 
+            dtpDen.Location = new Point(455, 143);
+            dtpDen.Name = "dtpDen";
+            dtpDen.Size = new Size(200, 23);
+            dtpDen.TabIndex = 14;
+            // 
+            // btn_Tim
+            // 
+            btn_Tim.Location = new Point(50, 192);
+            btn_Tim.Name = "btn_Tim";
+            btn_Tim.Size = new Size(75, 23);
+            btn_Tim.TabIndex = 15;
+            btn_Tim.Text = "Tìm ";
+            btn_Tim.UseVisualStyleBackColor = true;
+            // 
+            // btn_Thoat
+            // 
+            btn_Thoat.Location = new Point(178, 192);
+            btn_Thoat.Name = "btn_Thoat";
+            btn_Thoat.Size = new Size(75, 23);
+            btn_Thoat.TabIndex = 16;
+            btn_Thoat.Text = "Thoát";
+            btn_Thoat.UseVisualStyleBackColor = true;
+            // 
+            // lbTenSBDen
+            // 
+            lbTenSBDen.Location = new Point(0, 0);
+            lbTenSBDen.Name = "lbTenSBDen";
+            lbTenSBDen.Size = new Size(100, 23);
+            lbTenSBDen.TabIndex = 0;
+            // 
+            // lbTenSBDi
+            // 
+            lbTenSBDi.Location = new Point(0, 0);
+            lbTenSBDi.Name = "lbTenSBDi";
+            lbTenSBDi.Size = new Size(100, 23);
+            lbTenSBDi.TabIndex = 0;
+            // 
             // MH_TraCuu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(694, 342);
+            ClientSize = new Size(694, 418);
+            Controls.Add(btn_Thoat);
+            Controls.Add(btn_Tim);
+            Controls.Add(dtpDen);
+            Controls.Add(dtpTu);
             Controls.Add(label6);
             Controls.Add(label5);
-            Controls.Add(comboBox4);
-            Controls.Add(comboBox3);
-            Controls.Add(comboBox2);
+            Controls.Add(cbSanBayDen);
             Controls.Add(label1);
-            Controls.Add(comboBox1);
+            Controls.Add(cbSanBayDi);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(dataGridView1);
+            Controls.Add(grvChuyenBay);
             Name = "MH_TraCuu";
             Text = "Tra Cứu Chuyến Bay";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += MH_TraCuu_Load;
+            ((System.ComponentModel.ISupportInitialize)grvChuyenBay).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private DataGridView grvChuyenBay;
         private Label label1;
         private Label label2;
         private Label label3;
         private Label label4;
         private Label label5;
         private Label label6;
-        private ComboBox comboBox1;        
-        private ComboBox comboBox2;
-        private ComboBox comboBox3;
-        private ComboBox comboBox4;
-       
+        private ComboBox cbSanBayDi;
+        private ComboBox cbSanBayDen;
+        private DateTimePicker dtpTu;
+        private DateTimePicker dtpDen;
+        private Button btn_Tim;
+        private Button btn_Thoat;
+        private Label lbTenSBDi;
+        private Label lbTenSBDen;
     }
 }
