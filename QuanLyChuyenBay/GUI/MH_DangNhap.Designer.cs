@@ -87,6 +87,7 @@
             btnDangNhap.TabIndex = 5;
             btnDangNhap.Text = "Đăng Nhập";
             btnDangNhap.UseVisualStyleBackColor = true;
+            btnDangNhap.Click += btnDangNhap_Click;
             // 
             // btnThoat
             // 
@@ -96,6 +97,7 @@
             btnThoat.TabIndex = 6;
             btnThoat.Text = "Thoát";
             btnThoat.UseVisualStyleBackColor = true;
+            btnThoat.Click += btnThoat_Click;
             // 
             // label4
             // 
@@ -121,6 +123,7 @@
             Controls.Add(label1);
             Name = "MH_DangNhap";
             Text = "Đăng Nhập";
+            Load += MH_DangNhap_Load;
             ResumeLayout(false);
             PerformLayout();
         }

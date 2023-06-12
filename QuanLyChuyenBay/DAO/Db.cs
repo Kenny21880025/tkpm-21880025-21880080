@@ -62,6 +62,24 @@ namespace QuanLyChuyenBay.DAO
             }
             return so;
         }
+        protected DataTable LayDanhSachXacThuc(string sql, Dictionary<string, object> parameters)
+        {
+            SqlConnection ket_noi = new SqlConnection(duong_dan);
+            SqlDataAdapter bo_chuyen_doi = new SqlDataAdapter(sql, ket_noi);
+
+            if (parameters != null)
+            {
+                foreach (var parameter in parameters)
+                {
+                    bo_chuyen_doi.SelectCommand.Parameters.AddWithValue(parameter.Key, parameter.Value);
+                }
+            }
+
+            DataTable bang = new DataTable();
+            bo_chuyen_doi.Fill(bang);
+            return bang;
+        }
+
     }
 
 }

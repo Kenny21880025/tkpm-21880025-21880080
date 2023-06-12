@@ -39,8 +39,8 @@ namespace QuanLyChuyenBay
             ChiTietChuyenBayBUS ctcbBus = new ChiTietChuyenBayBUS();
             dsCTChuyenBay = ctcbBus.LayTDChiTietChuyenBay();
             grvSanBayTrungGian.DataSource = dsCTChuyenBay;
-            this.lbTenSBDen.Text = "";
-            this.lbTenSBDi.Text = "";
+            lbTenSBDen.Text = "";
+            lbTenSBDi.Text = "";
         }
         private void cbSanBayDi_LostFocus(object sender, EventArgs e)
         {
