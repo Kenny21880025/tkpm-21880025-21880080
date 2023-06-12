@@ -38,10 +38,9 @@
             QD1 = new ToolStripMenuItem();
             QD2 = new ToolStripMenuItem();
             QD3 = new ToolStripMenuItem();
+            đăngKýToolStripMenuItem = new ToolStripMenuItem();
             grvLichBay = new DataGridView();
             label1 = new Label();
-            đăngNhậpToolStripMenuItem = new ToolStripMenuItem();
-            đăngKýToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)grvLichBay).BeginInit();
             SuspendLayout();
@@ -88,7 +87,7 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { doanhThuThang, doanhThuNam, QD1, QD2, QD3, đăngNhậpToolStripMenuItem, đăngKýToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { doanhThuThang, doanhThuNam, QD1, QD2, QD3, đăngKýToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(800, 24);
@@ -130,6 +129,12 @@
             QD3.Text = "Quy Định 3";
             QD3.Click += QD3_Click;
             // 
+            // đăngKýToolStripMenuItem
+            // 
+            đăngKýToolStripMenuItem.Name = "đăngKýToolStripMenuItem";
+            đăngKýToolStripMenuItem.Size = new Size(49, 20);
+            đăngKýToolStripMenuItem.Text = "Thoát";
+            // 
             // grvLichBay
             // 
             grvLichBay.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -149,18 +154,6 @@
             label1.Size = new Size(385, 15);
             label1.TabIndex = 6;
             label1.Text = "SVTH: Trần Quốc Dũng - 21880025 và Trần Phan Quang Minh - 21880080";
-            // 
-            // đăngNhậpToolStripMenuItem
-            // 
-            đăngNhậpToolStripMenuItem.Name = "đăngNhậpToolStripMenuItem";
-            đăngNhậpToolStripMenuItem.Size = new Size(79, 20);
-            đăngNhậpToolStripMenuItem.Text = "Đăng Nhập";
-            // 
-            // đăngKýToolStripMenuItem
-            // 
-            đăngKýToolStripMenuItem.Name = "đăngKýToolStripMenuItem";
-            đăngKýToolStripMenuItem.Size = new Size(62, 20);
-            đăngKýToolStripMenuItem.Text = "Đăng Ký";
             // 
             // Form1
             // 
@@ -198,7 +191,6 @@
         private ToolStripMenuItem QD1;
         private ToolStripMenuItem QD2;
         private ToolStripMenuItem QD3;
-        private ToolStripMenuItem đăngNhậpToolStripMenuItem;
         private ToolStripMenuItem đăngKýToolStripMenuItem;
     }
 }

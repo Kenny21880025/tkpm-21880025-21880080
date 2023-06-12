@@ -1,4 +1,4 @@
-using QuanLyChuyenBay.BUS;
+﻿using QuanLyChuyenBay.BUS;
 using QuanLyChuyenBay.DAO;
 using QuanLyChuyenBay.GUI;
 
@@ -7,17 +7,19 @@ namespace QuanLyChuyenBay
     public partial class Form1 : Form
     {
         ChuyenBayBUS cbDb = new ChuyenBayBUS();
+        bool isOK = false;// Biến flag đăng nhập
         public Form1()
         {
-            InitializeComponent();
+            InitializeComponent();           
         }
-
+        
         private void btn_NhanLich_Click(object sender, EventArgs e)
         {
             LayDuLieu();
             MH_NhanLich mhnl = new MH_NhanLich();
             mhnl.Show();
         }
+
         private void LayDuLieu()
         {
             var bang = cbDb.LayDanhSach();

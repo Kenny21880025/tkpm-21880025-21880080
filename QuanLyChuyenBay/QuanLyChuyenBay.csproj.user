@@ -10,6 +10,9 @@
     <Compile Update="GUI\MH_BaoCaoThang.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GUI\MH_DangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GUI\MH_DatCho.cs">
       <SubType>Form</SubType>
     </Compile>

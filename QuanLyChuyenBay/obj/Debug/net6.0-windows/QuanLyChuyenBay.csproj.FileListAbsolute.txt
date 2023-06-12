@@ -36,3 +36,4 @@ D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\QuanLy
 D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\QuanLyChuyenBay.GUI.MH_QD1.resources
 D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\QuanLyChuyenBay.GUI.MH_QD2.resources
 D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\QuanLyChuyenBay.GUI.MH_QD3.resources
+D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\QuanLyChuyenBay.GUI.MH_DangNhap.resources

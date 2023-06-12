@@ -15,7 +15,7 @@ namespace QuanLyChuyenBay
         public int SoVe { get; set; }
         public float TyLe { get; set; }
         public float DoanhThu { get; set; }
-        public byte[] timestamp { get; set; }
+        //public byte[] timestamp { get; set; }
 
     }
 }
