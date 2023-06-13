@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Github\\tkpm-21880025-21880080\\QuanLyChuyenBay\\QuanLyChuyenBay.csproj": {}
+    "D:\\DATA VISUAL STUDIO\\source\\tkpm-21880025-21880080-main\\QuanLyChuyenBay\\QuanLyChuyenBay.csproj": {}
   },
   "projects": {
-    "D:\\Github\\tkpm-21880025-21880080\\QuanLyChuyenBay\\QuanLyChuyenBay.csproj": {
+    "D:\\DATA VISUAL STUDIO\\source\\tkpm-21880025-21880080-main\\QuanLyChuyenBay\\QuanLyChuyenBay.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Github\\tkpm-21880025-21880080\\QuanLyChuyenBay\\QuanLyChuyenBay.csproj",
+        "projectUniqueName": "D:\\DATA VISUAL STUDIO\\source\\tkpm-21880025-21880080-main\\QuanLyChuyenBay\\QuanLyChuyenBay.csproj",
         "projectName": "QuanLyChuyenBay",
-        "projectPath": "D:\\Github\\tkpm-21880025-21880080\\QuanLyChuyenBay\\QuanLyChuyenBay.csproj",
-        "packagesPath": "C:\\Users\\dung2\\.nuget\\packages\\",
-        "outputPath": "D:\\Github\\tkpm-21880025-21880080\\QuanLyChuyenBay\\obj\\",
+        "projectPath": "D:\\DATA VISUAL STUDIO\\source\\tkpm-21880025-21880080-main\\QuanLyChuyenBay\\QuanLyChuyenBay.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\DATA VISUAL STUDIO\\source\\tkpm-21880025-21880080-main\\QuanLyChuyenBay\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\dung2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0-windows"
+          "net6.0-windows7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -51,8 +51,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -64,7 +63,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

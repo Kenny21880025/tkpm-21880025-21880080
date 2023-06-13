@@ -45,13 +45,13 @@ namespace QuanLyChuyenBay
             }
             double gia = 0;
             gia = dgBus.LayDonGia(matuyenbay, cbHangVe.Text);
-            dg = null;
+            dg = new DonGia();
             vcb.MaChuyenBay = cbMaChuyenBay.Text;
             vcb.MaHangVe = cbHangVe.Text;
             vcb.MaHanhKhach = txtMaHanhKhach.Text;
             vcb.GiaTien = gia;
             vcbBus.ThemVeChuyenBay(vcb);
-            vcb = null;
+            vcb = new VeChuyenBay();
             // Update seat status            
             ttvBus.CapNhatTinhTrangVe(cbMaChuyenBay.Text, true);
         }
@@ -140,7 +140,7 @@ namespace QuanLyChuyenBay
             }
             DataTable ds = new DataTable();
             ds = hkBus.LayHanhKhachTuMa(txtMaHanhKhach.Text);
-            hk = null;
+            hk = new HanhKhach();
 
             if (ds.Rows.Count == 0)
             {
@@ -167,7 +167,7 @@ namespace QuanLyChuyenBay
                 return;
             }
             txtTenHangVe.Text = hvBus.LayTenHangVe(cbHangVe.Text);
-            hv = null;
+            hv = new HangVe();
 
             if (cbMaChuyenBay.Text == "" || cbHangVe.Text == "")
             {
@@ -176,7 +176,7 @@ namespace QuanLyChuyenBay
             }
             double gia = 0;
             gia = dgBus.LayDonGia(matuyenbay, cbHangVe.Text);
-            dg = null;
+            dg = new DonGia();
             txtGiaTien.Text = gia.ToString();
         }
         private void btn_HangVe_Click(object sender, EventArgs e)
@@ -185,7 +185,7 @@ namespace QuanLyChuyenBay
             mhthv.ShowDialog();
             DataTable ds = new DataTable();
             ds = cbBus.LayMaCBSauNgay(DateTime.Now);
-            cb = null;
+            cb = new ChuyenBay();
             cbMaChuyenBay.DataSource = ds;
             cbMaChuyenBay.DisplayMember = "MaChuyenBay";
         }

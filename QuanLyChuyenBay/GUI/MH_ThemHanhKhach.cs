@@ -32,7 +32,7 @@ namespace QuanLyChuyenBay.GUI
             hk.CMND = txtID.Text;
             hk.DienThoai = txtDienThoai.Text;
             hkBus.ThemHanhKhach(hk);
-            hkBus = null;
+            hk = new HanhKhach();
         }
 
         private void btn_Thoat_Click(object sender, EventArgs e)
@@ -41,7 +41,7 @@ namespace QuanLyChuyenBay.GUI
         }
         private void txtMaHanhKhach_LostFocus(object sender, EventArgs e)
         {
-            hk = null;
+            hk = new HanhKhach();
         }
     }
 }

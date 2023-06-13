@@ -79,5 +79,10 @@ namespace QuanLyChuyenBay
             MH_QD3 mhqd3 = new MH_QD3();
             mhqd3.Show();
         }
+
+        private void btn_NhanLich_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

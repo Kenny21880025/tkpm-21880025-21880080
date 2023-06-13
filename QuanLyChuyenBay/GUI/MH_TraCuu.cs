@@ -27,13 +27,13 @@ namespace QuanLyChuyenBay
         {
             // Đưa các giá trị vào cbSanBayDi
             DataTable dsSanBayDi = sbBus.LayDSSanBay();
-            sb = null;
+            sb = new SanBay();
 
             cbSanBayDi.DataSource = dsSanBayDi;
             cbSanBayDi.DisplayMember = "MaSanBay";
             cbSanBayDi.Text = dsSanBayDi.Rows[0][0].ToString();
             DataTable ds = cbBus.LayTDTraCuu(true);
-            cb = null;
+            cb = new ChuyenBay();
             grvChuyenBay.DataSource = ds;
         }
         private void cbSanBayDi_LostFocus(object sender, EventArgs e)
@@ -42,7 +42,7 @@ namespace QuanLyChuyenBay
             cbSanBayDen.DataSource = dsSanBayDen;
             cbSanBayDen.DisplayMember = "SanBayDen";
             lbTenSBDen.Text = sbBus.LayTenSanBay(cbSanBayDen.Text);
-            sb = null;
+            sb = new SanBay();
         }
 
         private void cbSanBayDi_SelectedIndexChanged(object sender, EventArgs e)
@@ -53,12 +53,12 @@ namespace QuanLyChuyenBay
             cbSanBayDen.DisplayMember = "SanBayDen";
             lbTenSBDen.Text = sbBus.LayTenSanBay(cbSanBayDen.Text);
             lbTenSBDi.Text = sbBus.LayTenSanBay(cbSanBayDi.Text);
-            sb = null;
+            sb = new SanBay();
         }
         private void cbSanBayDen_SelectedIndexChanged(object sender, EventArgs e)
         {
             lbTenSBDen.Text = sbBus.LayTenSanBay(cbSanBayDen.Text);
-            sb = null;
+            sb = new SanBay();
         }
 
         private void btn_Thoat_Click(object sender, EventArgs e)
@@ -70,7 +70,7 @@ namespace QuanLyChuyenBay
         {
             DataTable dscb;
             dscb = cbBus.TimChuyenBay(cbSanBayDi.Text, cbSanBayDen.Text, dtpTu.Value, dtpDen.Value);
-            cb = null;
+            cb = new ChuyenBay();
             grvChuyenBay.DataSource = dscb;
         }
         private void grvChuyenBay_CellContentClick(object sender, DataGridViewCellEventArgs e)
