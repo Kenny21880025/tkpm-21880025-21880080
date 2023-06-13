@@ -1,4 +1,6 @@
-﻿using QuanLyChuyenBay.GUI;
+﻿using System;
+using System.Windows.Forms;
+using QuanLyChuyenBay.GUI;
 
 namespace QuanLyChuyenBay
 {
@@ -12,24 +14,23 @@ namespace QuanLyChuyenBay
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            DialogResult ket_qua = DialogResult.Cancel;
 
-            DialogResult ket_qua = DialogResult.Cancel; // Khởi tạo giá trị mặc định cho biến ket_qua
-
-            // Hiển thị form đăng nhập trước khi hiển thị form chính
+            // Khởi tạo và hiển thị form đăng nhập
             MH_DangNhap mhdn = new MH_DangNhap();
             ket_qua = mhdn.ShowDialog();
 
             // Kiểm tra kết quả đăng nhập
             if (ket_qua == DialogResult.OK)
             {
-                // Người dùng đăng nhập thành công, hiển thị form chính
-                Application.Run(new Form1());
+                // Lấy tên đăng nhập từ MH_DangNhap
+                string tenDangNhap = mhdn.TenDangNhap;
+                Application.Run(new Form1 { TenDangNhap = tenDangNhap });
             }
             else
             {
-                // Người dùng không đăng nhập thành công, hiển thị thông báo và không khởi chạy ứng dụng
-                MessageBox.Show("Đăng nhập không thành công.");
-            }
+                MessageBox.Show("Thất bại");
+            }    
         }
     }
 }

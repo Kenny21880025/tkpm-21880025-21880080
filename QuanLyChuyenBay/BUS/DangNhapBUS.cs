@@ -1,6 +1,7 @@
 ﻿using QuanLyChuyenBay.DAO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Reflection.Metadata.Ecma335;
 using System.Text;
@@ -11,9 +12,9 @@ namespace QuanLyChuyenBay.BUS
     public class DangNhapBUS
     {
         DangNhapDAO dnDb = new DangNhapDAO();
-        public bool XacThucDangNhap(DangNhap dn)
+        public DataTable LayDSNguoiDung(DangNhap dn)
         {
-            return dnDb.XacThucDangNhap(dn);
+            return dnDb.LayDSNguoiDung(dn);
         }
     }
 }

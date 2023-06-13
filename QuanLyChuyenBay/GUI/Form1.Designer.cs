@@ -39,15 +39,18 @@
             QD2 = new ToolStripMenuItem();
             QD3 = new ToolStripMenuItem();
             đăngKýToolStripMenuItem = new ToolStripMenuItem();
+            menuXinChao = new ToolStripMenuItem();
             grvLichBay = new DataGridView();
             label1 = new Label();
+            lblTenDangNhap = new Label();
+            btn_LayDanhSachChuyenBay = new Button();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)grvLichBay).BeginInit();
             SuspendLayout();
             // 
             // btn_NhanLich
             // 
-            btn_NhanLich.Location = new Point(49, 72);
+            btn_NhanLich.Location = new Point(189, 51);
             btn_NhanLich.Name = "btn_NhanLich";
             btn_NhanLich.Size = new Size(107, 66);
             btn_NhanLich.TabIndex = 0;
@@ -57,7 +60,7 @@
             // 
             // btn_BanVe
             // 
-            btn_BanVe.Location = new Point(242, 72);
+            btn_BanVe.Location = new Point(341, 51);
             btn_BanVe.Name = "btn_BanVe";
             btn_BanVe.Size = new Size(107, 66);
             btn_BanVe.TabIndex = 1;
@@ -67,7 +70,7 @@
             // 
             // btn_DatCho
             // 
-            btn_DatCho.Location = new Point(444, 72);
+            btn_DatCho.Location = new Point(494, 51);
             btn_DatCho.Name = "btn_DatCho";
             btn_DatCho.Size = new Size(107, 66);
             btn_DatCho.TabIndex = 2;
@@ -77,7 +80,7 @@
             // 
             // btn_TraCuu
             // 
-            btn_TraCuu.Location = new Point(639, 72);
+            btn_TraCuu.Location = new Point(638, 51);
             btn_TraCuu.Name = "btn_TraCuu";
             btn_TraCuu.Size = new Size(107, 66);
             btn_TraCuu.TabIndex = 3;
@@ -87,7 +90,7 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { doanhThuThang, doanhThuNam, QD1, QD2, QD3, đăngKýToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { doanhThuThang, doanhThuNam, QD1, QD2, QD3, đăngKýToolStripMenuItem, menuXinChao });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(800, 24);
@@ -134,11 +137,19 @@
             đăngKýToolStripMenuItem.Name = "đăngKýToolStripMenuItem";
             đăngKýToolStripMenuItem.Size = new Size(49, 20);
             đăngKýToolStripMenuItem.Text = "Thoát";
+            đăngKýToolStripMenuItem.Click += đăngKýToolStripMenuItem_Click;
+            // 
+            // menuXinChao
+            // 
+            menuXinChao.Name = "menuXinChao";
+            menuXinChao.Size = new Size(65, 20);
+            menuXinChao.Text = "Xin chào";
+            menuXinChao.Click += menuXinChao_Click;
             // 
             // grvLichBay
             // 
             grvLichBay.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            grvLichBay.Location = new Point(49, 171);
+            grvLichBay.Location = new Point(49, 159);
             grvLichBay.Name = "grvLichBay";
             grvLichBay.RowTemplate.Height = 25;
             grvLichBay.Size = new Size(697, 248);
@@ -149,17 +160,28 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Yellow;
-            label1.Location = new Point(49, 24);
+            label1.Location = new Point(160, 426);
             label1.Name = "label1";
             label1.Size = new Size(385, 15);
             label1.TabIndex = 6;
             label1.Text = "SVTH: Trần Quốc Dũng - 21880025 và Trần Phan Quang Minh - 21880080";
+            // 
+            // btn_LayDanhSachChuyenBay
+            // 
+            btn_LayDanhSachChuyenBay.Location = new Point(48, 51);
+            btn_LayDanhSachChuyenBay.Name = "btn_LayDanhSachChuyenBay";
+            btn_LayDanhSachChuyenBay.Size = new Size(102, 66);
+            btn_LayDanhSachChuyenBay.TabIndex = 7;
+            btn_LayDanhSachChuyenBay.Text = "Lấy Danh Sách Chuyến Bay";
+            btn_LayDanhSachChuyenBay.UseVisualStyleBackColor = true;
+            btn_LayDanhSachChuyenBay.Click += btn_LayDanhSachChuyenBay_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btn_LayDanhSachChuyenBay);
             Controls.Add(label1);
             Controls.Add(grvLichBay);
             Controls.Add(btn_TraCuu);
@@ -170,6 +192,7 @@
             MainMenuStrip = menuStrip1;
             Name = "Form1";
             Text = "Quản Lý Chuyến Bay";
+            Load += Form1_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)grvLichBay).EndInit();
@@ -188,9 +211,12 @@
         private ToolStripMenuItem doanhThuNam;
         private DataGridView grvLichBay;
         private Label label1;
+        private Label lblTenDangNhap;
         private ToolStripMenuItem QD1;
         private ToolStripMenuItem QD2;
         private ToolStripMenuItem QD3;
         private ToolStripMenuItem đăngKýToolStripMenuItem;
+        private Button btn_LayDanhSachChuyenBay;
+        private ToolStripMenuItem menuXinChao;
     }
 }

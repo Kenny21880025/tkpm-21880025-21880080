@@ -1,30 +1,19 @@
 ﻿using QuanLyChuyenBay.BUS;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuanLyChuyenBay.GUI
 {
     public partial class MH_DangNhap : Form
     {
-        DangNhapBUS dnBus = new DangNhapBUS();
-        DangNhap dn = new DangNhap();        
         public MH_DangNhap()
         {
             InitializeComponent();
         }
-        private void MH_DangNhap_Load(object sender, EventArgs e)
-        {
-            dn.TenDangNhap = txtTenDangNhap.Text;
-            dn.MatKhau = txtMatKhau.Text;
-        }
-
+        DangNhapBUS dnBus = new DangNhapBUS();
+        DangNhap dn = new DangNhap();
+        public string TenDangNhap { get; private set; }
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             if (txtTenDangNhap.Text == "")
@@ -37,14 +26,15 @@ namespace QuanLyChuyenBay.GUI
                 MessageBox.Show("Chưa nhập mật khẩu");
                 return;
             }
-
-            bool isOK = dnBus.XacThucDangNhap(dn);
-
-            if (isOK)
+            dn.TenDangNhap = txtTenDangNhap.Text;
+            dn.MatKhau = txtMatKhau.Text;
+            DataTable dsND = dnBus.LayDSNguoiDung(dn);
+            if (dsND.Rows.Count > 0 && dsND.Rows[0][0].ToString() == "1")
             {
-                // Đăng nhập thành công, đóng màn hình đăng nhập và trả về kết quả OK
+                // Lưu tên đăng nhập vào biến tạm
+                TenDangNhap = txtTenDangNhap.Text;
+                // Đăng nhập thành công, trả về kết quả DialogResult.OK
                 DialogResult = DialogResult.OK;
-                Close();
             }
             else
             {
@@ -52,11 +42,10 @@ namespace QuanLyChuyenBay.GUI
             }
         }
 
+
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            Close();
+            DialogResult = DialogResult.Cancel;
         }
-
-        
     }
 }

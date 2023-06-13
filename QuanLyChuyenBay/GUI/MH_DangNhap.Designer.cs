@@ -123,7 +123,7 @@
             Controls.Add(label1);
             Name = "MH_DangNhap";
             Text = "Đăng Nhập";
-            Load += MH_DangNhap_Load;
+            //Load += MH_DangNhap_Load;
             ResumeLayout(false);
             PerformLayout();
         }
