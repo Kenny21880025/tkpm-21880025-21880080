@@ -61,9 +61,9 @@ namespace QuanLyChuyenBay.DAO
             return ds;
 
         }
-        public int ThemTuyenBay(string MaTuyenBay, string SanBayDi, string SanBayDen)
+        public int ThemTuyenBay(TuyenBay tb)
         {
-            string sql = string.Format($"Insert into TuyenBay(MaTuyenBay,SanBayDi, SanBayDen) values ('{0}', '{1}'), '{2}'), {MaTuyenBay}, {SanBayDi}, {SanBayDen}");
+            string sql = string.Format("Insert into TuyenBay(MaTuyenBay,SanBayDi, SanBayDen) values ('{0}', '{1}', '{2}')", tb.MaTuyenBay, tb.SanBayDi, tb.SanBayDen);
             return ThucThi(sql);
         }
 
@@ -72,6 +72,18 @@ namespace QuanLyChuyenBay.DAO
             string sql = "select tb.MaTuyenBay as [Mã Tuyến Bay],sb1.TenSanBay as [Sân Bay Đi],sb2.TenSanBay as [Sân Bay Đến] from TuyenBay tb,SanBay sb1,SanBay sb2 where tb.SanBayDi=sb1.MaSanBay and tb.SanBayDen=sb2.MaSanBay";
             DataTable ds = LayDuLieu(sql);
             return ds;
+        }
+        public bool TuyenBayDaTonTai(TuyenBay tb)
+        {
+            string sql = string.Format("SELECT COUNT(*) FROM TuyenBay WHERE MaTuyenBay = '{0}'", tb.MaTuyenBay);
+            object result = LayDuLieuScalar(sql);
+
+            int count;
+            if (result != null && int.TryParse(result.ToString(), out count))
+            {
+                return count > 0;
+            }
+            return false;
         }
 
     }

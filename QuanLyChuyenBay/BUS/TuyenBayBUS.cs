@@ -28,15 +28,19 @@ namespace QuanLyChuyenBay.BUS
         {
             return tbDb.LayCacSBDenKoThoa(sbd);
         }
-        public int ThemTuyenBay(string MaTuyenBay, string SanBayDi, string SanBayDen)
+        public int ThemTuyenBay(TuyenBay tb)
         {
-            if (string.IsNullOrEmpty(MaTuyenBay)) return -1;
-            if (string.IsNullOrEmpty(MaTuyenBay)) return -2;
-            return tbDb.ThemTuyenBay(MaTuyenBay, SanBayDi, SanBayDen);
+            //if (string.IsNullOrEmpty(tb.MaTuyenBay)) return -1;
+            //if (string.IsNullOrEmpty(tb.MaTuyenBay)) return -2;
+            return tbDb.ThemTuyenBay(tb);
         }
         public DataTable LayDSTuyenBay()
         {
             return tbDb.LayDSTuyenBay();
+        }
+        public bool TuyenBayDaTonTai(TuyenBay tb)
+        {
+            return tbDb.TuyenBayDaTonTai(tb);
         }
     }    
 }

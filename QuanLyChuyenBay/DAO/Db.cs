@@ -47,7 +47,7 @@ namespace QuanLyChuyenBay.DAO
         }
         protected int LaySo(string sql)
         {
-           int so = 0;
+            int so = 0;
             SqlConnection ket_noi = new SqlConnection(duong_dan);
             SqlCommand lenh = new SqlCommand(sql, ket_noi);
             lenh.CommandType = CommandType.Text;
@@ -69,7 +69,14 @@ namespace QuanLyChuyenBay.DAO
             DataTable bang = new DataTable();
             bo_chuyen_doi.Fill(bang);
             return bang;
-        } 
+        }
+        protected object LayDuLieuScalar(string sql)
+        {
+            SqlConnection ket_noi = new SqlConnection(duong_dan);
+            SqlCommand lenh = new SqlCommand(sql, ket_noi);            
+            ket_noi.Open();                
+            object result = lenh.ExecuteScalar();
+            return result;
+        }
     }
-
 }

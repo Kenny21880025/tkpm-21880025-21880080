@@ -15,32 +15,46 @@ namespace QuanLyChuyenBay.GUI
     {
         SanBayBUS sbBus = new SanBayBUS();
         TuyenBayBUS tbBus = new TuyenBayBUS();
+        TuyenBay tb = new TuyenBay();
         public MH_ThemTuyenBay()
         {
             InitializeComponent();
         }
         private void MH_ThemTuyenBay_Load(object sender, EventArgs e)
         {
+            cbSanBayDi.SelectedIndexChanged += cbSanBayDi_SelectedIndexChanged; // Đăng ký sự kiện SelectedIndexChanged cho cbSanBayDi
+    cbSanBayDen.SelectedIndexChanged += cbSanBayDen_SelectedIndexChanged; // Đăng ký sự kiện SelectedIndexChanged cho cbSanBayDe
             DataTable dsSanBayDi;
             //SanBay sb = new SanBay();
 
             dsSanBayDi = sbBus.LayDanhSach();
             cbSanBayDi.DataSource = dsSanBayDi;
-            cbSanBayDi.DisplayMember = "TenSanBay";
+            cbSanBayDi.DisplayMember = "MaSanBay";
 
             DataTable dsSanBayDen;
             //TuyenBay tb = new TuyenBay();
             dsSanBayDen = tbBus.LayCacSBDenKoThoa(cbSanBayDi.Text);
             cbSanBayDen.DataSource = dsSanBayDen;
-            cbSanBayDen.DisplayMember = "TenSanBay";
+            cbSanBayDen.DisplayMember = "MaSanBay";
             cbSanBayDi.Text = "";
             lbSanBayDi.Text = "";
             cbSanBayDen.Text = "";
             lbSanBayDen.Text = "";
         }
+        
+       
         private void btn_ThemTuyenBay_Click(object sender, EventArgs e)
-        {            
-            var rs = tbBus.ThemTuyenBay(txtMaTuyenBay.Text, cbSanBayDi.Text, cbSanBayDen.Text);
+        {
+            tb.MaTuyenBay = txtMaTuyenBay.Text;
+            tb.SanBayDi = cbSanBayDi.Text;
+            tb.SanBayDen = cbSanBayDen.Text;
+            // Kiểm tra tuyến bay đã tồn tại hay chưa
+            if (tbBus.TuyenBayDaTonTai(tb))
+            {
+                MessageBox.Show("Tuyến bay đã tồn tại!");
+                return;
+            }
+            var rs = tbBus.ThemTuyenBay(tb);
             if (rs > 0)
             {
                 tbBus.LayDSTuyenBay();

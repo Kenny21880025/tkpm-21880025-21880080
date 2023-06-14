@@ -28,9 +28,9 @@ namespace QuanLyChuyenBay.DAO
         }
         public string LayTenSanBay(string msb)
         {
-            string sql = string.Format("select TenHangVe from HangVe where MaHangVe = '{0}'", msb);
-            string? tsb = LayTen(sql);
-            return tsb ?? string.Empty;
+            string sql = string.Format("select TenSanBay from SanBay where MaSanBay = '{0}'", msb);
+            string tsb = LayTen(sql);
+            return tsb;
         }
         public int ThemSanBay(SanBay sb)
         {
