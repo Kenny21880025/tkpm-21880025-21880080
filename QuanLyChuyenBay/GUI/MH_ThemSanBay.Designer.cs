@@ -125,6 +125,7 @@
             Controls.Add(label1);
             Name = "MH_ThemSanBay";
             Text = "Thêm Sân Bay";
+            Load += MH_ThemSanBay_Load;
             ResumeLayout(false);
             PerformLayout();
         }

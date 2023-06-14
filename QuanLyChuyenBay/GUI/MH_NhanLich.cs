@@ -49,8 +49,8 @@ namespace QuanLyChuyenBay
 
             cbSanBayDen.DataSource = dsSanBayDen;
             cbSanBayDen.DisplayMember = "SanBayDen";
-            this.lbTenSBDen.Text =
-                sbBus.LayTenSanBay(cbSanBayDen.Text);
+            lbTenSBDen.Text =
+            sbBus.LayTenSanBay(cbSanBayDen.Text);
         }
         private void btn_LuuLichBay_Click(object sender, EventArgs e)
         {
@@ -107,8 +107,7 @@ namespace QuanLyChuyenBay
 
         private void cbSanBayDen_SelectedIndexChanged(object sender, EventArgs e)
         {
-            lbTenSBDen.Text =
-            sbBus.LayTenSanBay(cbSanBayDen.Text);
+            lbTenSBDen.Text =    sbBus.LayTenSanBay(cbSanBayDen.Text);
         }
         private void btn_ThemLichBay_Click(object sender, EventArgs e)
         {
@@ -145,8 +144,7 @@ namespace QuanLyChuyenBay
 
         private void btn_SanBayDen_Click(object sender, EventArgs e)
         {
-            MH_ThemTuyenBay mhtsb = new MH_ThemTuyenBay();
-            mhtsb.Show();
+            
         }
 
         private void grvSanBayTrungGian_CellContentClick(object sender, DataGridViewCellEventArgs e)

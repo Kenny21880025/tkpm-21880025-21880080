@@ -21,11 +21,11 @@ namespace QuanLyChuyenBay.GUI
         private void btn_LuuSanBay_Click(object sender, EventArgs e)
         {
             SanBay sb = new SanBay();
-            SanBayBUS sbBus = new SanBayBUS();            
+            SanBayBUS sbBus = new SanBayBUS();
             sb.TenSanBay = txtTenSanBay.Text;
             sb.MaSanBay = txtMaSanBay.Text;
             var rs = sbBus.ThemSanBay(sb);
-            if (rs == - 1)
+            if (rs == -1)
             {
                 MessageBox.Show("Chưa nhập mã sân bay");
                 return;
@@ -39,9 +39,9 @@ namespace QuanLyChuyenBay.GUI
             else if (rs > 0)
             {
                 sbBus.LayDSSanBay();
-                MessageBox.Show("Thêm thành công!");               
-            }    
-        }      
+                MessageBox.Show("Thêm thành công!");
+            }
+        }
         private void btn_ThemSanBay_Click(object sender, EventArgs e)
         {
             txtMaSanBay.Text = "";
@@ -51,6 +51,11 @@ namespace QuanLyChuyenBay.GUI
         private void btn_ThoatSanBay_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void MH_ThemSanBay_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -49,13 +49,21 @@ namespace QuanLyChuyenBay.DAO
 
         public DataTable LayCacSBDenKoThoa(string sbd)
         {
-            string sql = string.Format("select sb.MaSanBay from SanBay sb where sb.MaSanBay <> '{0}' and sb.MaSanBay not in (select tb.SanBayDen from TuyenBay tb where tb.SanBayDi='{0}')", sbd);
+            string sql = "select * from SanBay";
+            //string sql = string.Format("select sb.MaSanBay from SanBay sb where sb.MaSanBay <> '{0}' and sb.MaSanBay not in (select tb.SanBayDen from TuyenBay tb where tb.SanBayDi='{0}')", sbd);
             DataTable ds = LayDuLieu(sql);
+            DataRow[] rows = ds.Select(string.Format("MaSanBay = '{0}'", sbd));
+            if (rows.Length > 0)
+            {
+                ds.Rows.Remove(rows[0]);
+            }
+
             return ds;
+
         }
         public int ThemTuyenBay(string MaTuyenBay, string SanBayDi, string SanBayDen)
         {
-            string sql = string.Format("Insert into TuyenBay(MaTuyenBay,SanBayDi, SanBayDen) values ('{0}', '{1}'), '{2}'), MaTuyenBay, SanBayDi, SanBayDen");
+            string sql = string.Format($"Insert into TuyenBay(MaTuyenBay,SanBayDi, SanBayDen) values ('{0}', '{1}'), '{2}'), {MaTuyenBay}, {SanBayDi}, {SanBayDen}");
             return ThucThi(sql);
         }
 

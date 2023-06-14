@@ -32,6 +32,8 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
+            lbSanBayDi = new Label();
+            lbSanBayDen = new Label();
             btn_ThemTuyenBay = new Button();
             btn_Thoat = new Button();
             cbSanBayDen = new ComboBox();
@@ -64,7 +66,7 @@
             label3.Name = "label3";
             label3.Size = new Size(62, 15);
             label3.TabIndex = 2;
-            label3.Text = "Sân Bây Đi";
+            label3.Text = "Sân Bay Đi";
             // 
             // label4
             // 
@@ -75,6 +77,20 @@
             label4.TabIndex = 3;
             label4.Text = "Sân Bay Đến";
             // 
+            // lbSanBayDi
+            // 
+            lbSanBayDi.Location = new Point(0, 0);
+            lbSanBayDi.Name = "lbSanBayDi";
+            lbSanBayDi.Size = new Size(100, 23);
+            lbSanBayDi.TabIndex = 0;
+            // 
+            // lbSanBayDen
+            // 
+            lbSanBayDen.Location = new Point(0, 0);
+            lbSanBayDen.Name = "lbSanBayDen";
+            lbSanBayDen.Size = new Size(100, 23);
+            lbSanBayDen.TabIndex = 0;
+            // 
             // btn_ThemTuyenBay
             // 
             btn_ThemTuyenBay.Location = new Point(152, 197);
@@ -83,6 +99,7 @@
             btn_ThemTuyenBay.TabIndex = 4;
             btn_ThemTuyenBay.Text = "Thêm";
             btn_ThemTuyenBay.UseVisualStyleBackColor = true;
+            btn_ThemTuyenBay.Click += btn_ThemTuyenBay_Click;
             // 
             // btn_Thoat
             // 
@@ -92,6 +109,7 @@
             btn_Thoat.TabIndex = 5;
             btn_Thoat.Text = "Thoát";
             btn_Thoat.UseVisualStyleBackColor = true;
+            btn_Thoat.Click += btn_Thoat_Click;
             // 
             // cbSanBayDen
             // 
@@ -100,6 +118,7 @@
             cbSanBayDen.Name = "cbSanBayDen";
             cbSanBayDen.Size = new Size(186, 23);
             cbSanBayDen.TabIndex = 6;
+            
             // 
             // cbSanBayDi
             // 
@@ -133,6 +152,7 @@
             Controls.Add(label1);
             Name = "MH_ThemTuyenBay";
             Text = "Thêm Tuyến Bay";
+            Load += MH_ThemTuyenBay_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -148,5 +168,7 @@
         private ComboBox cbSanBayDen;
         private ComboBox cbSanBayDi;
         internal TextBox txtMaTuyenBay;
+        private Label lbSanBayDi;
+        private Label lbSanBayDen;
     }
 }
