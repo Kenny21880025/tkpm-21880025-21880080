@@ -128,6 +128,7 @@
             grvSanBayTrungGian.RowTemplate.Height = 25;
             grvSanBayTrungGian.Size = new Size(371, 95);
             grvSanBayTrungGian.TabIndex = 13;
+            grvSanBayTrungGian.CellContentClick += grvSanBayTrungGian_CellContentClick;
             // 
             // txtMaChuyenBay
             // 

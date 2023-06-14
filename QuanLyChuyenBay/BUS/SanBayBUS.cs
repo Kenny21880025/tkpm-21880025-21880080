@@ -27,17 +27,19 @@ namespace QuanLyChuyenBay.BUS
         {
             return sbDb.LayTenSanBay(sb);
         }
-        //public int ThemSanBay(SanBay sb)
-        //{
-        //    return ThemSanBay(sb);
-        //}
-        //public int SuaSanBay(SanBay sb, string msb)
-        //{
-        //    return SuaSanBay(sb, msb);
-        //}
-        //public int XoaSanBay(string msb)
-        //{
-        //    return XoaSanBay(msb);
-        //}
+        public int ThemSanBay(SanBay sb)
+        {
+            if (string.IsNullOrEmpty(sb.MaSanBay)) return -1;
+            if (string.IsNullOrEmpty(sb.TenSanBay)) return -2;
+            return sbDb.ThemSanBay(sb);
+        }
+        public int SuaSanBay(SanBay sb, string msb)
+        {
+            return SuaSanBay(sb, msb);
+        }
+        public int XoaSanBay(string msb)
+        {
+            return XoaSanBay(msb);
+        }
     }
 }

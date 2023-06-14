@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using System.Windows.Forms;
 using QuanLyChuyenBay.GUI;
 
@@ -11,7 +12,7 @@ namespace QuanLyChuyenBay
         /// </summary>
         [STAThread]
         static void Main()
-        {
+        {            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             DialogResult ket_qua = DialogResult.Cancel;

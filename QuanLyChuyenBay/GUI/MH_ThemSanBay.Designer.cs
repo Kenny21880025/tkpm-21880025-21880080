@@ -34,8 +34,8 @@
             btn_LuuSanBay = new Button();
             btn_ThemSanBay = new Button();
             btn_ThoatSanBay = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            txtMaSanBay = new TextBox();
+            txtTenSanBay = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -81,7 +81,7 @@
             btn_ThemSanBay.Name = "btn_ThemSanBay";
             btn_ThemSanBay.Size = new Size(75, 23);
             btn_ThemSanBay.TabIndex = 4;
-            btn_ThemSanBay.Text = "Thêm Mới";
+            btn_ThemSanBay.Text = "Xóa trắng";
             btn_ThemSanBay.UseVisualStyleBackColor = true;
             btn_ThemSanBay.Click += btn_ThemSanBay_Click;
             // 
@@ -95,27 +95,28 @@
             btn_ThoatSanBay.UseVisualStyleBackColor = true;
             btn_ThoatSanBay.Click += btn_ThoatSanBay_Click;
             // 
-            // textBox1
+            // txtMaSanBay
             // 
-            textBox1.Location = new Point(166, 58);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(225, 23);
-            textBox1.TabIndex = 6;
+            txtMaSanBay.Location = new Point(166, 58);
+            txtMaSanBay.Name = "txtMaSanBay";
+            txtMaSanBay.Size = new Size(225, 23);
+            txtMaSanBay.TabIndex = 6;
             // 
-            // textBox2
+            // txtTenSanBay
             // 
-            textBox2.Location = new Point(166, 108);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(225, 23);
-            textBox2.TabIndex = 7;
+            txtTenSanBay.AcceptsReturn = true;
+            txtTenSanBay.Location = new Point(166, 108);
+            txtTenSanBay.Name = "txtTenSanBay";
+            txtTenSanBay.Size = new Size(225, 23);
+            txtTenSanBay.TabIndex = 7;
             // 
             // MH_ThemSanBay
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(446, 237);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            ClientSize = new Size(446, 226);
+            Controls.Add(txtTenSanBay);
+            Controls.Add(txtMaSanBay);
             Controls.Add(btn_ThoatSanBay);
             Controls.Add(btn_ThemSanBay);
             Controls.Add(btn_LuuSanBay);
@@ -136,7 +137,7 @@
         private Button btn_LuuSanBay;
         private Button btn_ThemSanBay;
         private Button btn_ThoatSanBay;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txtMaSanBay;
+        private TextBox txtTenSanBay;
     }
 }

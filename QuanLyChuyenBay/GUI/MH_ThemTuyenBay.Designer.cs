@@ -32,11 +32,11 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
-            button1 = new Button();
-            button2 = new Button();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
-            txtThemTuyenBay = new TextBox();
+            btn_ThemTuyenBay = new Button();
+            btn_Thoat = new Button();
+            cbSanBayDen = new ComboBox();
+            cbSanBayDi = new ComboBox();
+            txtMaTuyenBay = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -75,58 +75,58 @@
             label4.TabIndex = 3;
             label4.Text = "Sân Bay Đến";
             // 
-            // button1
+            // btn_ThemTuyenBay
             // 
-            button1.Location = new Point(152, 197);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 4;
-            button1.Text = "Thêm";
-            button1.UseVisualStyleBackColor = true;
+            btn_ThemTuyenBay.Location = new Point(152, 197);
+            btn_ThemTuyenBay.Name = "btn_ThemTuyenBay";
+            btn_ThemTuyenBay.Size = new Size(75, 23);
+            btn_ThemTuyenBay.TabIndex = 4;
+            btn_ThemTuyenBay.Text = "Thêm";
+            btn_ThemTuyenBay.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btn_Thoat
             // 
-            button2.Location = new Point(263, 197);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 5;
-            button2.Text = "Thoát";
-            button2.UseVisualStyleBackColor = true;
+            btn_Thoat.Location = new Point(263, 197);
+            btn_Thoat.Name = "btn_Thoat";
+            btn_Thoat.Size = new Size(75, 23);
+            btn_Thoat.TabIndex = 5;
+            btn_Thoat.Text = "Thoát";
+            btn_Thoat.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cbSanBayDen
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(152, 136);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(186, 23);
-            comboBox1.TabIndex = 6;
+            cbSanBayDen.FormattingEnabled = true;
+            cbSanBayDen.Location = new Point(152, 136);
+            cbSanBayDen.Name = "cbSanBayDen";
+            cbSanBayDen.Size = new Size(186, 23);
+            cbSanBayDen.TabIndex = 6;
             // 
-            // comboBox2
+            // cbSanBayDi
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(152, 100);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(186, 23);
-            comboBox2.TabIndex = 7;
+            cbSanBayDi.FormattingEnabled = true;
+            cbSanBayDi.Location = new Point(152, 100);
+            cbSanBayDi.Name = "cbSanBayDi";
+            cbSanBayDi.Size = new Size(186, 23);
+            cbSanBayDi.TabIndex = 7;
             // 
-            // txtThemTuyenBay
+            // txtMaTuyenBay
             // 
-            txtThemTuyenBay.Enabled = false;
-            txtThemTuyenBay.Location = new Point(152, 60);
-            txtThemTuyenBay.Name = "txtThemTuyenBay";
-            txtThemTuyenBay.Size = new Size(186, 23);
-            txtThemTuyenBay.TabIndex = 8;
+            txtMaTuyenBay.Enabled = false;
+            txtMaTuyenBay.Location = new Point(152, 60);
+            txtMaTuyenBay.Name = "txtMaTuyenBay";
+            txtMaTuyenBay.Size = new Size(186, 23);
+            txtMaTuyenBay.TabIndex = 8;
             // 
             // MH_ThemTuyenBay
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(406, 239);
-            Controls.Add(txtThemTuyenBay);
-            Controls.Add(comboBox2);
-            Controls.Add(comboBox1);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(txtMaTuyenBay);
+            Controls.Add(cbSanBayDi);
+            Controls.Add(cbSanBayDen);
+            Controls.Add(btn_Thoat);
+            Controls.Add(btn_ThemTuyenBay);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -143,10 +143,10 @@
         private Label label2;
         private Label label3;
         private Label label4;
-        private Button button1;
-        private Button button2;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
-        internal TextBox txtThemTuyenBay;
+        private Button btn_ThemTuyenBay;
+        private Button btn_Thoat;
+        private ComboBox cbSanBayDen;
+        private ComboBox cbSanBayDi;
+        internal TextBox txtMaTuyenBay;
     }
 }

@@ -148,5 +148,14 @@ namespace QuanLyChuyenBay
             MH_ThemTuyenBay mhtsb = new MH_ThemTuyenBay();
             mhtsb.Show();
         }
+
+        private void grvSanBayTrungGian_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        private void grvSanBayTrungGian_Shown(object sender, EventArgs e)
+        {
+
+        }
     }
 }
