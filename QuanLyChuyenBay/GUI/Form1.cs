@@ -103,6 +103,21 @@ namespace QuanLyChuyenBay
         {
             menuXinChao.Text = "Xin chào, " + TenDangNhap;
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_BanVe_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
