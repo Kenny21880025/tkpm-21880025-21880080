@@ -75,6 +75,7 @@ namespace QuanLyChuyenBay
             mhqd3.Show();
         }
 
+
         private void btn_LayDanhSachChuyenBay_Click(object sender, EventArgs e)
         {
             LayDuLieu();
@@ -96,11 +97,13 @@ namespace QuanLyChuyenBay
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        {            
+        {
         }
         private void Form1_Shown(object sender, EventArgs e)
         {
             menuXinChao.Text = "Xin chào, " + TenDangNhap;
         }
-    }    
+    }
 }
+
+

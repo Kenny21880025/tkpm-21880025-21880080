@@ -90,9 +90,9 @@ namespace QuanLyChuyenBay
             for (int i = 0; i < rowCount; i++)
             {
                 ctcb.MaChuyenBay = txtMaChuyenBay.Text;
-                ctcb.SanBayTrungGian = grvSanBayTrungGian.Rows[i].Cells["SanBayTrungGian"].Value.ToString();
-                ctcb.ThoiGianDung = short.Parse(grvSanBayTrungGian.Rows[i].Cells["ThoiGianDung"].Value.ToString());
-                ctcb.GhiChu = grvSanBayTrungGian.Rows[i].Cells["GhiChu"].Value.ToString();
+                //ctcb.SanBayTrungGian = grvSanBayTrungGian.Rows[i].Cells["SanBayTrungGian"].Value.ToString();
+                //ctcb.ThoiGianDung = short.Parse(grvSanBayTrungGian.Rows[i].Cells["ThoiGianDung"].Value.ToString());
+                //ctcb.GhiChu = grvSanBayTrungGian.Rows[i].Cells["GhiChu"].Value.ToString();
 
                 // Call the ThemCTChuyenBay method passing the appropriate arguments
                 ctcbBUS.ThemCTChuyenBay(ctcb);
