@@ -19,6 +19,7 @@ namespace QuanLyChuyenBay
         ChuyenBayBUS cbBus = new ChuyenBayBUS();
         SanBayBUS sbBus = new SanBayBUS();
         TuyenBayBUS tbBus = new TuyenBayBUS();
+        TuyenBay tb = new TuyenBay();
         ChiTietChuyenBayBUS ctcbBUS = new ChiTietChuyenBayBUS();
         TinhTrangVeBUS ttvBus = new TinhTrangVeBUS();
         public MH_NhanLich()
@@ -28,12 +29,23 @@ namespace QuanLyChuyenBay
 
         private void MH_NhanLich_Load(object sender, EventArgs e)
         {
+            cbSanBayDi.SelectedIndexChanged += cbSanBayDi_SelectedIndexChanged; // Đăng ký sự kiện SelectedIndexChanged cho cbSanBayDi
+            cbSanBayDen.SelectedIndexChanged += cbSanBayDen_SelectedIndexChanged; // Đăng ký sự kiện SelectedIndexChanged cho cbSanBayDe
             // Đưa các giá trị vào cbSanBayDi
             DataTable dsSanBayDi;
             dsSanBayDi = sbBus.LayDanhSach();
             cbSanBayDi.DataSource = dsSanBayDi;
             cbSanBayDi.DisplayMember = "MaSanBay";
+
+            DataTable dsSanBayDen;
+            dsSanBayDen = tbBus.LayCacSBDenKoThoa(cbSanBayDi.Text);
+            cbSanBayDen.DataSource = dsSanBayDen;
+            cbSanBayDen.DisplayMember = "MaSanBay";
             cbSanBayDi.Text = "";
+            lbSanBayDi.Text = "";
+            cbSanBayDen.Text = "";
+            lbSanBayDen.Text = "";
+
             // Điền tiêu đề các cột vào dsSanBayTrungGian
             DataTable dsCTChuyenBay;
             ChiTietChuyenBayBUS ctcbBus = new ChiTietChuyenBayBUS();
@@ -75,15 +87,18 @@ namespace QuanLyChuyenBay
                 return;
             }
             // Lưu thông tin chuyến bay
-            string matb;
-            matb = tbBus.LayMaTuyenBay(cbSanBayDi.Text, cbSanBayDen.Text);
+            //txtMaChuyenBay.Text, matb, dtpNgayGio.Value, double.Parse(txtThoiGianBay.Text), int.Parse(txtSLGH1.Text), int.Parse(txtSLGH2.Text)
+            TuyenBay tb = new TuyenBay();
+            string matb = tbBus.LayMaTuyenBay(cbSanBayDi.Text, cbSanBayDen.Text);
+            cbBus.ThemChuyenBay(cb);
+
             cb.MaChuyenBay = txtMaChuyenBay.Text;
             cb.MaChuyenBay = matb;
             cb.NgayGio = dtpNgayGio.Value;
             cb.ThoiGianBay = Convert.ToInt32(txtThoiGianBay.Text);
             cb.SoLuongGheHang1 = Convert.ToInt32(txtGheHang1.Text);
-            cb.SoLuongGheHang2 = Convert.ToInt32(txtGheHang2.Text);
-            cbBus.ThemChuyenBay(cb);
+            cb.SoLuongGheHang2 = Convert.ToInt32(txtGheHang2.Text);            
+
             //Luu thong tin chi tiet chuyen bay (cac san bay trung gian)
             ChiTietChuyenBay ctcb = new ChiTietChuyenBay();
             int rowCount = grvSanBayTrungGian.Rows.Count;
@@ -97,6 +112,7 @@ namespace QuanLyChuyenBay
                 // Call the ThemCTChuyenBay method passing the appropriate arguments
                 ctcbBUS.ThemCTChuyenBay(ctcb);
             }
+
             // Thêm vào tình trạng vé            
             ttvBus.ThemTinhTrangVe(txtMaChuyenBay.Text, Convert.ToInt32(txtGheHang1.Text) + Convert.ToInt32(txtGheHang2.Text));
         }
@@ -107,7 +123,7 @@ namespace QuanLyChuyenBay
 
         private void cbSanBayDen_SelectedIndexChanged(object sender, EventArgs e)
         {
-            lbTenSBDen.Text =    sbBus.LayTenSanBay(cbSanBayDen.Text);
+            lbTenSBDen.Text = sbBus.LayTenSanBay(cbSanBayDen.Text);
         }
         private void btn_ThemLichBay_Click(object sender, EventArgs e)
         {
@@ -141,12 +157,10 @@ namespace QuanLyChuyenBay
             cbSanBayDen.Text = "";
             lbTenSBDen.Text = "";
         }
-
         private void btn_SanBayDen_Click(object sender, EventArgs e)
         {
-            
-        }
 
+        }
         private void grvSanBayTrungGian_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 

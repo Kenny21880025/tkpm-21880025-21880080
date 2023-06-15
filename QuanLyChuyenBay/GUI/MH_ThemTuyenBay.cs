@@ -23,16 +23,15 @@ namespace QuanLyChuyenBay.GUI
         private void MH_ThemTuyenBay_Load(object sender, EventArgs e)
         {
             cbSanBayDi.SelectedIndexChanged += cbSanBayDi_SelectedIndexChanged; // Đăng ký sự kiện SelectedIndexChanged cho cbSanBayDi
-    cbSanBayDen.SelectedIndexChanged += cbSanBayDen_SelectedIndexChanged; // Đăng ký sự kiện SelectedIndexChanged cho cbSanBayDe
+            cbSanBayDen.SelectedIndexChanged += cbSanBayDen_SelectedIndexChanged; // Đăng ký sự kiện SelectedIndexChanged cho cbSanBayDe
+            // Đưa các giá trị vào cbSanBayDi
             DataTable dsSanBayDi;
-            //SanBay sb = new SanBay();
-
             dsSanBayDi = sbBus.LayDanhSach();
             cbSanBayDi.DataSource = dsSanBayDi;
             cbSanBayDi.DisplayMember = "MaSanBay";
-
+            
+            // Đưa các giá trị vào cbSanBayDen
             DataTable dsSanBayDen;
-            //TuyenBay tb = new TuyenBay();
             dsSanBayDen = tbBus.LayCacSBDenKoThoa(cbSanBayDi.Text);
             cbSanBayDen.DataSource = dsSanBayDen;
             cbSanBayDen.DisplayMember = "MaSanBay";
@@ -41,8 +40,46 @@ namespace QuanLyChuyenBay.GUI
             cbSanBayDen.Text = "";
             lbSanBayDen.Text = "";
         }
-        
-       
+        private void cbSanBayDi_LostFocus(object sender, EventArgs e)
+        {
+            DataTable dsSanBayDen = tbBus.LayCacSBDenKoThoa(cbSanBayDi.Text);
+            cbSanBayDen.DataSource = dsSanBayDen;
+            cbSanBayDen.DisplayMember = "MaSanBay";            
+            lbSanBayDi.Text = sbBus.LayTenSanBay(cbSanBayDi.Text);
+        }
+        private void cbSanBayDi_GotFocus(object sender, EventArgs e)
+        {
+            cbSanBayDen.Text = "";
+            lbSanBayDen.Text = "";
+        }
+        private void cbSanBayDen_LostFocus(object sender, EventArgs e)
+        {
+            lbSanBayDen.Text = sbBus.LayTenSanBay(cbSanBayDen.Text);            
+        }
+        private void cbSanBayDi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lbSanBayDi.Text = sbBus.LayTenSanBay(cbSanBayDi.Text);
+            if (!string.IsNullOrEmpty(cbSanBayDi.Text) && !string.IsNullOrEmpty(cbSanBayDen.Text))
+            {
+                txtMaTuyenBay.Text = cbSanBayDi.Text + "-" + cbSanBayDen.Text;
+            }
+            else
+            {
+                txtMaTuyenBay.Text = "";
+            }
+        }
+        private void cbSanBayDen_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lbSanBayDen.Text = sbBus.LayTenSanBay(cbSanBayDen.Text);
+            if (!string.IsNullOrEmpty(cbSanBayDi.Text) && !string.IsNullOrEmpty(cbSanBayDen.Text))
+            {
+                txtMaTuyenBay.Text = cbSanBayDi.Text + "-" + cbSanBayDen.Text;
+            }
+            else
+            {
+                txtMaTuyenBay.Text = "";
+            }
+        }
         private void btn_ThemTuyenBay_Click(object sender, EventArgs e)
         {
             tb.MaTuyenBay = txtMaTuyenBay.Text;
@@ -80,54 +117,6 @@ namespace QuanLyChuyenBay.GUI
         private void btn_Thoat_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        
-        private void cbSanBayDi_LostFocus(object sender, EventArgs e)
-        {
-            DataTable dsSanBayDen;
-            TuyenBay tb = new TuyenBay();
-            dsSanBayDen = tbBus.LayCacSBDenKoThoa(cbSanBayDi.Text);
-            cbSanBayDen.DataSource = dsSanBayDen;
-            cbSanBayDen.DisplayMember = "TenSanBay";
-            SanBay sb = new SanBay();
-            lbSanBayDi.Text = sbBus.LayTenSanBay(cbSanBayDi.Text);
-        }
-        private void cbSanBayDi_GotFocus(object sender, EventArgs e)
-        {
-            cbSanBayDen.Text = "";
-            lbSanBayDen.Text = "";
-        }
-
-        private void cbSanBayDen_LostFocus(object sender, EventArgs e)
-        {
-            lbSanBayDen.Text = sbBus.LayTenSanBay(cbSanBayDen.Text);
-            cbSanBayDen.DisplayMember = "TenSanBay"; // Chỉ định tên cột chứa tên sân bay
-        }
-
-        private void cbSanBayDi_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            lbSanBayDi.Text = sbBus.LayTenSanBay(cbSanBayDi.Text);
-            if (!string.IsNullOrEmpty(cbSanBayDi.Text) && !string.IsNullOrEmpty(cbSanBayDen.Text))
-            {
-                txtMaTuyenBay.Text = cbSanBayDi.Text + "-" + cbSanBayDen.Text;
-            }
-            else
-            {
-                txtMaTuyenBay.Text = "";
-            }
-        }
-        private void cbSanBayDen_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            lbSanBayDen.Text = sbBus.LayTenSanBay(cbSanBayDen.Text);
-            if (!string.IsNullOrEmpty(cbSanBayDi.Text) && !string.IsNullOrEmpty(cbSanBayDen.Text))
-            {
-                txtMaTuyenBay.Text = cbSanBayDi.Text + "-" + cbSanBayDen.Text;
-            }
-            else
-            {
-                txtMaTuyenBay.Text = "";
-            }
-        }       
-    }
+        } 
+       }
 }

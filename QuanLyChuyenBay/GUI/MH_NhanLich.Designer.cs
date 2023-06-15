@@ -36,6 +36,8 @@
             label7 = new Label();
             lbTenSBDen = new Label();
             lbTenSBDi = new Label();
+            lbSanBayDi = new Label();
+            lbSanBayDen = new Label();
             grvSanBayTrungGian = new DataGridView();
             txtMaChuyenBay = new TextBox();
             txtThoiGianBay = new TextBox();
@@ -120,6 +122,20 @@
             lbTenSBDi.Size = new Size(100, 23);
             lbTenSBDi.TabIndex = 0;
             // 
+            // lbSanBayDi
+            // 
+            lbSanBayDi.Location = new Point(0, 0);
+            lbSanBayDi.Name = "lbSanBayDi";
+            lbSanBayDi.Size = new Size(100, 23);
+            lbSanBayDi.TabIndex = 0;
+            // 
+            // lbSanBayDen
+            // 
+            lbSanBayDen.Location = new Point(0, 0);
+            lbSanBayDen.Name = "lbSanBayDen";
+            lbSanBayDen.Size = new Size(100, 23);
+            lbSanBayDen.TabIndex = 0;
+            // 
             // grvSanBayTrungGian
             // 
             grvSanBayTrungGian.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -174,7 +190,7 @@
             btn_ThemLichBay.Name = "btn_ThemLichBay";
             btn_ThemLichBay.Size = new Size(75, 23);
             btn_ThemLichBay.TabIndex = 22;
-            btn_ThemLichBay.Text = "Thêm mới";
+            btn_ThemLichBay.Text = "Xóa trắng";
             btn_ThemLichBay.UseVisualStyleBackColor = true;
             btn_ThemLichBay.Click += btn_ThemLichBay_Click;
             // 
@@ -279,6 +295,8 @@
         private Label label7;
         private Label lbTenSBDi;
         private Label lbTenSBDen;
+        private Label lbSanBayDi;
+        private Label lbSanBayDen;
         private DataGridView grvSanBayTrungGian;
         private TextBox txtMaChuyenBay;
         private TextBox txtThoiGianBay;
