@@ -24,9 +24,13 @@ namespace QuanLyChuyenBay.BUS
             return tbDb.LayMaTuyenBay(sbdi, sbden);
         }
         
-        public DataTable LayCacSBDenKoThoa(string sbd)
+        public DataTable LayBangSBDenChoTuyenBay(string sbd)
         {
-            return tbDb.LayCacSBDenKoThoa(sbd);
+            return tbDb.LayBangSBDenChoTuyenBay(sbd);
+        }
+        public DataTable LayBangSBDenChoLichBay(string sbd)
+        {
+            return tbDb.LayBangSBDenChoLichBay(sbd);
         }
         public string LaySanBayDen(string sbdi)
         {

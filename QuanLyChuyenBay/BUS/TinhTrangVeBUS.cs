@@ -11,9 +11,9 @@ namespace QuanLyChuyenBay.BUS
     public class TinhTrangVeBUS
     {
         TinhTrangVeDAO ttvDb = new TinhTrangVeDAO();
-        public int ThemTinhTrangVe(string MaChuyenBay, int SoGheTrong)
+        public int ThemTinhTrangVe(string MaChuyenBay, int SoGheTrong, int SoGheDat)
         {
-            return ttvDb.ThemTinhTrangVe(MaChuyenBay, SoGheTrong);
+            return ttvDb.ThemTinhTrangVe(MaChuyenBay, SoGheTrong, SoGheDat);
         }
         public int CapNhatTinhTrangVe(string mcb, bool loai)
         {

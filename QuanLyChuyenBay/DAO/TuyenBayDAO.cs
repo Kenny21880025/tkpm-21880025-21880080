@@ -54,9 +54,17 @@ namespace QuanLyChuyenBay.DAO
             return ma;
         }
 
-        public DataTable LayCacSBDenKoThoa(string sbd)
+        public DataTable LayBangSBDenChoLichBay(string sbdi)
         {
-            string sql = string.Format("SELECT * FROM SanBay WHERE MaSanBay <> '{0}' AND MaSanBay NOT IN (SELECT SanBayDen FROM TuyenBay WHERE SanBayDi = '{0}')", sbd);
+            string sql = string.Format("select * from TuyenBay where SanBayDi='{0}'", sbdi);
+            //string sql = string.Format("SELECT * FROM SanBay WHERE MaSanBay <> '{0}' AND MaSanBay NOT IN (SELECT SanBayDen FROM TuyenBay WHERE SanBayDi = '{0}')", sbd);
+            DataTable ds = LayDuLieu(sql);
+            return ds;
+        }
+        public DataTable LayBangSBDenChoTuyenBay(string sbdi)
+        {
+            //string sql = string.Format("select SanBayDen from TuyenBay where SanBayDi='{0}'", sbdi);
+            string sql = string.Format("SELECT * FROM SanBay WHERE MaSanBay <> '{0}' AND MaSanBay NOT IN (SELECT SanBayDen FROM TuyenBay WHERE SanBayDi = '{0}')", sbdi);
             DataTable ds = LayDuLieu(sql);
             return ds;
         }

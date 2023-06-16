@@ -16,9 +16,20 @@ namespace QuanLyChuyenBay.DAO
         }
         public int ThemCTChuyenBay(ChiTietChuyenBay ctcb)
         {
-            string sql = string.Format("Insert into ChiTietChuyenBay(MaChuyenBay, SanBayTrungGian, ThoiGianDung, GhiChu) values('{0}', '{1}', '{2}', '{3}')", ctcb.MaChuyenBay, ctcb.SanBayTrungGian, ctcb.ThoiGianDung, ctcb.GhiChu);   
-            return ThucThi(sql);
+            // Kiểm tra xem MaChuyenBay có tồn tại trong bảng ChuyenBay hay không
+            //string checkSql = string.Format("SELECT COUNT(*) FROM ChuyenBay WHERE MaChuyenBay = '{0}'", ctcb.MaChuyenBay);
+            //int count = (int)ThucThi(checkSql);
+            //if (count == 0)
+            //{
+            //    // MaChuyenBay không tồn tại trong bảng ChuyenBay, trả về -1 hoặc thông báo lỗi
+            //    return -1; // hoặc throw new Exception("MaChuyenBay không tồn tại trong bảng ChuyenBay");
+            //}
+
+            string sql = string.Format("INSERT INTO ChiTietChuyenBay(MaChuyenBay, SanBayTrungGian, ThoiGianDung, GhiChu) VALUES ('{0}', '{1}', '{2}', '{3}')", ctcb.MaChuyenBay, ctcb.SanBayTrungGian, ctcb.ThoiGianDung, ctcb.GhiChu);
+            int maChiTietChuyenBay = ThucThi(sql);
+            return maChiTietChuyenBay;
         }
+
         public DataTable LayTDChiTietChuyenBay()
         {
             DataTable ds;

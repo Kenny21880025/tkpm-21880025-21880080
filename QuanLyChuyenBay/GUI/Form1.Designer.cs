@@ -35,8 +35,15 @@
             btn_TraCuu = new Button();
             menuStrip1 = new MenuStrip();
             menuXinChao = new ToolStripMenuItem();
-            doanhThuThang = new ToolStripMenuItem();
-            doanhThuNam = new ToolStripMenuItem();
+            khoDữLiệuToolStripMenuItem = new ToolStripMenuItem();
+            danhSáchTuyếnBayToolStripMenuItem = new ToolStripMenuItem();
+            danhSáchSânBayToolStripMenuItem = new ToolStripMenuItem();
+            danhSáchHạngVéToolStripMenuItem = new ToolStripMenuItem();
+            danhSáchKháchHàngToolStripMenuItem = new ToolStripMenuItem();
+            báoCáoDoanhThuToolStripMenuItem = new ToolStripMenuItem();
+            DT_Thang = new ToolStripMenuItem();
+            DT_Nam = new ToolStripMenuItem();
+            quyĐịnhToolStripMenuItem = new ToolStripMenuItem();
             QD1 = new ToolStripMenuItem();
             QD2 = new ToolStripMenuItem();
             QD3 = new ToolStripMenuItem();
@@ -121,7 +128,7 @@
             // menuStrip1
             // 
             menuStrip1.BackColor = Color.Black;
-            menuStrip1.Items.AddRange(new ToolStripItem[] { menuXinChao, doanhThuThang, doanhThuNam, QD1, QD2, QD3, Thoat });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { menuXinChao, khoDữLiệuToolStripMenuItem, báoCáoDoanhThuToolStripMenuItem, quyĐịnhToolStripMenuItem, Thoat });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(800, 24);
@@ -136,44 +143,87 @@
             menuXinChao.Text = "Xin chào";
             menuXinChao.Click += menuXinChao_Click;
             // 
-            // doanhThuThang
+            // khoDữLiệuToolStripMenuItem
             // 
-            doanhThuThang.ForeColor = Color.White;
-            doanhThuThang.Name = "doanhThuThang";
-            doanhThuThang.Size = new Size(160, 20);
-            doanhThuThang.Text = "Báo Cáo Doanh Thu Tháng";
-            doanhThuThang.Click += doanhThuThang_Click;
+            khoDữLiệuToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { danhSáchTuyếnBayToolStripMenuItem, danhSáchSânBayToolStripMenuItem, danhSáchHạngVéToolStripMenuItem, danhSáchKháchHàngToolStripMenuItem });
+            khoDữLiệuToolStripMenuItem.ForeColor = SystemColors.ControlLightLight;
+            khoDữLiệuToolStripMenuItem.Name = "khoDữLiệuToolStripMenuItem";
+            khoDữLiệuToolStripMenuItem.Size = new Size(83, 20);
+            khoDữLiệuToolStripMenuItem.Text = "Kho Dữ Liệu";
             // 
-            // doanhThuNam
+            // danhSáchTuyếnBayToolStripMenuItem
             // 
-            doanhThuNam.ForeColor = Color.White;
-            doanhThuNam.Name = "doanhThuNam";
-            doanhThuNam.Size = new Size(153, 20);
-            doanhThuNam.Text = "Báo Cáo Doanh Thu Năm";
-            doanhThuNam.Click += doanhThuNam_Click;
+            danhSáchTuyếnBayToolStripMenuItem.Name = "danhSáchTuyếnBayToolStripMenuItem";
+            danhSáchTuyếnBayToolStripMenuItem.Size = new Size(198, 22);
+            danhSáchTuyếnBayToolStripMenuItem.Text = "Danh Sách Tuyến Bay";
+            // 
+            // danhSáchSânBayToolStripMenuItem
+            // 
+            danhSáchSânBayToolStripMenuItem.Name = "danhSáchSânBayToolStripMenuItem";
+            danhSáchSânBayToolStripMenuItem.Size = new Size(198, 22);
+            danhSáchSânBayToolStripMenuItem.Text = "Danh Sách Sân Bay";
+            // 
+            // danhSáchHạngVéToolStripMenuItem
+            // 
+            danhSáchHạngVéToolStripMenuItem.Name = "danhSáchHạngVéToolStripMenuItem";
+            danhSáchHạngVéToolStripMenuItem.Size = new Size(198, 22);
+            danhSáchHạngVéToolStripMenuItem.Text = "Danh Sách Hạng Vé";
+            // 
+            // danhSáchKháchHàngToolStripMenuItem
+            // 
+            danhSáchKháchHàngToolStripMenuItem.Name = "danhSáchKháchHàngToolStripMenuItem";
+            danhSáchKháchHàngToolStripMenuItem.Size = new Size(198, 22);
+            danhSáchKháchHàngToolStripMenuItem.Text = "Danh Sách Khách Hàng";
+            // 
+            // báoCáoDoanhThuToolStripMenuItem
+            // 
+            báoCáoDoanhThuToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { DT_Thang, DT_Nam });
+            báoCáoDoanhThuToolStripMenuItem.ForeColor = SystemColors.ControlLightLight;
+            báoCáoDoanhThuToolStripMenuItem.Name = "báoCáoDoanhThuToolStripMenuItem";
+            báoCáoDoanhThuToolStripMenuItem.Size = new Size(124, 20);
+            báoCáoDoanhThuToolStripMenuItem.Text = "Báo Cáo Doanh Thu";
+            // 
+            // DT_Thang
+            // 
+            DT_Thang.Name = "DT_Thang";
+            DT_Thang.Size = new Size(168, 22);
+            DT_Thang.Text = "Doanh Thu Tháng";
+            DT_Thang.Click += DT_Thang_Click;
+            // 
+            // DT_Nam
+            // 
+            DT_Nam.Name = "DT_Nam";
+            DT_Nam.Size = new Size(168, 22);
+            DT_Nam.Text = "Doanh Thu Năm";
+            DT_Nam.Click += DT_Nam_Click;
+            // 
+            // quyĐịnhToolStripMenuItem
+            // 
+            quyĐịnhToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { QD1, QD2, QD3 });
+            quyĐịnhToolStripMenuItem.ForeColor = SystemColors.ControlLightLight;
+            quyĐịnhToolStripMenuItem.Name = "quyĐịnhToolStripMenuItem";
+            quyĐịnhToolStripMenuItem.Size = new Size(69, 20);
+            quyĐịnhToolStripMenuItem.Text = "Quy Định";
             // 
             // QD1
             // 
-            QD1.ForeColor = Color.White;
             QD1.Name = "QD1";
-            QD1.Size = new Size(78, 20);
-            QD1.Text = "Quy Định 1";
+            QD1.Size = new Size(180, 22);
+            QD1.Text = "QD1";
             QD1.Click += QD1_Click;
             // 
             // QD2
             // 
-            QD2.ForeColor = Color.White;
             QD2.Name = "QD2";
-            QD2.Size = new Size(78, 20);
-            QD2.Text = "Quy Định 2";
+            QD2.Size = new Size(180, 22);
+            QD2.Text = "QD2";
             QD2.Click += QD2_Click;
             // 
             // QD3
             // 
-            QD3.ForeColor = Color.White;
             QD3.Name = "QD3";
-            QD3.Size = new Size(78, 20);
-            QD3.Text = "Quy Định 3";
+            QD3.Size = new Size(180, 22);
+            QD3.Text = "QD3";
             QD3.Click += QD3_Click;
             // 
             // Thoat
@@ -187,7 +237,7 @@
             // grvLichBay
             // 
             grvLichBay.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            grvLichBay.Location = new Point(223, 27);
+            grvLichBay.Location = new Point(211, 30);
             grvLichBay.Name = "grvLichBay";
             grvLichBay.RowTemplate.Height = 25;
             grvLichBay.Size = new Size(577, 373);
@@ -287,18 +337,25 @@
         private Button btn_DatCho;
         private Button btn_TraCuu;
         private MenuStrip menuStrip1;
-        private ToolStripMenuItem doanhThuThang;
-        private ToolStripMenuItem doanhThuNam;
         private DataGridView grvLichBay;
         private Label label1;
         private Label lblTenDangNhap;
-        private ToolStripMenuItem QD1;
-        private ToolStripMenuItem QD2;
-        private ToolStripMenuItem QD3;
         private ToolStripMenuItem Thoat;
         private Button btn_LayDanhSachChuyenBay;
         private ToolStripMenuItem menuXinChao;
         private Panel panel1;
         private Button btn_ThemTuyenBau;
+        private ToolStripMenuItem khoDữLiệuToolStripMenuItem;
+        private ToolStripMenuItem danhSáchTuyếnBayToolStripMenuItem;
+        private ToolStripMenuItem danhSáchSânBayToolStripMenuItem;
+        private ToolStripMenuItem danhSáchHạngVéToolStripMenuItem;
+        private ToolStripMenuItem danhSáchKháchHàngToolStripMenuItem;
+        private ToolStripMenuItem báoCáoDoanhThuToolStripMenuItem;
+        private ToolStripMenuItem DT_Thang;
+        private ToolStripMenuItem DT_Nam;
+        private ToolStripMenuItem quyĐịnhToolStripMenuItem;
+        private ToolStripMenuItem QD1;
+        private ToolStripMenuItem QD2;
+        private ToolStripMenuItem QD3;
     }
 }

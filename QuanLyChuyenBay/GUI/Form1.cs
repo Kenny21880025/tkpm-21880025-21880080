@@ -54,18 +54,40 @@ namespace QuanLyChuyenBay
             menuXinChao.Text = "Xin chào, " + TenDangNhap;
         }
 
-        private void doanhThuThang_Click(object sender, EventArgs e)
+
+
+
+
+        
+
+        private void Thoat_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void btn_ThemTuyenBau_Click(object sender, EventArgs e)
+        {
+            MH_ThemTuyenBay mhtsb = new MH_ThemTuyenBay();
+            mhtsb.Show();
+        }
+
+        private void DT_Thang_Click(object sender, EventArgs e)
         {
             MH_BaoCaoThang mhbct = new MH_BaoCaoThang();
             mhbct.Show();
             Close(); // Đóng form hiện tại
         }
-        private void doanhThuNam_Click(object sender, EventArgs e)
+
+        private void DT_Nam_Click(object sender, EventArgs e)
         {
             MH_BaoCaoNam mhbcn = new MH_BaoCaoNam();
             mhbcn.Show();
             Close(); // Đóng form hiện tại
         }
+
         private void QD1_Click(object sender, EventArgs e)
         {
             MH_QD1 mhqd1 = new MH_QD1();
@@ -77,26 +99,11 @@ namespace QuanLyChuyenBay
             MH_QD2 mhqd2 = new MH_QD2();
             mhqd2.Show();
         }
+
         private void QD3_Click(object sender, EventArgs e)
         {
             MH_QD3 mhqd3 = new MH_QD3();
-            mhqd3.Show();
-        }
-
-        private void Thoat_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-        private void Form1_Load(object sender, EventArgs e)
-        {
-        }
-
-        
-
-        private void btn_ThemTuyenBau_Click(object sender, EventArgs e)
-        {
-            MH_ThemTuyenBay mhtsb = new MH_ThemTuyenBay();
-            mhtsb.Show();
+            //    mhqd3.Show();
         }
     }
 }

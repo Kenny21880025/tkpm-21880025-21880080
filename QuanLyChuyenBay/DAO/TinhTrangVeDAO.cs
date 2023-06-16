@@ -9,9 +9,9 @@ namespace QuanLyChuyenBay.DAO
 {
     public class TinhTrangVeDAO : Db
     {
-        public int ThemTinhTrangVe(string MaChuyenBay, int SoGheTrong)
+        public int ThemTinhTrangVe(string MaChuyenBay, int SoGheTrong, int SoGheDat)
         {
-            string sql = string.Format("insert into SanBay(MaSanBay, TenSanBay) values('{0}', '{1}')", MaChuyenBay, SoGheTrong);
+            string sql = string.Format("insert into TinhTrangVe(MaChuyenBay, SoGheTrong, SoGheDat) values('{0}', '{1}', '{2}')", MaChuyenBay, SoGheTrong, SoGheDat);
             return ThucThi(sql);
         }
         public int CapNhatTinhTrangVe(string mcb, bool loai)
