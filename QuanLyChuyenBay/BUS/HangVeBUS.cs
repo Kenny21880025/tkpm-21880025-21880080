@@ -27,9 +27,9 @@ namespace QuanLyChuyenBay.BUS
         {
             return hvDb.ThemHangVe(hv);
         }
-        public int SuaHangVe(HangVe hv, string mhv)
+        public int SuaHangVe(string mhv, string thv)
         {
-            return hvDb.SuaHangVe(hv, mhv);
+            return hvDb.SuaHangVe(mhv, thv);
         }
         public int XoaHangVe(string mhv)
         {

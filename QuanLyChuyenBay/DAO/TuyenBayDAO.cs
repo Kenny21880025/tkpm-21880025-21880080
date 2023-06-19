@@ -73,7 +73,16 @@ namespace QuanLyChuyenBay.DAO
             string sql = string.Format("Insert into TuyenBay(MaTuyenBay,SanBayDi, SanBayDen) values ('{0}', '{1}', '{2}')", tb.MaTuyenBay, tb.SanBayDi, tb.SanBayDen);
             return ThucThi(sql);
         }
-
+        public int XoaTuyenBay(string mtb)
+        {
+            string sql = string.Format("Delete from TuyenBay  where MaTuyenBay = '{0}'", mtb);
+            return ThucThi(sql);
+        }
+        public int SuaTuyenBay(TuyenBay tb)
+        {
+            string sql = string.Format("Update TuyenBay Set SanBayDi = '{0}', SanBayDen = '{1}' where MaTuyenBay = '{2}'", tb.SanBayDi,tb.SanBayDen,tb.MaTuyenBay);
+            return ThucThi(sql);
+        }
         public DataTable LayDSTuyenBay()
         {
             string sql = "select tb.MaTuyenBay as [Mã Tuyến Bay],sb1.TenSanBay as [Sân Bay Đi],sb2.TenSanBay as [Sân Bay Đến] from TuyenBay tb,SanBay sb1,SanBay sb2 where tb.SanBayDi=sb1.MaSanBay and tb.SanBayDen=sb2.MaSanBay";

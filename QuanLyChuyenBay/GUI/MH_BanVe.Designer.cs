@@ -46,7 +46,6 @@
             txtDienThoai = new TextBox();
             txtID = new TextBox();
             txtTenHanhKhach = new TextBox();
-            txtMaHanhKhach = new TextBox();
             btn_LuuVe = new Button();
             btn_TaoMoi = new Button();
             btn_ThoatBanVe = new Button();
@@ -55,6 +54,9 @@
             btn_HangVe = new Button();
             cbHangVe = new ComboBox();
             txtTenHangVe = new TextBox();
+            cbMaHanhKhach = new ComboBox();
+            label7 = new Label();
+            btn_XuatVe = new Button();
             SuspendLayout();
             // 
             // label1
@@ -203,36 +205,29 @@
             txtTenHanhKhach.Size = new Size(129, 23);
             txtTenHanhKhach.TabIndex = 19;
             // 
-            // txtMaHanhKhach
-            // 
-            txtMaHanhKhach.Location = new Point(375, 56);
-            txtMaHanhKhach.Name = "txtMaHanhKhach";
-            txtMaHanhKhach.Size = new Size(129, 23);
-            txtMaHanhKhach.TabIndex = 18;
-            // 
             // btn_LuuVe
             // 
-            btn_LuuVe.Location = new Point(185, 262);
+            btn_LuuVe.Location = new Point(232, 241);
             btn_LuuVe.Name = "btn_LuuVe";
             btn_LuuVe.Size = new Size(75, 23);
             btn_LuuVe.TabIndex = 23;
-            btn_LuuVe.Text = "Lưu";
+            btn_LuuVe.Text = "Bán Vé";
             btn_LuuVe.UseVisualStyleBackColor = true;
             btn_LuuVe.Click += btn_LuuVe_Click;
             // 
             // btn_TaoMoi
             // 
-            btn_TaoMoi.Location = new Point(306, 262);
+            btn_TaoMoi.Location = new Point(333, 241);
             btn_TaoMoi.Name = "btn_TaoMoi";
             btn_TaoMoi.Size = new Size(75, 23);
             btn_TaoMoi.TabIndex = 24;
-            btn_TaoMoi.Text = "Tạo Mới";
+            btn_TaoMoi.Text = "Xóa trắng";
             btn_TaoMoi.UseVisualStyleBackColor = true;
             btn_TaoMoi.Click += btn_TaoMoi_Click;
             // 
             // btn_ThoatBanVe
             // 
-            btn_ThoatBanVe.Location = new Point(429, 262);
+            btn_ThoatBanVe.Location = new Point(429, 241);
             btn_ThoatBanVe.Name = "btn_ThoatBanVe";
             btn_ThoatBanVe.Size = new Size(75, 23);
             btn_ThoatBanVe.TabIndex = 25;
@@ -267,6 +262,7 @@
             btn_HangVe.TabIndex = 28;
             btn_HangVe.Text = "Hạng Vé";
             btn_HangVe.UseVisualStyleBackColor = true;
+            btn_HangVe.Click += btn_HangVe_Click_1;
             // 
             // cbHangVe
             // 
@@ -283,11 +279,41 @@
             txtTenHangVe.Size = new Size(129, 23);
             txtTenHangVe.TabIndex = 30;
             // 
+            // cbMaHanhKhach
+            // 
+            cbMaHanhKhach.FormattingEnabled = true;
+            cbMaHanhKhach.Location = new Point(375, 56);
+            cbMaHanhKhach.Name = "cbMaHanhKhach";
+            cbMaHanhKhach.Size = new Size(129, 23);
+            cbMaHanhKhach.TabIndex = 31;
+            cbMaHanhKhach.SelectedIndexChanged += cbMaHanhKhach_SelectedIndexChanged;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(12, 245);
+            label7.Name = "label7";
+            label7.Size = new Size(99, 15);
+            label7.TabIndex = 32;
+            label7.Text = "Khách đã đặt chỗ";
+            // 
+            // btn_XuatVe
+            // 
+            btn_XuatVe.Location = new Point(130, 241);
+            btn_XuatVe.Name = "btn_XuatVe";
+            btn_XuatVe.Size = new Size(75, 23);
+            btn_XuatVe.TabIndex = 33;
+            btn_XuatVe.Text = "Xuất Vé";
+            btn_XuatVe.UseVisualStyleBackColor = true;
+            // 
             // MH_BanVe
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(536, 315);
+            Controls.Add(btn_XuatVe);
+            Controls.Add(label7);
+            Controls.Add(cbMaHanhKhach);
             Controls.Add(txtTenHangVe);
             Controls.Add(cbHangVe);
             Controls.Add(btn_HangVe);
@@ -300,7 +326,6 @@
             Controls.Add(txtDienThoai);
             Controls.Add(txtID);
             Controls.Add(txtTenHanhKhach);
-            Controls.Add(txtMaHanhKhach);
             Controls.Add(txtGiaTien);
             Controls.Add(txtNgayGio);
             Controls.Add(txtSanBayDen);
@@ -334,16 +359,15 @@
         private Label label9;
         private Label label10;
         private Label label11;
-        private Label label12;        
+        private Label label12;
         private TextBox txtSanBayDi;
         private TextBox txtSanBayDen;
-        private TextBox txtNgayGio;        
+        private TextBox txtNgayGio;
         private TextBox txtGiaTien;
         private TextBox txtTinhTrangVe;
         private TextBox txtDienThoai;
         private TextBox txtID;
         private TextBox txtTenHanhKhach;
-        private TextBox txtMaHanhKhach;
         private Button btn_LuuVe;
         private Button btn_TaoMoi;
         private Button btn_ThoatBanVe;
@@ -352,5 +376,8 @@
         private Button btn_HangVe;
         private ComboBox cbHangVe;
         private TextBox txtTenHangVe;
+        private ComboBox cbMaHanhKhach;
+        private Label label7;
+        private Button btn_XuatVe;
     }
 }

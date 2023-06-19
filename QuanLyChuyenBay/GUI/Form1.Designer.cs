@@ -36,10 +36,10 @@
             menuStrip1 = new MenuStrip();
             menuXinChao = new ToolStripMenuItem();
             khoDữLiệuToolStripMenuItem = new ToolStripMenuItem();
-            danhSáchTuyếnBayToolStripMenuItem = new ToolStripMenuItem();
-            danhSáchSânBayToolStripMenuItem = new ToolStripMenuItem();
-            danhSáchHạngVéToolStripMenuItem = new ToolStripMenuItem();
-            danhSáchKháchHàngToolStripMenuItem = new ToolStripMenuItem();
+            DS_TuyenBay = new ToolStripMenuItem();
+            DS_SanBay = new ToolStripMenuItem();
+            DS_HangVe = new ToolStripMenuItem();
+            DS_KhachHang = new ToolStripMenuItem();
             báoCáoDoanhThuToolStripMenuItem = new ToolStripMenuItem();
             DT_Thang = new ToolStripMenuItem();
             DT_Nam = new ToolStripMenuItem();
@@ -53,7 +53,7 @@
             lblTenDangNhap = new Label();
             btn_LayDanhSachChuyenBay = new Button();
             panel1 = new Panel();
-            btn_ThemTuyenBau = new Button();
+            DS_ChuyenBay = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)grvLichBay).BeginInit();
             panel1.SuspendLayout();
@@ -145,35 +145,39 @@
             // 
             // khoDữLiệuToolStripMenuItem
             // 
-            khoDữLiệuToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { danhSáchTuyếnBayToolStripMenuItem, danhSáchSânBayToolStripMenuItem, danhSáchHạngVéToolStripMenuItem, danhSáchKháchHàngToolStripMenuItem });
+            khoDữLiệuToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { DS_TuyenBay, DS_SanBay, DS_HangVe, DS_KhachHang, DS_ChuyenBay });
             khoDữLiệuToolStripMenuItem.ForeColor = SystemColors.ControlLightLight;
             khoDữLiệuToolStripMenuItem.Name = "khoDữLiệuToolStripMenuItem";
             khoDữLiệuToolStripMenuItem.Size = new Size(83, 20);
             khoDữLiệuToolStripMenuItem.Text = "Kho Dữ Liệu";
             // 
-            // danhSáchTuyếnBayToolStripMenuItem
+            // DS_TuyenBay
             // 
-            danhSáchTuyếnBayToolStripMenuItem.Name = "danhSáchTuyếnBayToolStripMenuItem";
-            danhSáchTuyếnBayToolStripMenuItem.Size = new Size(198, 22);
-            danhSáchTuyếnBayToolStripMenuItem.Text = "Danh Sách Tuyến Bay";
+            DS_TuyenBay.Name = "DS_TuyenBay";
+            DS_TuyenBay.Size = new Size(198, 22);
+            DS_TuyenBay.Text = "Danh Sách Tuyến Bay";
+            DS_TuyenBay.Click += DS_TuyenBay_Click;
             // 
-            // danhSáchSânBayToolStripMenuItem
+            // DS_SanBay
             // 
-            danhSáchSânBayToolStripMenuItem.Name = "danhSáchSânBayToolStripMenuItem";
-            danhSáchSânBayToolStripMenuItem.Size = new Size(198, 22);
-            danhSáchSânBayToolStripMenuItem.Text = "Danh Sách Sân Bay";
+            DS_SanBay.Name = "DS_SanBay";
+            DS_SanBay.Size = new Size(198, 22);
+            DS_SanBay.Text = "Danh Sách Sân Bay";
+            DS_SanBay.Click += DS_SanBay_Click;
             // 
-            // danhSáchHạngVéToolStripMenuItem
+            // DS_HangVe
             // 
-            danhSáchHạngVéToolStripMenuItem.Name = "danhSáchHạngVéToolStripMenuItem";
-            danhSáchHạngVéToolStripMenuItem.Size = new Size(198, 22);
-            danhSáchHạngVéToolStripMenuItem.Text = "Danh Sách Hạng Vé";
+            DS_HangVe.Name = "DS_HangVe";
+            DS_HangVe.Size = new Size(198, 22);
+            DS_HangVe.Text = "Danh Sách Hạng Vé";
+            DS_HangVe.Click += DS_HangVe_Click;
             // 
-            // danhSáchKháchHàngToolStripMenuItem
+            // DS_KhachHang
             // 
-            danhSáchKháchHàngToolStripMenuItem.Name = "danhSáchKháchHàngToolStripMenuItem";
-            danhSáchKháchHàngToolStripMenuItem.Size = new Size(198, 22);
-            danhSáchKháchHàngToolStripMenuItem.Text = "Danh Sách Khách Hàng";
+            DS_KhachHang.Name = "DS_KhachHang";
+            DS_KhachHang.Size = new Size(198, 22);
+            DS_KhachHang.Text = "Danh Sách Khách Hàng";
+            DS_KhachHang.Click += DS_KhachHang_Click;
             // 
             // báoCáoDoanhThuToolStripMenuItem
             // 
@@ -208,21 +212,21 @@
             // QD1
             // 
             QD1.Name = "QD1";
-            QD1.Size = new Size(180, 22);
+            QD1.Size = new Size(97, 22);
             QD1.Text = "QD1";
             QD1.Click += QD1_Click;
             // 
             // QD2
             // 
             QD2.Name = "QD2";
-            QD2.Size = new Size(180, 22);
+            QD2.Size = new Size(97, 22);
             QD2.Text = "QD2";
             QD2.Click += QD2_Click;
             // 
             // QD3
             // 
             QD3.Name = "QD3";
-            QD3.Size = new Size(180, 22);
+            QD3.Size = new Size(97, 22);
             QD3.Text = "QD3";
             QD3.Click += QD3_Click;
             // 
@@ -282,7 +286,6 @@
             // panel1
             // 
             panel1.BackColor = Color.Black;
-            panel1.Controls.Add(btn_ThemTuyenBau);
             panel1.Controls.Add(btn_NhanLich);
             panel1.Controls.Add(btn_LayDanhSachChuyenBay);
             panel1.Controls.Add(btn_BanVe);
@@ -293,21 +296,12 @@
             panel1.Size = new Size(227, 425);
             panel1.TabIndex = 8;
             // 
-            // btn_ThemTuyenBau
+            // DS_ChuyenBay
             // 
-            btn_ThemTuyenBau.BackColor = Color.Black;
-            btn_ThemTuyenBau.FlatStyle = FlatStyle.Popup;
-            btn_ThemTuyenBau.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_ThemTuyenBau.ForeColor = Color.White;
-            btn_ThemTuyenBau.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_ThemTuyenBau.Location = new Point(52, 323);
-            btn_ThemTuyenBau.Name = "btn_ThemTuyenBau";
-            btn_ThemTuyenBau.Size = new Size(227, 66);
-            btn_ThemTuyenBau.TabIndex = 8;
-            btn_ThemTuyenBau.Text = "Thêm Tuyến Bay";
-            btn_ThemTuyenBau.TextAlign = ContentAlignment.MiddleLeft;
-            btn_ThemTuyenBau.UseVisualStyleBackColor = false;
-            btn_ThemTuyenBau.Click += btn_ThemTuyenBau_Click;
+            DS_ChuyenBay.Name = "DS_ChuyenBay";
+            DS_ChuyenBay.Size = new Size(198, 22);
+            DS_ChuyenBay.Text = "Danh Sách Chuyến Bay";
+            DS_ChuyenBay.Click += DS_ChuyenBay_Click;
             // 
             // Form1
             // 
@@ -344,12 +338,11 @@
         private Button btn_LayDanhSachChuyenBay;
         private ToolStripMenuItem menuXinChao;
         private Panel panel1;
-        private Button btn_ThemTuyenBau;
         private ToolStripMenuItem khoDữLiệuToolStripMenuItem;
-        private ToolStripMenuItem danhSáchTuyếnBayToolStripMenuItem;
-        private ToolStripMenuItem danhSáchSânBayToolStripMenuItem;
-        private ToolStripMenuItem danhSáchHạngVéToolStripMenuItem;
-        private ToolStripMenuItem danhSáchKháchHàngToolStripMenuItem;
+        private ToolStripMenuItem DS_TuyenBay;
+        private ToolStripMenuItem DS_SanBay;
+        private ToolStripMenuItem DS_HangVe;
+        private ToolStripMenuItem DS_KhachHang;
         private ToolStripMenuItem báoCáoDoanhThuToolStripMenuItem;
         private ToolStripMenuItem DT_Thang;
         private ToolStripMenuItem DT_Nam;
@@ -357,5 +350,6 @@
         private ToolStripMenuItem QD1;
         private ToolStripMenuItem QD2;
         private ToolStripMenuItem QD3;
+        private ToolStripMenuItem DS_ChuyenBay;
     }
 }

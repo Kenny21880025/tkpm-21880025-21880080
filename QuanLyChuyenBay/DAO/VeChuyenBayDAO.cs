@@ -10,7 +10,7 @@ namespace QuanLyChuyenBay.DAO
     {
         public int ThemVeChuyenBay(VeChuyenBay ve)
         {
-            string sql = string.Format($"Insert into VeChuyenBay(MaChuyenBay,MaHangVe,MaHanhKhach,GiaTien) values('{ve.MaChuyenBay}', '{ve.MaHangVe}','{ve.MaHanhKhach}', {ve.GiaTien}");
+            string sql = string.Format($"Insert into VeChuyenBay(MaChuyenBay,MaHangVe,MaHanhKhach,GiaTien) values('{ve.MaChuyenBay}', '{ve.MaHangVe}','{ve.MaHanhKhach}', '{ve.GiaTien}'");
             return ThucThi(sql);
         }
     }

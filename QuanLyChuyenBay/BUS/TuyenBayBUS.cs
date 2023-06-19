@@ -37,10 +37,18 @@ namespace QuanLyChuyenBay.BUS
             return tbDb.LaySanBayDen(sbdi);
         }
         public int ThemTuyenBay(TuyenBay tb)
-        {
-            //if (string.IsNullOrEmpty(tb.MaTuyenBay)) return -1;
-            //if (string.IsNullOrEmpty(tb.MaTuyenBay)) return -2;
+        {            
             return tbDb.ThemTuyenBay(tb);
+        }
+        public int XoaTuyenBay(string mtb)
+        {
+            
+            return tbDb.XoaTuyenBay(mtb);
+        }
+        public int SuaTuyenBay(TuyenBay tb)
+        {
+
+            return tbDb.SuaTuyenBay(tb);
         }
         public DataTable LayDSTuyenBay()
         {

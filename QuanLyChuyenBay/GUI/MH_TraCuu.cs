@@ -18,6 +18,10 @@ namespace QuanLyChuyenBay
         ChuyenBayBUS cbBus = new ChuyenBayBUS();
         ChuyenBay cb = new ChuyenBay();
         TuyenBayBUS tbBus = new TuyenBayBUS();
+        DataTable dsSanBayDi = new DataTable();
+        DataTable dsSanBayDen = new DataTable();
+        DataTable dsChuyenBay = new DataTable();
+        DataTable dscb = new DataTable();
         public MH_TraCuu()
         {
             InitializeComponent();
@@ -25,53 +29,60 @@ namespace QuanLyChuyenBay
         Font customFont = new Font("Arial", 20, FontStyle.Bold);
         private void MH_TraCuu_Load(object sender, EventArgs e)
         {
-            // Đưa các giá trị vào cbSanBayDi
-            DataTable dsSanBayDi = sbBus.LayDSSanBay();
-            sb = new SanBay();
+            cbSanBayDi.SelectedIndexChanged += cbSanBayDi_SelectedIndexChanged; // Đăng ký sự kiện SelectedIndexChanged cho cbSanBayDi            
+            cbSanBayDen.SelectedIndexChanged += cbSanBayDen_SelectedIndexChanged; // Đăng ký sự kiện SelectedIndexChanged cho cbSanBayDen                                                                                  
 
+            // Đưa các giá trị vào cbSanBayDi       
+            dsSanBayDi = sbBus.LayDanhSach();
             cbSanBayDi.DataSource = dsSanBayDi;
             cbSanBayDi.DisplayMember = "MaSanBay";
-            cbSanBayDi.Text = dsSanBayDi.Rows[0][0].ToString();
-            DataTable ds = cbBus.LayTDTraCuu(true);
-            cb = new ChuyenBay();
-            grvChuyenBay.DataSource = ds;
+
+            // Đưa các giá trị vào cbSanBayDen            
+            dsSanBayDen = tbBus.LayBangSBDenChoLichBay(cbSanBayDi.Text);
+            cbSanBayDen.DataSource = dsSanBayDen;
+            cbSanBayDen.DisplayMember = "SanBayDen";
+            cbSanBayDi.Text = "";
+            lbTenSBDen.Text = "";
+            cbSanBayDen.Text = "";
+            lbTenSBDen.Text = "";
+            dsChuyenBay = cbBus.LayTDTraCuu(true);
+            grvChuyenBay.DataSource = dsChuyenBay;
         }
         private void cbSanBayDi_LostFocus(object sender, EventArgs e)
         {
-            DataTable dsSanBayDen = tbBus.ChonTuyenBay(true, cbSanBayDi.Text);
+            dsSanBayDen = tbBus.LayBangSBDenChoTuyenBay(cbSanBayDi.Text);
             cbSanBayDen.DataSource = dsSanBayDen;
             cbSanBayDen.DisplayMember = "SanBayDen";
             lbTenSBDen.Text = sbBus.LayTenSanBay(cbSanBayDen.Text);
-            sb = new SanBay();
         }
-
         private void cbSanBayDi_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DataTable dsSanBayDen;
-            dsSanBayDen = tbBus.ChonTuyenBay(true, cbSanBayDi.Text);
+            lbTenSBDi.Text = sbBus.LayTenSanBay(cbSanBayDi.Text);
+            string sanBayDi = cbSanBayDi.Text;
+            dsSanBayDen = tbBus.LayBangSBDenChoLichBay(sanBayDi);
             cbSanBayDen.DataSource = dsSanBayDen;
             cbSanBayDen.DisplayMember = "SanBayDen";
-            lbTenSBDen.Text = sbBus.LayTenSanBay(cbSanBayDen.Text);
-            lbTenSBDi.Text = sbBus.LayTenSanBay(cbSanBayDi.Text);
-            sb = new SanBay();
         }
         private void cbSanBayDen_SelectedIndexChanged(object sender, EventArgs e)
         {
             lbTenSBDen.Text = sbBus.LayTenSanBay(cbSanBayDen.Text);
-            sb = new SanBay();
         }
-
         private void btn_Thoat_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void btn_Tim_Click(object sender, EventArgs e)
         {
-            DataTable dscb;
             dscb = cbBus.TimChuyenBay(cbSanBayDi.Text, cbSanBayDen.Text, dtpTu.Value, dtpDen.Value);
-            cb = new ChuyenBay();
-            grvChuyenBay.DataSource = dscb;
+            if (dscb.Rows.Count == 0)
+            {
+                MessageBox.Show("Không có chuyến bay phù hợp.");
+            }
+            else
+            {
+                grvChuyenBay.DataSource = dscb;
+            }
         }
         private void grvChuyenBay_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

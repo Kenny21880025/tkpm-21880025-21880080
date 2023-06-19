@@ -35,6 +35,7 @@ namespace QuanLyChuyenBay.DAO
             DataTable ds;
             string sql = "SELECT SanBayTrungGian AS [Sân Bay Trung Gian], ThoiGianDung AS [Thời Gian Dừng], GhiChu AS [Ghi Chú] FROM ChiTietChuyenBay";
             ds = LayDuLieu(sql);
+            ds.Clear();
             return ds;
         }
 

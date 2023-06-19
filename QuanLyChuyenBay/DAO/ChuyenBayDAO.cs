@@ -20,18 +20,28 @@ namespace QuanLyChuyenBay.DAO
             string sql = string.Format("Insert into ChuyenBay(MaChuyenBay,MaTuyenBay,NgayGio,ThoiGianBay,SoLuongGheHang1,SoLuongGheHang2) values('{0}', '{1}', '{2}', '{3}', '{4}', '{5}')", cb.MaChuyenBay, cb.MaTuyenBay, cb.NgayGio, cb.ThoiGianBay, cb.SoLuongGheHang1, cb.SoLuongGheHang2);
             return ThucThi(sql);
         }
+        public int XoaChuyenBay(string mtb)
+        {
+            string sql = string.Format("Delete from ChuyenBay  where MaChuyenBay = '{0}'", mtb);
+            return ThucThi(sql);
+        }
+        public int SuaChuyenBay(string ma, DateTime date)
+        {
+            string sql = string.Format("Update ChuyenBay Set NgayGio = '{0}' where MaChuyenBay = '{1}'",date, ma);
+            return ThucThi(sql);
+        }
         public DataTable LayMaCBSauNgay(DateTime NgayGio)
         {
             DataTable ds;
             string sql = "select MaChuyenBay from ChuyenBay";
-            // where NgayGio>='" + NgayGio + "'";
+            //where NgayGio>='" + NgayGio + "'";
             ds = LayDuLieu(sql);
             return ds;
         }
         public DataTable LayDSChuyenBayTheoMa(string ma)
         {
             DataTable ds;
-            string sql = "select sb1.TenSanBay,sb2.TenSanBay,cb.NgayGio,tb.MaTuyenBay from ChuyenBay cb,TuyenBay tb,SanBay sb1,SanBay sb2 where sb1.MaSanBay=tb.SanBayDi and sb2.MaSanBay=tb.SanBayDen and cb.MaTuyenBay=tb.MaTuyenBay and MaChuyenBay='" + ma + "'";
+            string sql = string.Format($"select sb1.TenSanBay,sb2.TenSanBay,cb.NgayGio,tb.MaTuyenBay from ChuyenBay cb,TuyenBay tb,SanBay sb1,SanBay sb2 where sb1.MaSanBay=tb.SanBayDi and sb2.MaSanBay=tb.SanBayDen and cb.MaTuyenBay=tb.MaTuyenBay and MaChuyenBay='{ma}'");
             ds = LayDuLieu(sql);
             return ds;
         }

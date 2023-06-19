@@ -9,7 +9,7 @@ namespace QuanLyChuyenBay
     public class QD1
     {
         public int ThoiGianBayToiThieu { get; set; }
-        public int SoSanByTrungGianToiDa { get; set; }
+        public int SoSanBayTrungGianToiDa { get; set; }
         public int ThoiGianDungToiThieu { get; set; }
         public int ThoiGianDungToiDa { get; set; }                         
     }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyChuyenBay.DAO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -9,13 +10,14 @@ namespace QuanLyChuyenBay.BUS
 {
     public class DonGiaBUS
     {
-        public DataTable LayDanhSach()
-        {
-            return LayDanhSach();
-        }
+        DonGiaDAO dgDb = new DonGiaDAO();        
         public double LayDonGia(string MaTuyenBay, string MaHangVe)
         {
-            return LayDonGia(MaTuyenBay, MaHangVe);
+            return dgDb.LayDonGia(MaTuyenBay, MaHangVe);
+        }
+        public DataTable LayDanhSach(string MaTuyenBay, string MaHangVe)
+        {
+            return dgDb.LayDanhSach(MaTuyenBay, MaHangVe);
         }
     }
 }

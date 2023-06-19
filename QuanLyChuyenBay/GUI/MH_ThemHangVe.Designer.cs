@@ -71,6 +71,7 @@
             txtMaHangVe.Name = "txtMaHangVe";
             txtMaHangVe.Size = new Size(191, 23);
             txtMaHangVe.TabIndex = 3;
+            txtMaHangVe.TextChanged += txtMaHangVe_TextChanged;
             // 
             // txtTenHangVe
             // 
@@ -78,6 +79,7 @@
             txtTenHangVe.Name = "txtTenHangVe";
             txtTenHangVe.Size = new Size(191, 23);
             txtTenHangVe.TabIndex = 4;
+            txtTenHangVe.TextChanged += txtTenHangVe_TextChanged;
             // 
             // btn_LuuHangVe
             // 
@@ -87,6 +89,7 @@
             btn_LuuHangVe.TabIndex = 5;
             btn_LuuHangVe.Text = "Lưu";
             btn_LuuHangVe.UseVisualStyleBackColor = true;
+            btn_LuuHangVe.Click += btn_LuuHangVe_Click;
             // 
             // btn_Them
             // 
@@ -94,8 +97,9 @@
             btn_Them.Name = "btn_Them";
             btn_Them.Size = new Size(75, 23);
             btn_Them.TabIndex = 6;
-            btn_Them.Text = "Thêm Mới";
+            btn_Them.Text = "Xóa trắng";
             btn_Them.UseVisualStyleBackColor = true;
+            btn_Them.Click += btn_Them_Click;
             // 
             // btn_Thoat
             // 
@@ -105,6 +109,7 @@
             btn_Thoat.TabIndex = 7;
             btn_Thoat.Text = "Thoát";
             btn_Thoat.UseVisualStyleBackColor = true;
+            btn_Thoat.Click += btn_Thoat_Click;
             // 
             // MH_ThemHangVe
             // 
