@@ -18,9 +18,9 @@ namespace QuanLyChuyenBay.GUI
         public MH_DSChuyenBay()
         {
             InitializeComponent();
+
             mcb = txtMaChuyenBay.Text;
         }
-
         private void btn_LayDanhSach_Click(object sender, EventArgs e)
         {
             LayDuLieu();
@@ -30,12 +30,12 @@ namespace QuanLyChuyenBay.GUI
             var bang = cbBus.LayDanhSach();
             grvChuyenBay.DataSource = bang;
         }
-
         private void btn_Them_Click(object sender, EventArgs e)
         {
             MH_NhanLich mhnl = new MH_NhanLich();
             mhnl.Show();
         }
+
         private void btn_Xoa_Click(object sender, EventArgs e)
         {
             mcb = txtMaChuyenBay.Text;
@@ -49,9 +49,10 @@ namespace QuanLyChuyenBay.GUI
             {
                 MessageBox.Show("Xóa hành khách thành công");
             }
-        }
+        }        
         private void btn_Sua_Click(object sender, EventArgs e)
         {
+
             mcb = txtMaChuyenBay.Text;
             if (string.IsNullOrEmpty(mcb))
             {
@@ -61,11 +62,6 @@ namespace QuanLyChuyenBay.GUI
             MH_SuaChuyenBay mhscb = new MH_SuaChuyenBay();
             mhscb.MaChuyenBay = txtMaChuyenBay.Text;
             mhscb.Show();
-        }
-
-        private void MH_DSChuyenBay_Load(object sender, EventArgs e)
-        {           
-            
         }
     }
 }

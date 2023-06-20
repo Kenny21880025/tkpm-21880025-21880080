@@ -116,8 +116,7 @@
             Controls.Add(btn_Them);
             Controls.Add(btn_LayDanhSach);
             Name = "MH_DSChuyenBay";
-            Text = "MH_DSChuyenBay";
-            Load += MH_DSChuyenBay_Load;
+            Text = "MH_DSChuyenBay";            
             ((System.ComponentModel.ISupportInitialize)grvChuyenBay).EndInit();
             ResumeLayout(false);
             PerformLayout();
