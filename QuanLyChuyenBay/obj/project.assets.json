@@ -475,11 +475,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\tkpm-21880025-21880080\\QuanLyChuyenBay\\QuanLyChuyenBay.csproj",
+      "projectUniqueName": "D:\\Github\\tkpm-21880025-21880080\\QuanLyChuyenBay\\QuanLyChuyenBay.csproj",
       "projectName": "QuanLyChuyenBay",
-      "projectPath": "D:\\tkpm-21880025-21880080\\QuanLyChuyenBay\\QuanLyChuyenBay.csproj",
+      "projectPath": "D:\\Github\\tkpm-21880025-21880080\\QuanLyChuyenBay\\QuanLyChuyenBay.csproj",
       "packagesPath": "C:\\Users\\dung2\\.nuget\\packages\\",
-      "outputPath": "D:\\tkpm-21880025-21880080\\QuanLyChuyenBay\\obj\\",
+      "outputPath": "D:\\Github\\tkpm-21880025-21880080\\QuanLyChuyenBay\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dung2\\AppData\\Roaming\\NuGet\\NuGet.Config",

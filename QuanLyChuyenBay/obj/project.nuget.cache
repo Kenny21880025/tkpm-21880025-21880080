@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bva+UI1FstK6bi/SzSuaBQiuJjw/XpREnsT27UixFeD4iKa4ZzyWCnBilJ9n2nz28mNyCySzxayFdxtU0qt/Tg==",
+  "dgSpecHash": "eO4GnlsHe/3xIKd8B7H3qleuUyf5x4bsbVzuNzRrnq1HO/AZGPaLZMaEm57Hgw1YeqmC/mRt3aG9GjsEWSOVEg==",
   "success": true,
-  "projectFilePath": "D:\\tkpm-21880025-21880080\\QuanLyChuyenBay\\QuanLyChuyenBay.csproj",
+  "projectFilePath": "D:\\Github\\tkpm-21880025-21880080\\QuanLyChuyenBay\\QuanLyChuyenBay.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dung2\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\dung2\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
