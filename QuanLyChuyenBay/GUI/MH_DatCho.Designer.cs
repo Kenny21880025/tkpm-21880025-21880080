@@ -34,7 +34,6 @@
             txtDienThoai = new TextBox();
             txtID = new TextBox();
             txtTenHanhKhach = new TextBox();
-            txtMaHanhKhach = new TextBox();
             txtGiaTien = new TextBox();
             txtTinhTrangVe = new TextBox();
             txtNgayGio = new TextBox();
@@ -56,6 +55,7 @@
             cbHangVe = new ComboBox();
             dtpNgayDat = new DateTimePicker();
             btn_HangVe = new Button();
+            cbMaHanhKhach = new ComboBox();
             SuspendLayout();
             // 
             // btn_ThoatDatCho
@@ -108,13 +108,6 @@
             txtTenHanhKhach.Name = "txtTenHanhKhach";
             txtTenHanhKhach.Size = new Size(129, 23);
             txtTenHanhKhach.TabIndex = 45;
-            // 
-            // txtMaHanhKhach
-            // 
-            txtMaHanhKhach.Location = new Point(378, 59);
-            txtMaHanhKhach.Name = "txtMaHanhKhach";
-            txtMaHanhKhach.Size = new Size(129, 23);
-            txtMaHanhKhach.TabIndex = 44;
             // 
             // txtGiaTien
             // 
@@ -294,11 +287,21 @@
             btn_HangVe.UseVisualStyleBackColor = true;
             btn_HangVe.Click += btn_HangVe_Click;
             // 
+            // cbMaHanhKhach
+            // 
+            cbMaHanhKhach.FormattingEnabled = true;
+            cbMaHanhKhach.Location = new Point(378, 58);
+            cbMaHanhKhach.Name = "cbMaHanhKhach";
+            cbMaHanhKhach.Size = new Size(129, 23);
+            cbMaHanhKhach.TabIndex = 59;
+            cbMaHanhKhach.SelectedIndexChanged += cbMaHanhKhach_SelectedIndexChanged;
+            // 
             // MH_DatCho
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(551, 326);
+            Controls.Add(cbMaHanhKhach);
             Controls.Add(btn_HangVe);
             Controls.Add(dtpNgayDat);
             Controls.Add(cbHangVe);
@@ -311,7 +314,6 @@
             Controls.Add(txtDienThoai);
             Controls.Add(txtID);
             Controls.Add(txtTenHanhKhach);
-            Controls.Add(txtMaHanhKhach);
             Controls.Add(txtGiaTien);
             Controls.Add(txtTinhTrangVe);
             Controls.Add(txtNgayGio);
@@ -342,7 +344,6 @@
         private TextBox txtDienThoai;
         private TextBox txtID;
         private TextBox txtTenHanhKhach;
-        private TextBox txtMaHanhKhach;
         private TextBox txtGiaTien;
         private TextBox txtTinhTrangVe;
         private TextBox txtNgayGio;
@@ -364,5 +365,6 @@
         private ComboBox cbHangVe;
         private DateTimePicker dtpNgayDat;
         private Button btn_HangVe;
+        private ComboBox cbMaHanhKhach;
     }
 }

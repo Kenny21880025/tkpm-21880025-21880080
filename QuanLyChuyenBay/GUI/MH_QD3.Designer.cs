@@ -31,8 +31,8 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            button1 = new Button();
-            button2 = new Button();
+            btn_CapNhat = new Button();
+            btn_Thoat = new Button();
             txtTimeOrder = new TextBox();
             txtTimeCancel = new TextBox();
             SuspendLayout();
@@ -64,25 +64,25 @@
             label3.TabIndex = 2;
             label3.Text = "Thời Gian Chậm Nhất Khi Hủy Đặt Vé";
             // 
-            // button1
+            // btn_CapNhat
             // 
-            button1.Location = new Point(232, 139);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 3;
-            button1.Text = "Cập Nhật";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btn_CapNhat.Location = new Point(232, 139);
+            btn_CapNhat.Name = "btn_CapNhat";
+            btn_CapNhat.Size = new Size(75, 23);
+            btn_CapNhat.TabIndex = 3;
+            btn_CapNhat.Text = "Cập Nhật";
+            btn_CapNhat.UseVisualStyleBackColor = true;
+            btn_CapNhat.Click += btn_CapNhat_Click;
             // 
-            // button2
+            // btn_Thoat
             // 
-            button2.Location = new Point(339, 139);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 4;
-            button2.Text = "Thoát";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            btn_Thoat.Location = new Point(339, 139);
+            btn_Thoat.Name = "btn_Thoat";
+            btn_Thoat.Size = new Size(75, 23);
+            btn_Thoat.TabIndex = 4;
+            btn_Thoat.Text = "Thoát";
+            btn_Thoat.UseVisualStyleBackColor = true;
+            btn_Thoat.Click += btn_Thoat_Click;
             // 
             // txtTimeOrder
             // 
@@ -105,8 +105,8 @@
             ClientSize = new Size(426, 174);
             Controls.Add(txtTimeCancel);
             Controls.Add(txtTimeOrder);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btn_Thoat);
+            Controls.Add(btn_CapNhat);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -122,8 +122,8 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private Button button1;
-        private Button button2;
+        private Button btn_CapNhat;
+        private Button btn_Thoat;
         private TextBox txtTimeOrder;
         private TextBox txtTimeCancel;
     }

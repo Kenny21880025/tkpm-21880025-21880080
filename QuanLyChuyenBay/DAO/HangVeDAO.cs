@@ -29,9 +29,9 @@ namespace QuanLyChuyenBay.DAO
             string sql = string.Format("insert into HangVe(MaHangVe, TenHangVe) values('{0}', '{1}')", hv.MaHangVe, hv.TenHangVe);
             return ThucThi(sql);
         }
-        public int SuaHangVe(HangVe hv, string mhv)
+        public int SuaHangVe(string mhv, string thv)
         {
-            string sql = string.Format("Update HangVe Set TenHangVe = '{0}' where MaHangVe = '{1}'", hv.TenHangVe, mhv);
+            string sql = string.Format("Update HangVe Set TenHangVe = '{0}' where MaHangVe = '{1}'",thv, mhv);
             return ThucThi(sql);
         }
         public int XoaHangVe(string mhv)

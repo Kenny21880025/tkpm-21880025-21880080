@@ -19,6 +19,14 @@ namespace QuanLyChuyenBay.BUS
         {
             return hkDb.ThemHanhKhach(hk);
         }
+        public int XoaHanhKhach(string hk)
+        {
+            return hkDb.XoaHanhKhach(hk);
+        }
+        public int SuaHanhKhach(string mhk, string dt, string id)
+        {
+            return hkDb.SuaHanhKhach(mhk, dt, id);
+        }
         public DataTable LayHanhKhachTuMa(string mhk)
         {
             return hkDb.LayHanhKhachTuMa(mhk);

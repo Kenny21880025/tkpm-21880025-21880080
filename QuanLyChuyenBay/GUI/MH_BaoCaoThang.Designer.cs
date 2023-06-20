@@ -88,6 +88,7 @@
             btn_BaoCao.TabIndex = 5;
             btn_BaoCao.Text = "Báo Cáo";
             btn_BaoCao.UseVisualStyleBackColor = true;
+            btn_BaoCao.Click += btn_BaoCao_Click;
             // 
             // btn_Thoat
             // 
@@ -97,6 +98,7 @@
             btn_Thoat.TabIndex = 6;
             btn_Thoat.Text = "Thoát";
             btn_Thoat.UseVisualStyleBackColor = true;
+            btn_Thoat.Click += btn_Thoat_Click;
             // 
             // MH_BaoCaoThang
             // 

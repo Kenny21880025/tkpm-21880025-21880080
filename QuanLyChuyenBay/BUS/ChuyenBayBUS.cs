@@ -21,7 +21,14 @@ namespace QuanLyChuyenBay.BUS
             if (string.IsNullOrEmpty(cb.MaTuyenBay)) return -2;
             return cbDb.ThemChuyenBay(cb);
         }
-
+        public int XoaChuyenBay(string mcb)
+        {
+            return cbDb.XoaChuyenBay(mcb);
+        }
+        public int SuaChuyenBay(string ma, DateTime date)
+        {
+            return cbDb.SuaChuyenBay(ma, date);
+        }
         public DataTable LayMaCBSauNgay(DateTime NgayGio)
         {
             return cbDb.LayMaCBSauNgay(NgayGio);

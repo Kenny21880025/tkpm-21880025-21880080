@@ -78,6 +78,7 @@
             btn_Thoat.TabIndex = 6;
             btn_Thoat.Text = "Thoát";
             btn_Thoat.UseVisualStyleBackColor = true;
+            btn_Thoat.Click += btn_Thoat_Click;
             // 
             // MH_BaoCaoNam
             // 

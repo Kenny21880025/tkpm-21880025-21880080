@@ -30,7 +30,7 @@ namespace QuanLyChuyenBay
             }
             else
             {
-                MessageBox.Show("Thất bại");
+                MessageBox.Show("Đăng nhập không thành công!!!");
             }    
         }
     }

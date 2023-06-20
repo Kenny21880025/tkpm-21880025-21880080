@@ -148,6 +148,7 @@
             btn_Tim.TabIndex = 15;
             btn_Tim.Text = "Tìm ";
             btn_Tim.UseVisualStyleBackColor = true;
+            btn_Tim.Click += btn_Tim_Click;
             // 
             // btn_Thoat
             // 
@@ -157,6 +158,7 @@
             btn_Thoat.TabIndex = 16;
             btn_Thoat.Text = "Thoát";
             btn_Thoat.UseVisualStyleBackColor = true;
+            btn_Thoat.Click += btn_Thoat_Click;
             // 
             // lbTenSBDen
             // 

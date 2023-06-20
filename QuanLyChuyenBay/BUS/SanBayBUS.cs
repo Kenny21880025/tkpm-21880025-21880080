@@ -33,13 +33,13 @@ namespace QuanLyChuyenBay.BUS
             if (string.IsNullOrEmpty(sb.TenSanBay)) return -2;
             return sbDb.ThemSanBay(sb);
         }
-        public int SuaSanBay(SanBay sb, string msb)
+        public int SuaSanBay(string msb)
         {
-            return SuaSanBay(sb, msb);
+            return SuaSanBay( msb);
         }
         public int XoaSanBay(string msb)
         {
-            return XoaSanBay(msb);
+            return sbDb.XoaSanBay(msb);
         }
     }
 }

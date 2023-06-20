@@ -19,11 +19,17 @@ namespace QuanLyChuyenBay
 
         private void MH_BaoCaoNam_Load(object sender, EventArgs e)
         {
-            //for (int i = 1990; i <= DateTime.Now.Year; i++)
-            //{
-            //    cbNam.Items.Add(i);
-            //}
-            //cbNam.Text = DateTime.Now.Year.ToString();
+            int i;
+            for (i = 1990; i <= DateTime.Now.Year; i++)
+            {
+                cbNam.Items.Add(i);
+            }
+            cbNam.Text = DateTime.Now.Year.ToString();
+        }
+
+        private void btn_Thoat_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

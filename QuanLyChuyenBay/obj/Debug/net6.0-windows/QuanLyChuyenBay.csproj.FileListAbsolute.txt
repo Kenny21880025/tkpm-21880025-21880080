@@ -37,3 +37,13 @@ D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\QuanLy
 D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\QuanLyChuyenBay.GUI.MH_QD2.resources
 D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\QuanLyChuyenBay.GUI.MH_QD3.resources
 D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\QuanLyChuyenBay.GUI.MH_DangNhap.resources
+D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\QuanLyChuyenBay.GUI.MH_DSTuyenBay.resources
+D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\QuanLyChuyenBay.GUI.MH_DSChuyenBay.resources
+D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\QuanLyChuyenBay.GUI.MH_DSHangVe.resources
+D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\QuanLyChuyenBay.GUI.MH_DSKhachHang.resources
+D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\QuanLyChuyenBay.GUI.MH_DSSanBay.resources
+D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\QuanLyChuyenBay.GUI.MH_SuaChuyenBay.resources
+D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\QuanLyChuyenBay.GUI.MH_SuaTuyenBay.resources
+D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\QuanLyChuyenBay.GUI.MH_SuaSanBay.resources
+D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\QuanLyChuyenBay.GUI.MH_SuaHangVe.resources
+D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\QuanLyChuyenBay.GUI.MH_SuaHanhKhach.resources

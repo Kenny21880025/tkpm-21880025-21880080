@@ -54,6 +54,7 @@ namespace QuanLyChuyenBay
             grvSanBayTrungGian.DataSource = dsCTChuyenBay;
             lbTenSBDen.Text = "";
             lbTenSBDi.Text = "";
+
         }
         private void cbSanBayDi_LostFocus(object sender, EventArgs e)
         {            
@@ -182,16 +183,12 @@ namespace QuanLyChuyenBay
                     }                    
                 }
                 MessageBox.Show("Thêm thành công!");
-            }
-            
-            
-            
+            } 
         }
         private void btn_ThoatLichBay_Click(object sender, EventArgs e)
         {
             Close();
         }
-
         private void btn_SanBayDi_Click(object sender, EventArgs e)
         {
             MH_ThemSanBay mhtsb = new MH_ThemSanBay();
