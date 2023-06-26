@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,35 @@ namespace QuanLyChuyenBay.DAO
 
             return 0;
         }
+        public DataTable LayDSPhieuDatCho()
+        {
+            string sql = "select * from PhieuDatCho";
+            return LayDuLieu(sql);
+        }
+        public DataTable LayPhieuTheoMa(string ma)
+        {
+            string sql = $"select * from PhieuDatCho where MaHanhKhach = {ma}";
+            return LayDuLieu(sql);
+        }
+        public int CapNhat(int maPhieuDatID, string trangThai)
+        {
+            string sql = $"UPDATE PhieuDatCho SET TrangThai = '{trangThai}' WHERE MaPhieuDat = {maPhieuDatID}";
+            return ThucThi(sql);
+        }
+        public int KiemTra(string maHanhKhach)
+        {
+            string sql = $"SELECT COUNT(*) FROM PhieuDatCho WHERE MaHanhKhach = '{maHanhKhach}'";
+            return ThucThi(sql);
+        }
+        public int CapNhatKhiXuatVe(string maHanhKhach,string trangThai)
+        {
+            string sql = $"UPDATE PhieuDatCho SET TrangThai = '{trangThai}' WHERE MaHanhKhach = '{maHanhKhach}'";
+            return ThucThi(sql);
+        }
+        public PhieuDatCho LayPhieu(string maHanhKhach)
+        {
+            return null;
+        }    
     }
 
 }

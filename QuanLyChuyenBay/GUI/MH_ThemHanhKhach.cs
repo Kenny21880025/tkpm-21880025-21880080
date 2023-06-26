@@ -24,7 +24,22 @@ namespace QuanLyChuyenBay.GUI
         {
             if (txtMaHanhKhach.Text == "")
             {
-                MessageBox.Show("Hành khách chưa có mã");
+                MessageBox.Show("Hành khách chưa có mã !!!");
+                return;
+            }
+            if (txtTenHanhKhach.Text == "")
+            {
+                MessageBox.Show("Chưa nhập tên hành khách !!!");
+                return;
+            }
+            if (txtDienThoai.Text == "")
+            {
+                MessageBox.Show("Chưa nhập số điện thoại hành khách !!!");
+                return;
+            }
+            if (txtID.Text == "")
+            {
+                MessageBox.Show("Chưa nhập số căn cước hành khách !!!");
                 return;
             }
             hk.MaHanhKhach = txtMaHanhKhach.Text;
@@ -34,7 +49,6 @@ namespace QuanLyChuyenBay.GUI
             hkBus.ThemHanhKhach(hk);
             hk = new HanhKhach();
         }
-
         private void btn_Thoat_Click(object sender, EventArgs e)
         {
             Close();

@@ -15,6 +15,11 @@ namespace QuanLyChuyenBay.DAO
             string sql = "select * from SanBay";
             return LayDuLieu(sql);
         }
+        public DataTable LayThamSo()
+        {
+            string sql = "select * from ThamSo";
+            return LayDuLieu(sql);
+        }
         public DataTable LayDSSanBay()
         {
             string sql = "SELECT MaSanBay as [Mã Sân Bay], TenSanBay as [Tên Sân Bay] FROM SanBay";
@@ -37,9 +42,9 @@ namespace QuanLyChuyenBay.DAO
             string sql = string.Format("insert into SanBay(MaSanBay, TenSanBay) values('{0}', '{1}')", sb.MaSanBay, sb.TenSanBay);
             return ThucThi(sql);
         }
-        public int SuaSanBay(string msb)
+        public int SuaSanBay(SanBay sb)
         {
-            string sql = string.Format("Update SanBay Set TenSanBay = '{0}' where MaSanBay = '{1}'", msb);
+            string sql = string.Format("Update SanBay Set TenSanBay = '{0}' where MaSanBay = '{1}'", sb.TenSanBay, sb.MaSanBay);
             return ThucThi(sql);
         }
         public int XoaSanBay(string msb)

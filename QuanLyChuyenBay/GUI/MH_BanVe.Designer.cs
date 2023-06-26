@@ -57,6 +57,8 @@
             cbMaHanhKhach = new ComboBox();
             label7 = new Label();
             btn_XuatVe = new Button();
+            label13 = new Label();
+            dtpNgayBan = new DateTimePicker();
             SuspendLayout();
             // 
             // label1
@@ -207,7 +209,7 @@
             // 
             // btn_LuuVe
             // 
-            btn_LuuVe.Location = new Point(232, 241);
+            btn_LuuVe.Location = new Point(232, 280);
             btn_LuuVe.Name = "btn_LuuVe";
             btn_LuuVe.Size = new Size(75, 23);
             btn_LuuVe.TabIndex = 23;
@@ -217,7 +219,7 @@
             // 
             // btn_TaoMoi
             // 
-            btn_TaoMoi.Location = new Point(333, 241);
+            btn_TaoMoi.Location = new Point(335, 280);
             btn_TaoMoi.Name = "btn_TaoMoi";
             btn_TaoMoi.Size = new Size(75, 23);
             btn_TaoMoi.TabIndex = 24;
@@ -227,7 +229,7 @@
             // 
             // btn_ThoatBanVe
             // 
-            btn_ThoatBanVe.Location = new Point(429, 241);
+            btn_ThoatBanVe.Location = new Point(429, 280);
             btn_ThoatBanVe.Name = "btn_ThoatBanVe";
             btn_ThoatBanVe.Size = new Size(75, 23);
             btn_ThoatBanVe.TabIndex = 25;
@@ -299,18 +301,37 @@
             // 
             // btn_XuatVe
             // 
-            btn_XuatVe.Location = new Point(130, 241);
+            btn_XuatVe.Location = new Point(117, 241);
             btn_XuatVe.Name = "btn_XuatVe";
             btn_XuatVe.Size = new Size(75, 23);
             btn_XuatVe.TabIndex = 33;
             btn_XuatVe.Text = "Xuất Vé";
             btn_XuatVe.UseVisualStyleBackColor = true;
+            btn_XuatVe.Click += btn_XuatVe_Click;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(232, 245);
+            label13.Name = "label13";
+            label13.Size = new Size(58, 15);
+            label13.TabIndex = 34;
+            label13.Text = "Ngày bán";
+            // 
+            // dtpNgayBan
+            // 
+            dtpNgayBan.Location = new Point(304, 239);
+            dtpNgayBan.Name = "dtpNgayBan";
+            dtpNgayBan.Size = new Size(200, 23);
+            dtpNgayBan.TabIndex = 35;
             // 
             // MH_BanVe
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(536, 315);
+            Controls.Add(dtpNgayBan);
+            Controls.Add(label13);
             Controls.Add(btn_XuatVe);
             Controls.Add(label7);
             Controls.Add(cbMaHanhKhach);
@@ -379,5 +400,7 @@
         private ComboBox cbMaHanhKhach;
         private Label label7;
         private Button btn_XuatVe;
+        private Label label13;
+        private DateTimePicker dtpNgayBan;
     }
 }

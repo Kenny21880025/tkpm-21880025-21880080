@@ -35,6 +35,8 @@
             cbNam = new ComboBox();
             btn_BaoCao = new Button();
             btn_Thoat = new Button();
+            grvThang = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)grvThang).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -82,7 +84,7 @@
             // 
             // btn_BaoCao
             // 
-            btn_BaoCao.Location = new Point(188, 143);
+            btn_BaoCao.Location = new Point(368, 62);
             btn_BaoCao.Name = "btn_BaoCao";
             btn_BaoCao.Size = new Size(75, 23);
             btn_BaoCao.TabIndex = 5;
@@ -92,7 +94,7 @@
             // 
             // btn_Thoat
             // 
-            btn_Thoat.Location = new Point(285, 143);
+            btn_Thoat.Location = new Point(493, 63);
             btn_Thoat.Name = "btn_Thoat";
             btn_Thoat.Size = new Size(75, 23);
             btn_Thoat.TabIndex = 6;
@@ -100,11 +102,20 @@
             btn_Thoat.UseVisualStyleBackColor = true;
             btn_Thoat.Click += btn_Thoat_Click;
             // 
+            // grvThang
+            // 
+            grvThang.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            grvThang.Location = new Point(32, 117);
+            grvThang.Name = "grvThang";
+            grvThang.Size = new Size(536, 225);
+            grvThang.TabIndex = 7;
+            // 
             // MH_BaoCaoThang
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(388, 190);
+            ClientSize = new Size(611, 363);
+            Controls.Add(grvThang);
             Controls.Add(btn_Thoat);
             Controls.Add(btn_BaoCao);
             Controls.Add(cbNam);
@@ -115,6 +126,7 @@
             Name = "MH_BaoCaoThang";
             Text = "MH_BaoCaoThang";
             Load += MH_BaoCaoThang_Load;
+            ((System.ComponentModel.ISupportInitialize)grvThang).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -128,5 +140,6 @@
         private ComboBox cbNam;
         private Button btn_BaoCao;
         private Button btn_Thoat;
+        private DataGridView grvThang;
     }
 }

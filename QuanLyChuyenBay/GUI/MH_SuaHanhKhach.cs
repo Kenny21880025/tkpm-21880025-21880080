@@ -28,6 +28,16 @@ namespace QuanLyChuyenBay.GUI
 
         private void btn_CapNhat_Click(object sender, EventArgs e)
         {
+            if (txtID.Text == "")
+            {
+                MessageBox.Show("Chưa nhập căn cước mới !!!");
+                return;
+            }
+            if (txtDienThoai.Text == "")
+            {
+                MessageBox.Show("Chưa nhập số điện thoại mới !!!");
+                return;
+            }
             // Lấy giá trị đã chỉnh sửa
             string mhk = txtMaHanhKhach.Text;
             string SDT = txtDienThoai.Text;
@@ -35,7 +45,7 @@ namespace QuanLyChuyenBay.GUI
             var rs = hkBus.SuaHanhKhach(mhk, SDT,ID);
             if (rs > 0)
             {
-                MessageBox.Show("Sửa hạng vé thành công");
+                MessageBox.Show("Sửa thông tin khách thành công !!!");
             }
         }
 

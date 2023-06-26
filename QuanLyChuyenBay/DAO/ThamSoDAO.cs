@@ -11,7 +11,7 @@ namespace QuanLyChuyenBay.DAO
     {
         public DataTable LayQD1()
         {
-            string sql = "select ThoiGianBayToiThieu,SoSanBayTrungGianToiDa,ThoiGianDungToiThieu,ThoiGianDungToiDa from Thamso";
+            string sql = "select ThoiGianBayToiThieu,SoSanBayTrungGianToiDa,ThoiGianDungToiThieu,ThoiGianDungToiDa, SoSanBay from Thamso";
             return LayDuLieu(sql);
         }        
         public int SuaQD1(QD1 qd)
@@ -22,12 +22,12 @@ namespace QuanLyChuyenBay.DAO
         }
         public DataTable LayQD2()
         {
-            string sql = "select * from Thamso";
+            string sql = "select SLHangVe from Thamso";
             return LayDuLieu(sql);
         }
         public int SuaQD2(QD2 qd)
         {
-            string sql = string.Format("Update HangVe Set MaHangVe = '{0}'", qd.SLHangVe);
+            string sql = string.Format("Update ThamSo Set SLHangVe = '{0}'", qd.SLHangVe);
             return ThucThi(sql);
         }
         public DataTable LayQD3()

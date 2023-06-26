@@ -10,7 +10,7 @@ namespace QuanLyChuyenBay
     {
         public string MaDoanhThuNam { get; set; }
         public int  Nam { get; set; }
-        public float TongDoanhThuNam { get; set; }
+        public double TongDoanhThuNam { get; set; }
 
     }
 }

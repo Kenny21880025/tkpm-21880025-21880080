@@ -18,7 +18,6 @@ namespace QuanLyChuyenBay.GUI
         public MH_DSChuyenBay()
         {
             InitializeComponent();
-
             mcb = txtMaChuyenBay.Text;
         }
         private void btn_LayDanhSach_Click(object sender, EventArgs e)

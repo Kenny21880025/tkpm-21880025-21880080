@@ -28,13 +28,18 @@ namespace QuanLyChuyenBay.GUI
 
         private void btn_CapNhat_Click(object sender, EventArgs e)
         {
+            if (txtTenHangVe.Text == "")
+            {
+                MessageBox.Show("Chưa nhập tên hạng vé mới !!!");
+                return;
+            }
             // Lấy giá trị đã chỉnh sửa
             string TenHangVe = txtTenHangVe.Text;
             string MaHangVe = txtMaHangVe.Text;
             var rs = hvBus.SuaHangVe(MaHangVe, TenHangVe);
             if (rs > 0)
             {
-                MessageBox.Show("Sửa hạng vé thành công");
+                MessageBox.Show("Sửa hạng vé thành công !!!");
             }
         }
         private void btn_Thoat_Click(object sender, EventArgs e)

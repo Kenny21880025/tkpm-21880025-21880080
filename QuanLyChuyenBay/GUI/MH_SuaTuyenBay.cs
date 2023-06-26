@@ -29,6 +29,16 @@ namespace QuanLyChuyenBay.GUI
         }
         private void btn_CapNhat_Click(object sender, EventArgs e)
         {
+            if (txtSanBayDi.Text == "")
+            {
+                MessageBox.Show("Chưa nhập sân bay đi");
+                return;
+            }
+            if (txtSanBayDi.Text == "")
+            {
+                MessageBox.Show("Chưa nhập sân bay đến");
+                return;
+            }
             // Lấy giá trị đã chỉnh sửa
             string SanBayDi = txtSanBayDi.Text;
             string SanBayDen = txtSanBayDen.Text;

@@ -11,6 +11,10 @@ namespace QuanLyChuyenBay.BUS
     public class SanBayBUS
     {
         SanBayDAO sbDb = new SanBayDAO();
+        public DataTable LayThamSo()
+        {
+            return sbDb.LayThamSo();
+        }
         public DataTable LayDanhSach()
         {
             return sbDb.LayDanhSach();
@@ -33,9 +37,9 @@ namespace QuanLyChuyenBay.BUS
             if (string.IsNullOrEmpty(sb.TenSanBay)) return -2;
             return sbDb.ThemSanBay(sb);
         }
-        public int SuaSanBay(string msb)
+        public int SuaSanBay(SanBay sb)
         {
-            return SuaSanBay( msb);
+            return sbDb.SuaSanBay(sb);
         }
         public int XoaSanBay(string msb)
         {

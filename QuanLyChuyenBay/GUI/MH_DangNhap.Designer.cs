@@ -76,6 +76,7 @@
             // 
             txtMatKhau.Location = new Point(219, 95);
             txtMatKhau.Name = "txtMatKhau";
+            txtMatKhau.PasswordChar = '*';
             txtMatKhau.Size = new Size(197, 23);
             txtMatKhau.TabIndex = 4;
             // 
@@ -123,7 +124,6 @@
             Controls.Add(label1);
             Name = "MH_DangNhap";
             Text = "Đăng Nhập";
-            //Load += MH_DangNhap_Load;
             ResumeLayout(false);
             PerformLayout();
         }

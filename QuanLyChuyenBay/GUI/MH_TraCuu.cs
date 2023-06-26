@@ -50,10 +50,13 @@ namespace QuanLyChuyenBay
         }
         private void cbSanBayDi_LostFocus(object sender, EventArgs e)
         {
-            dsSanBayDen = tbBus.LayBangSBDenChoTuyenBay(cbSanBayDi.Text);
-            cbSanBayDen.DataSource = dsSanBayDen;
-            cbSanBayDen.DisplayMember = "SanBayDen";
-            lbTenSBDen.Text = sbBus.LayTenSanBay(cbSanBayDen.Text);
+            if (!string.IsNullOrEmpty(cbSanBayDi.Text))
+            {
+                dsSanBayDen = tbBus.LayBangSBDenChoTuyenBay(cbSanBayDi.Text);
+                cbSanBayDen.DataSource = dsSanBayDen;
+                cbSanBayDen.DisplayMember = "SanBayDen";
+                lbTenSBDen.Text = sbBus.LayTenSanBay(cbSanBayDen.Text);
+            }
         }
         private void cbSanBayDi_SelectedIndexChanged(object sender, EventArgs e)
         {

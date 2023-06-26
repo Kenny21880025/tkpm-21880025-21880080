@@ -51,6 +51,10 @@ namespace QuanLyChuyenBay.BUS
         {
             return cbDb.KiemTraChuyenBay(MaChuyenBay);
         }
+        public DateTime LayNgayKhoiHanhTheoMaChuyenBay(string maChuyenBay)
+        {
+            return cbDb.LayNgayBay(maChuyenBay);
+        }
     }
     
 }

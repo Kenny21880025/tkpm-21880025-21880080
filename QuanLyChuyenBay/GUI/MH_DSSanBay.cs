@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuanLyChuyenBay.GUI
-{
+{    
     public partial class MH_DSSanBay : Form
-    {
+    {        
         SanBayBUS sbBus = new SanBayBUS();
         string msb;
         public MH_DSSanBay()
@@ -20,7 +20,6 @@ namespace QuanLyChuyenBay.GUI
             InitializeComponent();
             msb = txtMaSanBay.Text;
         }
-
         private void btn_LayDS_Click(object sender, EventArgs e)
         {
             LayDuLieu();
@@ -28,13 +27,24 @@ namespace QuanLyChuyenBay.GUI
         private void LayDuLieu()
         {
             var bang = sbBus.LayDanhSach();
-            grvSanBay.DataSource = bang;
+            grvSanBay.DataSource = bang;            
         }
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
-            MH_ThemSanBay mh = new MH_ThemSanBay();
-            mh.Show();
+            int soSanBayQuyDinh = Convert.ToInt32(sbBus.LayThamSo().Rows[0]["SoSanBay"]);
+
+            int count = sbBus.LayDanhSach().Rows.Count;
+
+            if (count >= soSanBayQuyDinh)
+            {
+                MessageBox.Show("Đã đủ " + soSanBayQuyDinh + " sân bay theo quy định, không thể thêm mới!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MH_ThemSanBay mh = new MH_ThemSanBay();
+                mh.Show();
+            }
         }
         private void btn_Xoa_Click(object sender, EventArgs e)
         {
@@ -63,7 +73,7 @@ namespace QuanLyChuyenBay.GUI
             }
 
             MH_SuaSanBay mh = new MH_SuaSanBay();
-            mh.MaSanBay = msb; // Gán giá trị mã sân bay vào thuộc tính MaTuyenBay
+            mh.MaSanBay = txtMaSanBay.Text; 
             mh.ShowDialog();
         }
     }

@@ -15,23 +15,10 @@ namespace QuanLyChuyenBay.DAO
 
             return LayDuLieu(sql);
         }
-        
-        //public bool XacThucDangNhap(DangNhap dn)
-        //{
-        //    string sql = $"SELECT COUNT(*) FROM NguoiDung WHERE TenDangNhap = '{dn.TenDangNhap}' AND MatKhau = '{dn.MatKhau}'";
-
-        //    var tham_so = new Dictionary<string, object>()
-        //{
-        //    { "@TenDangNhap", dn.TenDangNhap },
-        //    { "@MatKhau", dn.MatKhau }
-        //};
-
-        //    DataTable dataTable = LayDanhSachXacThuc(sql, tham_so);
-
-        //    int count = dataTable.Rows.Count;
-
-        //    return count > 0;
-        //}
-
+        public int ThemNguoiDung(DangNhap dn)
+        {
+            string sql = string.Format($"INSERT INTO NguoiDung(TenDangNhap, MatKhau) Values('{0}', '{1}')", dn.TenDangNhap, dn.MatKhau);
+            return ThucThi(sql);
+        }
     }
 }

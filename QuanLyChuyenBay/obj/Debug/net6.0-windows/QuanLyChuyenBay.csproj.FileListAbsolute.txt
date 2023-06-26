@@ -96,3 +96,6 @@ D:\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\refint\QuanLy
 D:\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\QuanLyChuyenBay.pdb
 D:\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\QuanLyChuyenBay.genruntimeconfig.cache
 D:\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\ref\QuanLyChuyenBay.dll
+D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\QuanLyChuyenBay.GUI.MH_HuyVe.resources
+D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\QuanLyChuyenBay.GUI.MH_SuaVe.resources
+D:\Github\tkpm-21880025-21880080\QuanLyChuyenBay\obj\Debug\net6.0-windows\QuanLyChuyenBay.GUI.MH_ThemNhanVien.resources

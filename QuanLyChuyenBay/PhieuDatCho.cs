@@ -13,5 +13,6 @@ namespace QuanLyChuyenBay
         public string MaHanhKhach { get; set; }
         public double GiaTien { get; set; }
         public DateTime NgayDat { get; set; }
+        public string TrangThai { get; set; }
     }
 }

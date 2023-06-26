@@ -37,6 +37,7 @@ namespace QuanLyChuyenBay.GUI
 
         private void btn_Xoa_Click(object sender, EventArgs e)
         {
+            string mtb = txtMaTuyenBay.Text;
             if (string.IsNullOrEmpty(mtb))
             {
                 MessageBox.Show("Vui lòng nhập mã tuyến bay", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);

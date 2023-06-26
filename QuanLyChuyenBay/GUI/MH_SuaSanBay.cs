@@ -15,6 +15,7 @@ namespace QuanLyChuyenBay.GUI
     {
         SanBayBUS sbBus = new SanBayBUS();
         TuyenBay tb = new TuyenBay();
+        SanBay sb = new SanBay();
         // Thuộc tính để lưu giá trị mã tuyến bay
         public string MaSanBay { get; set; }
         public MH_SuaSanBay()
@@ -30,9 +31,16 @@ namespace QuanLyChuyenBay.GUI
 
         private void btn_CapNhat_Click(object sender, EventArgs e)
         {
+            if (txtTenSanBay.Text == "")
+            {
+                MessageBox.Show("Chưa nhập tên sân bay");
+                return;
+            }
             // Lấy giá trị đã chỉnh sửa
             string TenSanBay = txtTenSanBay.Text;            
-            var rs = sbBus.SuaSanBay(TenSanBay);
+            sb.MaSanBay = MaSanBay;
+            sb.TenSanBay = TenSanBay;
+            var rs = sbBus.SuaSanBay(sb);
             if (rs > 0)
             {
                 MessageBox.Show("Sửa sân bay thành công");

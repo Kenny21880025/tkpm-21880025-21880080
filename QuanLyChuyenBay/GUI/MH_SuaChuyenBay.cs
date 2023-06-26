@@ -28,13 +28,18 @@ namespace QuanLyChuyenBay.GUI
 
         private void btn_CapNhat_Click(object sender, EventArgs e)
         {
+            if (dtpNgayGio.Text == "")
+            {
+                MessageBox.Show("Chưa chọn lại ngày giờ mới !!!");
+                return;
+            }
             txtMaChuyenBay.Text = MaChuyenBay;
             // Lấy giá trị đã chỉnh sửa
             DateTime NgayGio = dtpNgayGio.Value;
             var rs = cbBus.SuaChuyenBay(MaChuyenBay, NgayGio);
             if (rs > 0)
             {
-                MessageBox.Show("Sửa chuyến bay thành công");
+                MessageBox.Show("Sửa chuyến bay thành công !!!");
             }
         }
         private void btn_Thoat_Click(object sender, EventArgs e)

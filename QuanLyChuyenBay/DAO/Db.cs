@@ -28,6 +28,17 @@ namespace QuanLyChuyenBay.DAO
             ket_noi.Close();
             return rs;
         }
+
+        protected DateTime LayNgay(string sql)
+        {
+            DateTime ngayKhoiHanh = DateTime.MinValue;
+            SqlConnection ket_noi = new SqlConnection(duong_dan);
+            SqlCommand lenh = new SqlCommand(sql, ket_noi);
+            ket_noi.Open();
+            lenh.CommandType = CommandType.Text;
+            ket_noi.Close();
+            return ngayKhoiHanh;
+        }
         protected string LayTen(string sql)
         {
             string ten = "";

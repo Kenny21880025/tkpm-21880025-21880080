@@ -21,6 +21,16 @@ namespace QuanLyChuyenBay.GUI
         }
         private void btn_LuuHangVe_Click(object sender, EventArgs e)
         {
+            if (txtMaHangVe.Text == "")
+            {
+                MessageBox.Show("Chưa nhập mã hạng vé");
+                return;
+            }
+            if (txtTenHangVe.Text == "")
+            {
+                MessageBox.Show("Chưa nhập tên hạng vé");
+                return;
+            }
             hv.MaHangVe = txtMaHangVe.Text;
             hv.TenHangVe = txtTenHangVe.Text;
             int rs = hvBus.ThemHangVe(hv);

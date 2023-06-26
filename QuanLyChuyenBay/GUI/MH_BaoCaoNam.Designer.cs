@@ -33,6 +33,8 @@
             cbNam = new ComboBox();
             btn_BaoCao = new Button();
             btn_Thoat = new Button();
+            grvNam = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)grvNam).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -63,16 +65,17 @@
             // 
             // btn_BaoCao
             // 
-            btn_BaoCao.Location = new Point(84, 109);
+            btn_BaoCao.Location = new Point(197, 57);
             btn_BaoCao.Name = "btn_BaoCao";
             btn_BaoCao.Size = new Size(75, 23);
             btn_BaoCao.TabIndex = 5;
             btn_BaoCao.Text = "Báo Cáo";
             btn_BaoCao.UseVisualStyleBackColor = true;
+            btn_BaoCao.Click += btn_BaoCao_Click;
             // 
             // btn_Thoat
             // 
-            btn_Thoat.Location = new Point(181, 109);
+            btn_Thoat.Location = new Point(319, 56);
             btn_Thoat.Name = "btn_Thoat";
             btn_Thoat.Size = new Size(75, 23);
             btn_Thoat.TabIndex = 6;
@@ -80,11 +83,20 @@
             btn_Thoat.UseVisualStyleBackColor = true;
             btn_Thoat.Click += btn_Thoat_Click;
             // 
+            // grvNam
+            // 
+            grvNam.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            grvNam.Location = new Point(27, 123);
+            grvNam.Name = "grvNam";
+            grvNam.Size = new Size(536, 225);
+            grvNam.TabIndex = 8;
+            // 
             // MH_BaoCaoNam
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(310, 172);
+            ClientSize = new Size(592, 378);
+            Controls.Add(grvNam);
             Controls.Add(btn_Thoat);
             Controls.Add(btn_BaoCao);
             Controls.Add(cbNam);
@@ -93,6 +105,7 @@
             Name = "MH_BaoCaoNam";
             Text = "MH_BaoCaoThang";
             Load += MH_BaoCaoNam_Load;
+            ((System.ComponentModel.ISupportInitialize)grvNam).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -104,5 +117,6 @@
         private ComboBox cbNam;
         private Button btn_BaoCao;
         private Button btn_Thoat;
+        private DataGridView grvNam;
     }
 }

@@ -12,12 +12,11 @@ using System.Windows.Forms;
 namespace QuanLyChuyenBay.GUI
 {
     public partial class MH_ThemSanBay : Form
-    {
+    {        
         public MH_ThemSanBay()
         {
             InitializeComponent();
         }
-
         private void btn_LuuSanBay_Click(object sender, EventArgs e)
         {
             SanBay sb = new SanBay();
@@ -27,13 +26,13 @@ namespace QuanLyChuyenBay.GUI
             var rs = sbBus.ThemSanBay(sb);
             if (rs == -1)
             {
-                MessageBox.Show("Chưa nhập mã sân bay");
+                MessageBox.Show("Chưa nhập mã sân bay !!!");
                 return;
             }
 
             if (rs == -2)
             {
-                MessageBox.Show("Chưa nhập tên sân bay");
+                MessageBox.Show("Chưa nhập tên sân bay !!!");
                 return;
             }
             else if (rs > 0)

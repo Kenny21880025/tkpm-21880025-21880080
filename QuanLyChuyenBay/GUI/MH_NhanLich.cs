@@ -24,7 +24,7 @@ namespace QuanLyChuyenBay
         DataTable dsSanBayDen = new DataTable();
         ChiTietChuyenBay ctcb = new ChiTietChuyenBay();
         DataTable dsCTChuyenBay = new DataTable();
-        ChiTietChuyenBayBUS ctcbBus = new ChiTietChuyenBayBUS();
+        ChiTietChuyenBayBUS ctcbBus = new ChiTietChuyenBayBUS();        
         public MH_NhanLich()
         {
             InitializeComponent();
@@ -132,13 +132,40 @@ namespace QuanLyChuyenBay
             }
             if (txtGheHang1.Text == "")
             {
-                MessageBox.Show("Chưa nhập số lượng");
+                MessageBox.Show("Chưa nhập số lượng ghế hạng 1");
                 return;
             }
             if (txtGheHang2.Text == "")
             {
-                MessageBox.Show("Chưa nhập số lượng");
+                MessageBox.Show("Chưa nhập số lượng ghế hạng 2");
                 return;
+            }
+            // Kiểm tra theo quy định 1
+
+            int thoiGianBayToiThieu = Convert.ToInt32(sbBus.LayThamSo().Rows[0]["ThoiGianBayToiThieu"]);
+            if (thoiGianBayToiThieu > Convert.ToInt32(txtThoiGianBay.Text))
+            {
+                MessageBox.Show("Thời gian bay không đạt yêu cầu tối thiểu là" + thoiGianBayToiThieu);
+                return;
+            }
+
+            int soSanBayTrungGianToiDa = Convert.ToInt32(sbBus.LayThamSo().Rows[0]["SoSanBayTrungGianToiDa"]);
+            if (soSanBayTrungGianToiDa < grvSanBayTrungGian.Rows.Count)
+            {
+                MessageBox.Show("Số sân bay trung gian vượt quá giới hạn cho phép.");
+                return;
+            }
+            int thoiGianDungToiThieu = Convert.ToInt32(sbBus.LayThamSo().Rows[0]["ThoiGianDungToiThieu"]);
+            int thoiGianDungToiDa = Convert.ToInt32(sbBus.LayThamSo().Rows[0]["ThoiGianDungToiDa"]);
+
+            foreach (DataGridViewRow row in grvSanBayTrungGian.Rows)
+            {
+                int thoiGianDung = Convert.ToInt32(row.Cells["ThoiGianDung"].Value);
+                if (thoiGianDung < thoiGianDungToiThieu || thoiGianDung > thoiGianDungToiDa)
+                {
+                    MessageBox.Show("Thời gian dừng không đạt yêu cầu. Thời gian dừng phải nằm trong khoảng từ " + thoiGianDungToiThieu + " đến " + thoiGianDungToiDa + " phút.");
+                    return;
+                }
             }
             // Lưu thông tin chuyến bay  
 
@@ -191,8 +218,19 @@ namespace QuanLyChuyenBay
         }
         private void btn_SanBayDi_Click(object sender, EventArgs e)
         {
-            MH_ThemSanBay mhtsb = new MH_ThemSanBay();
-            mhtsb.Show();
+            int soSanBayQuyDinh = Convert.ToInt32(sbBus.LayThamSo().Rows[0]["SoSanBay"]);
+
+            int count = sbBus.LayDanhSach().Rows.Count;
+
+            if (count >= soSanBayQuyDinh)
+            {
+                MessageBox.Show("Đã đủ " + soSanBayQuyDinh + " sân bay theo quy định, không thể thêm mới!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MH_ThemSanBay mh = new MH_ThemSanBay();
+                mh.Show();
+            }
         }
         
         private void btn_SanBayDen_Click(object sender, EventArgs e)

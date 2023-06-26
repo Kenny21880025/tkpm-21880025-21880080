@@ -33,6 +33,7 @@
             btn_CapNhat = new Button();
             btn_Thoat = new Button();
             label2 = new Label();
+            txtSLHangVe = new TextBox();
             ((System.ComponentModel.ISupportInitialize)grvBangDonGiaVe).BeginInit();
             SuspendLayout();
             // 
@@ -57,7 +58,7 @@
             // 
             // btn_CapNhat
             // 
-            btn_CapNhat.Location = new Point(56, 51);
+            btn_CapNhat.Location = new Point(78, 95);
             btn_CapNhat.Name = "btn_CapNhat";
             btn_CapNhat.Size = new Size(75, 23);
             btn_CapNhat.TabIndex = 4;
@@ -67,7 +68,7 @@
             // 
             // btn_Thoat
             // 
-            btn_Thoat.Location = new Point(206, 51);
+            btn_Thoat.Location = new Point(201, 95);
             btn_Thoat.Name = "btn_Thoat";
             btn_Thoat.Size = new Size(75, 23);
             btn_Thoat.TabIndex = 5;
@@ -78,17 +79,25 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(28, 90);
+            label2.Location = new Point(49, 49);
             label2.Name = "label2";
-            label2.Size = new Size(360, 15);
+            label2.Size = new Size(104, 15);
             label2.TabIndex = 6;
-            label2.Text = "Có 2 hạng vé ( 1, 2) với đơn giá trong bảng sân bay đi, sân bay đến.";
+            label2.Text = "Số Lượng Hạng Vé";
+            // 
+            // txtSLHangVe
+            // 
+            txtSLHangVe.Location = new Point(222, 46);
+            txtSLHangVe.Name = "txtSLHangVe";
+            txtSLHangVe.Size = new Size(100, 23);
+            txtSLHangVe.TabIndex = 13;
             // 
             // MH_QD2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(410, 274);
+            Controls.Add(txtSLHangVe);
             Controls.Add(label2);
             Controls.Add(btn_Thoat);
             Controls.Add(btn_CapNhat);
@@ -109,5 +118,6 @@
         private Button btn_CapNhat;
         private Button btn_Thoat;
         private Label label2;
+        private TextBox txtSLHangVe;
     }
 }

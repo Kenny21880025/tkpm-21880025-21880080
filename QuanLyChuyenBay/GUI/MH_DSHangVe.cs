@@ -13,6 +13,7 @@ namespace QuanLyChuyenBay.GUI
 {
     public partial class MH_DSHangVe : Form
     {
+        SanBayBUS sbBus = new SanBayBUS();
         HangVeBUS hvBus = new HangVeBUS();
         string mhv;
         public MH_DSHangVe()
@@ -33,12 +34,22 @@ namespace QuanLyChuyenBay.GUI
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
-            MH_ThemHangVe mh = new MH_ThemHangVe();
-            mh.Show();
+            int soLuongHangVe = Convert.ToInt32(sbBus.LayThamSo().Rows[0]["SLHangVe"]);
+            int soLuongHangVeDemDuoc = hvBus.LayDanhSach().Rows.Count;
+            if (soLuongHangVeDemDuoc >= soLuongHangVe)
+                {
+                    MessageBox.Show("Số lượng hạng vé đã đủ " + soLuongHangVe + ". Không thể thêm hạng vé mới.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MH_ThemHangVe mh = new MH_ThemHangVe();
+                    mh.Show();
+                }
         }
 
         private void btn_Xoa_Click(object sender, EventArgs e)
         {
+            mhv = txtMaHangVe.Text;
             if (string.IsNullOrEmpty(mhv))
             {
                 MessageBox.Show("Vui lòng nhập mã hạng vé", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -48,7 +59,7 @@ namespace QuanLyChuyenBay.GUI
             var rs = hvBus.XoaHangVe(mhv);
             if (rs > 0)
             {
-                MessageBox.Show("Xóa xóa bay thành công");
+                MessageBox.Show("Xóa hạng vé thành công");
             }
         }
         private void btn_Sua_Click(object sender, EventArgs e)

@@ -16,5 +16,9 @@ namespace QuanLyChuyenBay.BUS
         {
             return dnDb.LayDSNguoiDung(dn);
         }
+        public int ThemNguoiDung(DangNhap dn)
+        {
+            return dnDb.ThemNguoiDung(dn);
+        }
     }
 }

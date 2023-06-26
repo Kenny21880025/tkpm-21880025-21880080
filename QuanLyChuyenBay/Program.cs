@@ -12,7 +12,8 @@ namespace QuanLyChuyenBay
         /// </summary>
         [STAThread]
         static void Main()
-        {            
+        {  // Đặt mã hóa UTF-8 cho toàn bộ dự án
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             DialogResult ket_qua = DialogResult.Cancel;

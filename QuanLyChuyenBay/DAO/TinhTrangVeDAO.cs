@@ -19,7 +19,7 @@ namespace QuanLyChuyenBay.DAO
             string sql = string.Format($"select SoGheTrong from TinhTrangVe where MaChuyenBay = '{mcb}'");
             DataTable ds = LayDuLieu(sql);
             int SoGheTrong, SoGheDat;
-            SoGheTrong = Convert.ToInt32(ds.Rows[0][1]) - 1;
+            SoGheTrong = Convert.ToInt32(ds.Rows[0][0]) - 1;
             if (loai) // cập nhật khi có người mua vé
             {
                 sql = string.Format($"update TinhTrangVe set SoGheTrong='{SoGheTrong}' where MaChuyenBay='{mcb}'");

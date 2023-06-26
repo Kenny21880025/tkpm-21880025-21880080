@@ -93,6 +93,23 @@ namespace QuanLyChuyenBay
                 MessageBox.Show("Chưa có hành khách");
                 return;
             }
+            // Kiểm tra tình trạng vé trước khi bán
+            if (txtTinhTrangVe.Text != "Còn chỗ")
+            {
+                MessageBox.Show("Ghế đã được đặt hết, không thể bán vé.");
+                return;
+            }
+            // Kiểm tra ngày khởi hành
+            DateTime ngayKhoiHanh = DateTime.Parse(txtNgayGio.Text);
+            DateTime ngayHienTai = DateTime.Now.Date;
+            TimeSpan timeSpan = ngayKhoiHanh - ngayHienTai;
+            int soNgayConLai = timeSpan.Days;
+
+            if (soNgayConLai < 1)
+            {
+                MessageBox.Show("Không thể đặt vé vào ngày khởi hành. Vui lòng chọn ngày khác.");
+                return;
+            }
             vcb.MaChuyenBay = cbMaChuyenBay.Text;
             vcb.MaHangVe = cbHangVe.Text;
             vcb.MaHanhKhach = cbMaHanhKhach.Text;
@@ -102,11 +119,11 @@ namespace QuanLyChuyenBay
             var rs = vcbBus.ThemPhieuDatCho(vcb);
             if (rs > 0)
             {
-                MessageBox.Show("Thêm vé thành công!");
+                MessageBox.Show("Đặt chỗ thành công!");
             }
             else
             {
-                MessageBox.Show("Thêm vé không thành công!");
+                MessageBox.Show("Đặt chỗ không thành công!");
             }
             // Cập nhật tình trạng vé         
             ttvBus.CapNhatTinhTrangVe(cbMaChuyenBay.Text, true);

@@ -39,6 +39,8 @@
             txtMiddleTerminal = new TextBox();
             btn_CapNhat = new Button();
             btn_Thoat = new Button();
+            txtSoSanBay = new TextBox();
+            label6 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -116,7 +118,7 @@
             // 
             // btn_CapNhat
             // 
-            btn_CapNhat.Location = new Point(75, 189);
+            btn_CapNhat.Location = new Point(75, 218);
             btn_CapNhat.Name = "btn_CapNhat";
             btn_CapNhat.Size = new Size(75, 23);
             btn_CapNhat.TabIndex = 9;
@@ -126,7 +128,7 @@
             // 
             // btn_Thoat
             // 
-            btn_Thoat.Location = new Point(241, 189);
+            btn_Thoat.Location = new Point(241, 218);
             btn_Thoat.Name = "btn_Thoat";
             btn_Thoat.Size = new Size(75, 23);
             btn_Thoat.TabIndex = 10;
@@ -134,11 +136,29 @@
             btn_Thoat.UseVisualStyleBackColor = true;
             btn_Thoat.Click += btn_Thoat_Click;
             // 
+            // txtSoSanBay
+            // 
+            txtSoSanBay.Location = new Point(216, 168);
+            txtSoSanBay.Name = "txtSoSanBay";
+            txtSoSanBay.Size = new Size(100, 23);
+            txtSoSanBay.TabIndex = 12;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(35, 171);
+            label6.Name = "label6";
+            label6.Size = new Size(67, 15);
+            label6.TabIndex = 11;
+            label6.Text = "Số Sân Bay ";
+            // 
             // MH_QD1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(383, 231);
+            ClientSize = new Size(383, 253);
+            Controls.Add(txtSoSanBay);
+            Controls.Add(label6);
             Controls.Add(btn_Thoat);
             Controls.Add(btn_CapNhat);
             Controls.Add(txtMiddleTerminal);
@@ -170,5 +190,7 @@
         private TextBox txtMiddleTerminal;
         private Button btn_CapNhat;
         private Button btn_Thoat;
+        private TextBox txtSoSanBay;
+        private Label label6;
     }
 }

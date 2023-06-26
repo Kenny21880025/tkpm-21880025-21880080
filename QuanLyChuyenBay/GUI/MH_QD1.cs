@@ -28,6 +28,7 @@ namespace QuanLyChuyenBay.GUI
             txtMiddleTerminal.Text = ds.Rows[0][1].ToString();
             txttimestopmax.Text = ds.Rows[0][2].ToString();
             txttimestopmin.Text = ds.Rows[0][3].ToString();
+            txtSoSanBay.Text = ds.Rows[0][4].ToString();
         }
 
         private void btn_CapNhat_Click(object sender, EventArgs e)

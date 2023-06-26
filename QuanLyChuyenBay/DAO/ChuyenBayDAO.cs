@@ -45,6 +45,13 @@ namespace QuanLyChuyenBay.DAO
             ds = LayDuLieu(sql);
             return ds;
         }
+        public DateTime LayNgayBay(string maChuyenBay)
+        {
+            DateTime ngayKhoiHanh = DateTime.MinValue;
+            string sql = $"SELECT NgayKhoiHanh FROM ChuyenBay WHERE MaChuyenBay = '{maChuyenBay}'";
+            LayNgay(sql);
+            return ngayKhoiHanh;
+        }
         public DataTable LayTDTraCuu(bool loai)
         {
             DataTable ds;
@@ -57,11 +64,12 @@ namespace QuanLyChuyenBay.DAO
             return ds;
         }
         public DataTable TimChuyenBay(string SanBayDi, string SanBayDen, DateTime TuNgay, DateTime DenNgay)
-        {            
-            DataTable ds;
-            string sql = "select sb1.TenSanBay as [Sân Bay Đi],sb2.TenSanBay as [Sân Bay Đến],cb.NgayGio as [Khởi Hành],cb.ThoiGianBay as [Thời Gian],ttv.SoGheTrong as [Số Ghế Trống],ttv.SoGheDat as [Số Ghế Đặt] from SanBay sb1,SanBay sb2, ChuyenBay cb, TinhTrangVe ttv, TuyenBay tb where tb.SanBayDi=sb1.MaSanBay and tb.SanBayDen=sb2.MaSanBay and tb.MaTuyenBay=cb.MaTuyenBay and sb1.MaSanBay='" + SanBayDi + "' and sb2.MaSanBay='" + SanBayDen + "' and cb.MaChuyenBay=ttv.MaChuyenBay and (cb.NgayGio between '" + TuNgay + "' and '" + DenNgay + "')";
-            ds = LayDuLieu(sql);
-            return ds;
+        {
+            string sql = $"SELECT sb1.TenSanBay AS [Sân Bay Đi], sb2.TenSanBay AS [Sân Bay Đến], cb.NgayGio AS [Khởi Hành], cb.ThoiGianBay AS [Thời Gian], ttv.SoGheTrong AS [Số Ghế Trống], ttv.SoGheDat AS [Số Ghế Đặt] " +
+             $"FROM SanBay sb1, SanBay sb2, ChuyenBay cb, TinhTrangVe ttv, TuyenBay tb " +
+             $"WHERE tb.SanBayDi = sb1.MaSanBay AND tb.SanBayDen = sb2.MaSanBay AND tb.MaTuyenBay = cb.MaTuyenBay AND sb1.MaSanBay = '{SanBayDi}' AND sb2.MaSanBay = '{SanBayDen}' AND cb.MaChuyenBay = ttv.MaChuyenBay AND (cb.NgayGio BETWEEN '{TuNgay}' AND '{DenNgay}') " +
+             $"ORDER BY cb.NgayGio ASC";            
+            return LayDuLieu(sql);
         }
         public bool KiemTraChuyenBay(string MaChuyenBay)
         {
